@@ -1,0 +1,147 @@
+{
+  "design_system": {
+    "name": "Edumotion XI",
+    "version": "1.0",
+    "archetype": "Archetype 1 (Organic & Earthy) + Archetype 4 (Swiss Editorial)",
+    "philosophy": "Warm Editorial Minimalism. Breaking the 'generic edtech' mold by treating the platform like a high-end curated digital magazine. We use asymmetric layouts, archival index structuring, and warm depth to build a focused, trustworthy, and distraction-free student experience."
+  },
+  "colors": {
+    "background": {
+      "default": "#FAF9F6",
+      "card": "#FFFFFF",
+      "muted": "#F5F5F4"
+    },
+    "brand": {
+      "primary": "#7B1E1E",
+      "primary_hover": "#631818",
+      "primary_light": "#962A2A",
+      "accent": "#F5B400",
+      "accent_hover": "#D99E00",
+      "accent_light": "#FDE68A"
+    },
+    "text": {
+      "main": "#292524",
+      "muted": "#78716C",
+      "inverse": "#FFFFFF",
+      "primary": "#7B1E1E",
+      "accent": "#B48200"
+    },
+    "border": {
+      "default": "#E7E5E4",
+      "focus": "#7B1E1E"
+    },
+    "feedback": {
+      "success": "#16A34A",
+      "warning": "#F5B400",
+      "error": "#DC2626",
+      "info": "#3B82F6"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "headings": "Cabinet Grotesk, Outfit, sans-serif",
+      "body": "DM Sans, sans-serif",
+      "mono": "IBM Plex Mono, monospace",
+      "setup_instructions": "Import via Google Fonts or Fontsource. If Cabinet Grotesk is unavailable, fallback to 'Outfit'."
+    },
+    "scales": {
+      "h1": "text-5xl md:text-6xl tracking-tight font-bold",
+      "h2": "text-3xl md:text-4xl tracking-tight font-bold",
+      "h3": "text-2xl md:text-3xl tracking-tight font-semibold",
+      "h4": "text-xl font-semibold",
+      "body_lg": "text-lg leading-relaxed",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm",
+      "overline": "text-xs uppercase tracking-[0.2em] font-mono font-medium text-stone-500"
+    }
+  },
+  "layout_and_spacing": {
+    "grid_system": "12-column CSS Grid. Use 'grid-cols-1 md:grid-cols-12' for main layouts.",
+    "bento_strategy": "For the dashboard, use tightly packed Bento grids with 'gap-6'. For marketing/homepage, use asymmetrical 'gap-8' to 'gap-12'.",
+    "container_paddings": "Generous spacing: use 'p-8', 'p-12', or 'py-20' for sections.",
+    "border_radius": {
+      "card": "rounded-[20px]",
+      "button": "rounded-full",
+      "badge": "rounded-md"
+    },
+    "shadows": {
+      "soft_warm": "shadow-[0_8px_30px_rgba(123,30,30,0.06)]",
+      "float": "shadow-[0_20px_40px_rgba(123,30,30,0.08)]"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#7B1E1E] text-white hover:bg-[#631818] rounded-full px-8 py-4 font-semibold transition-transform hover:-translate-y-0.5",
+      "secondary": "bg-[#F5B400] text-[#292524] hover:bg-[#D99E00] rounded-full px-8 py-4 font-semibold transition-transform hover:-translate-y-0.5",
+      "outline": "border-2 border-[#E7E5E4] text-[#292524] hover:border-[#7B1E1E] hover:text-[#7B1E1E] bg-transparent rounded-full px-8 py-4 font-semibold transition-colors"
+    },
+    "cards": {
+      "base": "bg-white border border-[#E7E5E4]/50 rounded-[20px] p-8 shadow-[0_8px_30px_rgba(123,30,30,0.03)] hover:shadow-[0_8px_30px_rgba(123,30,30,0.08)] transition-all duration-300"
+    },
+    "header": {
+      "style": "sticky top-0 z-50 bg-[#FAF9F6]/80 backdrop-blur-xl border-b border-[#E7E5E4]"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "Simple outline, stroke-width 1.5. Use primary or text.main color."
+    }
+  },
+  "pages": {
+    "homepage": {
+      "hero": "Asymmetric layout (7 cols text, 5 cols image/illustration). Massive H1 in maroon. Search bar integrated directly into hero (not generic). Golden yellow CTA. Add subtle warm abstract shapes in background.",
+      "quick_access": "6 cards. Grid md:grid-cols-3. Icons floating on soft maroon/gold circular backgrounds.",
+      "choose_class": "4 large cards. Interactive hover states that expand to show subjects.",
+      "trending_chapters": "Horizontal scroll or 3-col grid. Cards feature a thumbnail, chapter name, difficulty badge (mono font), and a golden progress bar.",
+      "reviews": "Bento style masonry or smooth marquee layout with 'student portrait' images."
+    },
+    "dashboard": {
+      "layout": "Control Room Grid but with warm aesthetic. Sidebar navigation + Main content area.",
+      "welcome": "Greeting with dynamic time. 'Continue Learning' card prominent at the top.",
+      "stats_row": "4 bento boxes (completed, hours, tests, streak). Use large typography for numbers.",
+      "calendar": "Shadcn calendar customized with maroon accents for active dates.",
+      "ai_assistant": "Floating Action Button (FAB) bottom right. Maroon background with a golden spark icon. Opens a minimal chat interface.",
+      "badges": "Visual tokens using emojis and gold colors (🔥, 📚, 🏆, ⭐)."
+    },
+    "search_page": {
+      "layout": "Left sidebar for filters (Class, Subject, Type). Right main area for results. Archival list view for results."
+    },
+    "chapter_page": {
+      "layout": "Tabs component (Shadcn customized). Clean, readable area for PDF/Notes. Embedded video player with soft rounded corners. AI Doubt section adjacent to content."
+    }
+  },
+  "images": {
+    "hero_backgrounds": [
+      {
+        "url": "https://images.pexels.com/photos/15361558/pexels-photo-15361558.jpeg",
+        "description": "Quiet library scene with people reading and studying in a warmly lit environment. Use in hero or generic backgrounds."
+      },
+      {
+        "url": "https://images.pexels.com/photos/6549913/pexels-photo-6549913.jpeg",
+        "description": "College students studying in a modern library. Use for 'About Us' or feature sections."
+      }
+    ],
+    "abstract_shapes": [
+      {
+        "url": "https://images.pexels.com/photos/22897311/pexels-photo-22897311.jpeg",
+        "description": "Dynamic shadows create an abstract pattern on an orange wall. Use for subtle background textures or hero accents."
+      }
+    ],
+    "student_portraits": [
+      {
+        "url": "https://images.pexels.com/photos/5940722/pexels-photo-5940722.jpeg",
+        "description": "Positive African American male learner with toothy smile in eyeglasses. Use in Reviews section."
+      },
+      {
+        "url": "https://images.pexels.com/photos/7983621/pexels-photo-7983621.jpeg",
+        "description": "Confident young man with glasses smiling in a library. Use in Reviews section."
+      }
+    ]
+  },
+  "technical_and_accessibility": {
+    "testing": "All interactive elements (buttons, inputs, tabs, search) MUST have a 'data-testid' attribute using kebab-case role-based naming (e.g., 'data-testid=\"search-submit-button\"').",
+    "contrast": "Text colors must meet APCA/WCAG AA standards. Ensure white text on maroon bg, and dark stone text on golden yellow.",
+    "motion": "Use 'framer-motion' for page transitions and card hovers. Respect 'prefers-reduced-motion'. Staggered entrance animations for lists (Dashboard stats, Quick Access cards).",
+    "shadcn_customization": "Override default styles. Make borders lighter (#E7E5E4), increase padding in cards, use 'rounded-[20px]', and override active states to use Maroon.",
+    "file_structure": "Use standard .js and .jsx files for React components."
+  }
+}

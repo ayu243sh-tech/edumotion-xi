@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #faf9f6;
+  --bg-card: #ffffff;
+  --bg-muted: #f5f5f4;
+  --brand: #7b1e1e;
+  --brand-hover: #631818;
+  --brand-light: #962a2a;
+  --accent: #f5b400;
+  --accent-hover: #d99e00;
+  --accent-light: #fde68a;
+  --text-main: #292524;
+  --text-muted: #78716c;
+  --border: #e7e5e4;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: "Outfit", "Cabinet Grotesk", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono-em {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* shadcn tokens mapped to brand */
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 24 10% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 24 10% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 15%;
+    --primary: 0 61% 30%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 60 9% 95%;
+    --secondary-foreground: 24 10% 15%;
+    --muted: 60 9% 95%;
+    --muted-foreground: 25 5% 45%;
+    --accent: 42 96% 48%;
+    --accent-foreground: 24 10% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 11% 89%;
+    --input: 30 11% 89%;
+    --ring: 0 61% 30%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.bento-shadow {
+  box-shadow: 0 8px 30px rgba(123, 30, 30, 0.04);
+}
+.bento-shadow-hover:hover {
+  box-shadow: 0 20px 40px rgba(123, 30, 30, 0.1);
+}
+
+/* Subtle grain overlay */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.6s ease-out both; }
