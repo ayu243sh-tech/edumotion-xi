@@ -10,10 +10,10 @@ CLASSES = [
 
 SUBJECTS = [
     {"id": "science", "name": "History", "icon": "FlaskConical", "color": "#7B1E1E"},
-    {"id": "mathematics", "name": "Political Science", "icon": "Sigma", "color": "#962A2A"},
+    {"id": "mathematics", "name": "Maths", "icon": "Sigma", "color": "#962A2A"},
     {"id": "social-science", "name": "Economics", "icon": "Globe2", "color": "#B45309"},
     {"id": "english", "name": "English", "icon": "BookOpen", "color": "#0F766E"},
-    {"id": "hindi", "name": "Maths", "icon": "Languages", "color": "#F5B400"},
+    {"id": "hindi", "name": "Political Science", "icon": "Languages", "color": "#F5B400"},
     {"id": "computer", "name": "Hindi", "icon": "Cpu", "color": "#1E40AF"},
 ]
 
