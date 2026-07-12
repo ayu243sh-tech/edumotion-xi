@@ -14,7 +14,7 @@ export default function ClassDetail() {
   useEffect(() => {
     Promise.all([
       api.get("/catalog/classes"),
-      api.get("/catalog/subjects"),
+      api.get("/catalog/subjects"),{params : { class_id: classId } })
       api.get("/catalog/chapters", { params: { class_id: classId } }),
     ]).then(([c, s, ch]) => {
       setKlass(c.data.find((x) => x.id === classId));
