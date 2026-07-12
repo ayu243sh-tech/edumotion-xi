@@ -21,6 +21,7 @@ SUBJECTS = [
     {"id": "history", "name": "History", "icon": "Globe2", "color": "#B45309", "classes": ["class-9","class-10","class-11", "class-12"]},
     {"id": "political-science", "name": "Political Science", "icon": "Landmark", "color": "#B45309", "classes": ["class-9","class-10","class-11", "class-12"]},
     {"id": "economics", "name": "Economics", "icon": "IndianRupee", "color": "#B45309", "classes": ["class-9", "class-10","class-11", "class-12"]},
+    {"id": "physical-education", "name": "Physical Education", "icon": "Dumbbell", "color": "#0F766E", "classes": ["class-12","class-11"]},
     
 ]
 
@@ -64,6 +65,21 @@ CHAPTERS = [
 
     # Economics
     {"id": "ch12-eco-national-income", "class_id": "class-12", "subject_id": "economics", "name": "National Income Accounting", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+    # ---------- CLASS 12 - Physical Education ----------
+    {"id": "ch12-pe-sports-mgmt", "class_id": "class-12", "subject_id": "physical-education", "name": "Management of Sports Events", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Planning, organizing committees, budgeting, and conducting tournaments.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1pt8UwXsb8ORk1JsGBta95a5yYN6LyNw9/view?usp=sharing"},
+
+    {"id": "ch12-pe-women-sports", "class_id": "class-12", "subject_id": "physical-education", "name": "Children and Women in Sports", "difficulty": "Easy", "duration": "2h 00m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Motor development in children, common sports injuries, and women's participation in sports.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    {"id": "ch12-pe-yoga-lifestyle", "class_id": "class-12", "subject_id": "physical-education", "name": "Yoga as Preventive Measure for Lifestyle Disease", "difficulty": "Easy", "duration": "2h 15m", "thumbnail": "https://images.pexels.com/photos/6019798/pexels-photo-6019798.jpeg", "trending": False, "overview": "Obesity, diabetes, asthma, hypertension, and back pain management through yoga.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    # ---------- CLASS 12 - English ----------
+    {"id": "ch12-eng-last-lesson", "class_id": "class-12", "subject_id": "english", "name": "The Last Lesson", "difficulty": "Easy", "duration": "1h 30m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Alsace under Prussian rule, loss of language and identity, and the value of one's mother tongue.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    {"id": "ch12-eng-lost-spring", "class_id": "class-12", "subject_id": "english", "name": "Lost Spring", "difficulty": "Medium", "duration": "1h 45m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Childhood lost to poverty, child labour, and broken promises in Saheb and Mukesh's stories.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    {"id": "ch12-eng-mother-66", "class_id": "class-12", "subject_id": "english", "name": "My Mother at Sixty-Six", "difficulty": "Easy", "duration": "1h 00m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Ageing, mortality, and a daughter's fear of losing her mother, told through a car ride to the airport.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    {"id": "ch12-eng-deep-water", "class_id": "class-12", "subject_id": "english", "name": "Deep Water", "difficulty": "Medium", "duration": "1h 45m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "William Douglas's childhood fear of water and how he overcame it through determination.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
 ]
 
 # NOTE: "drive_link" added below as a placeholder — replace with the actual
