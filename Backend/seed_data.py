@@ -9,12 +9,12 @@ CLASSES = [
 ]
 
 SUBJECTS = [
-    {"id": "science", "name": "Science", "icon": "FlaskConical", "color": "#7B1E1E"},
-    {"id": "mathematics", "name": "Mathematics", "icon": "Sigma", "color": "#962A2A"},
-    {"id": "social-science", "name": "Social Science", "icon": "Globe2", "color": "#B45309"},
+    {"id": "science", "name": "History", "icon": "FlaskConical", "color": "#7B1E1E"},
+    {"id": "mathematics", "name": "Political Science", "icon": "Sigma", "color": "#962A2A"},
+    {"id": "social-science", "name": "Economics", "icon": "Globe2", "color": "#B45309"},
     {"id": "english", "name": "English", "icon": "BookOpen", "color": "#0F766E"},
-    {"id": "hindi", "name": "Hindi", "icon": "Languages", "color": "#F5B400"},
-    {"id": "computer", "name": "Computer", "icon": "Cpu", "color": "#1E40AF"},
+    {"id": "hindi", "name": "Maths", "icon": "Languages", "color": "#F5B400"},
+    {"id": "computer", "name": "Hindi", "icon": "Cpu", "color": "#1E40AF"},
 ]
 
 # Chapters keyed by class_id + subject_id
