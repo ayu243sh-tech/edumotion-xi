@@ -41,7 +41,7 @@ CHAPTERS = [
     {"id": "ch11-bio-cell", "class_id": "class-11", "subject_id": "biology", "name": "Cell: The Unit of Life", "difficulty": "Medium", "duration": "3h 20m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Cell theory, cell structure, and differences between plant and animal cells.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
 
     # History
-    {"id": "ch11-his-harappan", "class_id": "class-11", "subject_id": "history", "name": "Harappan Civilization", "difficulty": "Easy", "duration": "2h 00m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Town planning, Great Bath, seals, trade, and decline of the Indus Valley cities.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+    {"id": "ch11-his-harappan", "class_id": "class-12", "subject_id": "history", "name": "Harappan Civilization", "difficulty": "Easy", "duration": "2h 00m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Town planning, Great Bath, seals, trade, and decline of the Indus Valley cities.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1oF-hlEFEzpl3dxlideCTcdZDqLe0XDCz/view?usp=drive_link"},
 
     # ---------- CLASS 12 ----------
     # Physics
