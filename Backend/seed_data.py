@@ -14,7 +14,7 @@ SUBJECTS = [
     {"id": "social-science", "name": "Economics", "icon": "Globe2", "color": "#B45309"},
     {"id": "english", "name": "English", "icon": "BookOpen", "color": "#0F766E"},
     {"id": "hindi", "name": "Political Science", "icon": "Languages", "color": "#F5B400"},
-    {"id": "computer", "name": "Hindi", "icon": "Cpu", "color": "#1E40AF"},
+    {"id": "computer", "name": "Computer", "icon": "Cpu", "color": "#1E40AF"},
 ]
 
 # Chapters keyed by class_id + subject_id
@@ -35,10 +35,14 @@ CHAPTERS = [
     {"id": "ch-matter", "class_id": "class-9", "subject_id": "science", "name": "Matter in Our Surroundings", "difficulty": "Easy", "duration": "2h 10m", "thumbnail": "https://images.pexels.com/photos/220301/pexels-photo-220301.jpeg", "trending": False, "overview": "States of matter, change of state, evaporation and factors affecting it.", "video_url": "https://www.youtube.com/embed/oNCxs0EaW4Y", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
     # Class 12 Maths
     {"id": "ch-integrals", "class_id": "class-12", "subject_id": "mathematics", "name": "Integrals", "difficulty": "Hard", "duration": "5h 00m", "thumbnail": "https://images.pexels.com/photos/6238118/pexels-photo-6238118.jpeg", "trending": True, "overview": "Indefinite & definite integrals, methods of integration, properties.", "video_url": "https://www.youtube.com/embed/__zy-oOLPug", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
+    # Class 12 History
+    {"id": "ch-Harrapan Civilization", "class_id": "class-12", "subject_id": "science", "name": "Harappan Civilization", "difficulty": "Hard", "duration": "5h 00m", "thumbnail": "https://www.pexels.com/photo/ancient-ruins-of-gobekli-tepe-in-turkiye-31028118/", "trending": True, "overview": "Town planning, Great Bath, seals, trade, and decline of the Indus Valley cities.", "video_url": "https://www.youtube.com/embed/__zy-oOLPug", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
     # Class 10 English
     {"id": "ch-letter", "class_id": "class-10", "subject_id": "english", "name": "A Letter to God", "difficulty": "Easy", "duration": "1h 30m", "thumbnail": "https://images.pexels.com/photos/267669/pexels-photo-267669.jpeg", "trending": False, "overview": "Theme, characters and message of the story.", "video_url": "https://www.youtube.com/embed/n2C5wlSDQTI", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
     # Class 10 Computer
     {"id": "ch-python", "class_id": "class-10", "subject_id": "computer", "name": "Python Basics", "difficulty": "Easy", "duration": "2h 20m", "thumbnail": "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg", "trending": True, "overview": "Variables, data types, conditionals, loops and functions in Python.", "video_url": "https://www.youtube.com/embed/_uQrJ0TkZlc", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
+    # Class 10 Computer
+    {"id": "ch-CyberEthics", "class_id": "class-10", "subject_id": "computer", "name": "Cyber Ethics", "difficulty": "Easy", "duration": "2h 20m", "thumbnail": "https://images.pexels.com/photos/5380640/pexels-photo-5380640.jpeg", "trending": True, "overview": "Netiquette, digital footprint, plagiarism, cyberbullying, and intellectual property rights.", "video_url": "https://www.youtube.com/embed/_uQrJ0TkZlc", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
 ]
 
 # NOTE: "drive_link" added below as a placeholder — replace with the actual
