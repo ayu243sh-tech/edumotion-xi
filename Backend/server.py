@@ -28,9 +28,9 @@ async def get_classes():
     return CLASSES
 
 @api_router.get("/catalog/subjects")
-async def get_subjects(class_id: Optional[str]=None):
+async def get_subjects(class_id: Optional[str] = None):
     if class_id:
-    return [s for s in SUBJECTS if class_id in s.get("classes",[])]
+        return [s for s in SUBJECTS if class_id in s.get("classes", [])]
     return SUBJECTS
 
 @api_router.get("/catalog/chapters")
