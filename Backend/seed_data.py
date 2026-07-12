@@ -135,6 +135,7 @@ PYQ_QUESTIONS = {
         {"year" 2023, "q": "Decribe any three features of ancient numismatics."},
         {"year" 2022, "q": "Examine the nature and characteristics of the land grants in ancient Indian Society."},
         {"year" 2022, "q": "Mauryan Empire was considered as a major landmark in Indian history.Justify the statement."},
+    ],
         
         
 }
