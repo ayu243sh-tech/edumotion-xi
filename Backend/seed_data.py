@@ -9,12 +9,19 @@ CLASSES = [
 ]
 
 SUBJECTS = [
-    {"id": "science", "name": "History", "icon": "FlaskConical", "color": "#7B1E1E"},
-    {"id": "mathematics", "name": "Mathematics", "icon": "Sigma", "color": "#962A2A"},
-    {"id": "social-science", "name": "Economics", "icon": "Globe2", "color": "#B45309"},
-    {"id": "english", "name": "English", "icon": "BookOpen", "color": "#0F766E"},
-    {"id": "hindi", "name": "Political Science", "icon": "Languages", "color": "#F5B400"},
-    {"id": "computer", "name": "Computer", "icon": "Cpu", "color": "#1E40AF"},
+    {"id": "science", "name": "Science", "icon": "FlaskConical", "color": "#7B1E1E", "classes": ["class-9", "class-10"]},
+    {"id": "mathematics", "name": "Mathematics", "icon": "Sigma", "color": "#962A2A", "classes": ["class-9", "class-10", "class-11", "class-12"]},
+    {"id": "social-science", "name": "Social Science", "icon": "Globe2", "color": "#B45309", "classes": ["class-9", "class-10"]},
+    {"id": "english", "name": "English", "icon": "BookOpen", "color": "#0F766E", "classes": ["class-9", "class-10", "class-11", "class-12"]},
+    {"id": "hindi", "name": "Hindi", "icon": "Languages", "color": "#F5B400", "classes": ["class-9", "class-10"]},
+    {"id": "computer", "name": "Computer", "icon": "Cpu", "color": "#1E40AF", "classes": ["class-9", "class-10"]},
+    {"id": "physics", "name": "Physics", "icon": "FlaskConical", "color": "#7B1E1E", "classes": ["class-11", "class-12"]},
+    {"id": "chemistry", "name": "Chemistry", "icon": "FlaskConical", "color": "#962A2A", "classes": ["class-11", "class-12"]},
+    {"id": "biology", "name": "Biology", "icon": "FlaskConical", "color": "#0F766E", "classes": ["class-11", "class-12"]},
+    {"id": "history", "name": "History", "icon": "Globe2", "color": "#B45309", "classes": ["class-9","class-10","class-11", "class-12"]},
+    {"id": "political-science", "name": "Political Science", "icon": "Landmark", "color": "#B45309", "classes": ["class-9","class-10","class-11", "class-12"]},
+    {"id": "economics", "name": "Economics", "icon": "IndianRupee", "color": "#B45309", "classes": ["class-9", "class-10","class-11", "class-12"]},
+    
 ]
 
 # Chapters keyed by class_id + subject_id
@@ -22,27 +29,41 @@ SUBJECTS = [
 # Replace "YOUR_FILE_ID_HERE" with the actual file ID from your uploaded Drive PDF.
 # Use ".../preview" to embed inline, or ".../view" to open in a new tab.
 CHAPTERS = [
-    # Class 10 Science
-    {"id": "ch-light", "class_id": "class-10", "subject_id": "science", "name": "Light – Reflection and Refraction", "difficulty": "Medium", "duration": "3h 20m", "thumbnail": "https://images.pexels.com/photos/256262/pexels-photo-256262.jpeg", "trending": True, "overview": "Understand laws of reflection, image formation by mirrors, refraction by lenses, lens formula, and power of a lens.", "video_url": "https://www.youtube.com/embed/Pe-rkN9pibo", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
-    {"id": "ch-electricity", "class_id": "class-10", "subject_id": "science", "name": "Electricity", "difficulty": "Hard", "duration": "4h 10m", "thumbnail": "https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg", "trending": True, "overview": "Ohm's law, resistance, series & parallel combinations, heating effect of current, and electric power.", "video_url": "https://www.youtube.com/embed/mc979OhitAg", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
-    {"id": "ch-life-processes", "class_id": "class-10", "subject_id": "science", "name": "Life Processes", "difficulty": "Easy", "duration": "2h 45m", "thumbnail": "https://images.pexels.com/photos/3735709/pexels-photo-3735709.jpeg", "trending": True, "overview": "Nutrition, respiration, transportation and excretion in living organisms.", "video_url": "https://www.youtube.com/embed/yqOpC4lvDRA", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
-    # Class 10 Maths
-    {"id": "ch-quadratic", "class_id": "class-10", "subject_id": "mathematics", "name": "Quadratic Equations", "difficulty": "Medium", "duration": "3h 00m", "thumbnail": "https://images.pexels.com/photos/6238048/pexels-photo-6238048.jpeg", "trending": True, "overview": "Roots of quadratic equations, discriminant, nature of roots and applications.", "video_url": "https://www.youtube.com/embed/UFiP-zsiqIw", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
-    {"id": "ch-trigonometry", "class_id": "class-10", "subject_id": "mathematics", "name": "Introduction to Trigonometry", "difficulty": "Medium", "duration": "3h 30m", "thumbnail": "https://images.pexels.com/photos/6238297/pexels-photo-6238297.jpeg", "trending": False, "overview": "Trig ratios, identities, complementary angles and basic problems.", "video_url": "https://www.youtube.com/embed/F21S9Wpi0y8", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
-    # Class 11 Physics
-    {"id": "ch-kinematics", "class_id": "class-11", "subject_id": "science", "name": "Motion in a Straight Line", "difficulty": "Hard", "duration": "4h 30m", "thumbnail": "https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg", "trending": True, "overview": "Position, displacement, velocity, acceleration and equations of motion.", "video_url": "https://www.youtube.com/embed/ZM8ECpBuQYE", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
-    # Class 9 Science
-    {"id": "ch-matter", "class_id": "class-9", "subject_id": "science", "name": "Matter in Our Surroundings", "difficulty": "Easy", "duration": "2h 10m", "thumbnail": "https://images.pexels.com/photos/220301/pexels-photo-220301.jpeg", "trending": False, "overview": "States of matter, change of state, evaporation and factors affecting it.", "video_url": "https://www.youtube.com/embed/oNCxs0EaW4Y", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
-    # Class 12 Maths
-    {"id": "ch-integrals", "class_id": "class-12", "subject_id": "mathematics", "name": "Integrals", "difficulty": "Hard", "duration": "5h 00m", "thumbnail": "https://images.pexels.com/photos/6238118/pexels-photo-6238118.jpeg", "trending": True, "overview": "Indefinite & definite integrals, methods of integration, properties.", "video_url": "https://www.youtube.com/embed/__zy-oOLPug", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
-    # Class 12 History
-    {"id": "ch-Harrapan Civilization", "class_id": "class-12", "subject_id": "science", "name": "Harappan Civilization", "difficulty": "Hard", "duration": "5h 00m", "thumbnail": "https://images.pexels.com/photos/13800345/pexels-photo-13800345.jpeg", "trending": True, "overview": "Town planning, Great Bath, seals, trade, and decline of the Indus Valley cities.", "video_url": "https://www.youtube.com/embed/__zy-oOLPug", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
-    # Class 10 English
-    {"id": "ch-letter", "class_id": "class-10", "subject_id": "english", "name": "A Letter to God", "difficulty": "Easy", "duration": "1h 30m", "thumbnail": "https://images.pexels.com/photos/267669/pexels-photo-267669.jpeg", "trending": False, "overview": "Theme, characters and message of the story.", "video_url": "https://www.youtube.com/embed/n2C5wlSDQTI", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
-    # Class 10 Computer
-    {"id": "ch-python", "class_id": "class-10", "subject_id": "computer", "name": "Python Basics", "difficulty": "Easy", "duration": "2h 20m", "thumbnail": "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg", "trending": True, "overview": "Variables, data types, conditionals, loops and functions in Python.", "video_url": "https://www.youtube.com/embed/_uQrJ0TkZlc", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
-    # Class 10 Computer
-    {"id": "ch-CyberEthics", "class_id": "class-10", "subject_id": "computer", "name": "Cyber Ethics", "difficulty": "Easy", "duration": "2h 20m", "thumbnail": "https://images.pexels.com/photos/5380640/pexels-photo-5380640.jpeg", "trending": True, "overview": "Netiquette, digital footprint, plagiarism, cyberbullying, and intellectual property rights.", "video_url": "https://www.youtube.com/embed/_uQrJ0TkZlc", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/preview"},
+    # ---------- CLASS 11 ----------
+    # Physics
+    {"id": "ch11-phy-motion", "class_id": "class-11", "subject_id": "physics", "name": "Motion in a Straight Line", "difficulty": "Hard", "duration": "4h 30m", "thumbnail": "https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg", "trending": True, "overview": "Position, displacement, velocity, acceleration and equations of motion.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    # Chemistry
+    {"id": "ch11-chem-basic", "class_id": "class-11", "subject_id": "chemistry", "name": "Some Basic Concepts of Chemistry", "difficulty": "Medium", "duration": "3h 00m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Mole concept, atomic mass, molecular mass, and stoichiometry.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    # Biology
+    {"id": "ch11-bio-cell", "class_id": "class-11", "subject_id": "biology", "name": "Cell: The Unit of Life", "difficulty": "Medium", "duration": "3h 20m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Cell theory, cell structure, and differences between plant and animal cells.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    # History
+    {"id": "ch11-his-harappan", "class_id": "class-11", "subject_id": "history", "name": "Harappan Civilization", "difficulty": "Easy", "duration": "2h 00m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Town planning, Great Bath, seals, trade, and decline of the Indus Valley cities.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    # ---------- CLASS 12 ----------
+    # Physics
+    {"id": "ch12-phy-charges", "class_id": "class-12", "subject_id": "physics", "name": "Electric Charges and Fields", "difficulty": "Hard", "duration": "4h 00m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Coulomb's law, electric field, and Gauss's theorem.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    # Chemistry
+    {"id": "ch12-chem-solutions", "class_id": "class-12", "subject_id": "chemistry", "name": "Solutions", "difficulty": "Medium", "duration": "3h 15m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Types of solutions, concentration terms, and colligative properties.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    # Mathematics (already exists as ch-integrals — keep or replace)
+    {"id": "ch-integrals", "class_id": "class-12", "subject_id": "mathematics", "name": "Integrals", "difficulty": "Hard", "duration": "5h 00m", "thumbnail": "https://images.pexels.com/photos/6238118/pexels-photo-6238118.jpeg", "trending": True, "overview": "Indefinite & definite integrals, methods of integration, properties.", "video_url": "https://www.youtube.com/embed/__zy-oOLPug", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+# ---------- CLASS 11 (continued) ----------
+    # Political Science
+    {"id": "ch11-polsci-constitution", "class_id": "class-11", "subject_id": "political-science", "name": "Constitution: Why and How?", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Need for a constitution, constituent assembly, and its guiding values.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    # Economics
+    {"id": "ch11-eco-basics", "class_id": "class-11", "subject_id": "economics", "name": "Introduction to Economics", "difficulty": "Easy", "duration": "2h 00m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Scarcity, choice, opportunity cost, and central problems of an economy.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    # ---------- CLASS 12 (continued) ----------
+    # Political Science
+    {"id": "ch12-polsci-coldwar", "class_id": "class-12", "subject_id": "political-science", "name": "The Cold War Era", "difficulty": "Medium", "duration": "3h 00m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Origins of the Cold War, alliances, arms race, and non-alignment.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+
+    # Economics
+    {"id": "ch12-eco-national-income", "class_id": "class-12", "subject_id": "economics", "name": "National Income Accounting", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
 ]
 
 # NOTE: "drive_link" added below as a placeholder — replace with the actual
