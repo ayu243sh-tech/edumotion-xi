@@ -127,6 +127,16 @@ PYQ_QUESTIONS = {
         {"year": 2024, "q": "Find the roots of x² – 5x + 6 = 0 by factorisation."},
         {"year": 2023, "q": "Determine the nature of roots of 2x² – 4x + 3 = 0."},
     ],
+    "ch-ch2-Kinf-farmer": [
+        {"year" 2024, "q": "The Mauryan Empire had a strong administration.Examine the statement."},
+        {"year" 2024, "q": Why was the 6th Century BCE often regarded as a major turning point in early Indian History?Explain."},
+        {"year" 2024, "q": "How do historians came to know about the Mauryas?Explain the administrative structure of the Mauryan Empire?"},
+        {"year" 2023, "q": "Between the 6th and 4th centuries BCE, Magadha became the most powerful Mahajanpada.Explain."},
+        {"year" 2023, "q": "Decribe any three features of ancient numismatics."},
+        {"year" 2022, "q": "Examine the nature and characteristics of the land grants in ancient Indian Society."},
+        {"year" 2022, "q": "Mauryan Empire was considered as a major landmark in Indian history.Justify the statement."},
+        
+        
 }
 
 FLASHCARDS = {
