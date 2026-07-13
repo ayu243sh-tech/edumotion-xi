@@ -98,9 +98,9 @@ async def search(q: str = "", class_id: Optional[str] = None, subject_id: Option
             if q_lower and q_lower not in u["title"].lower():
                 continue
             results.append({"type": u["type"], "id": u["id"], "title": u["title"], "chapter_id": u["chapter_id"]})
-    return {"count": len(results), "results": results}
-    // src/components/CurrentAffairsFAB.jsx
-    
+return {"count": len(results), "results": results}
+
+
 @api_router.get("/catalog/current-affairs")
 async def current_affairs():
     return CURRENT_AFFAIRS
