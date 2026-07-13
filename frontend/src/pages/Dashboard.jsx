@@ -153,7 +153,7 @@ export default function Dashboard() {
             <div className="flex items-center justify-between mb-6">
               <div>
                 <div className="text-xs uppercase tracking-[0.2em] font-mono-em text-[#78716C]">Performance</div>
-                <h3 className="font-display text-xl font-bold mt-1">Weekly study time</h3>
+               <h3 className="font-display text-xl font-bold mt-1">Weekly study time</h3>
               </div>
               <div className="text-sm text-[#78716C]">{weekly_minutes.reduce((a, b) => a + b, 0)} min total</div>
             </div>
@@ -165,6 +165,30 @@ export default function Dashboard() {
                   </div>
                   <div className="text-xs font-mono-em text-[#78716C]">{days[i]}</div>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Calm Study Music */}
+          <div className="bg-white rounded-[20px] border border-[#E7E5E4] p-6 bento-shadow" data-testid="study-music-card">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <div className="text-xs uppercase tracking-[0.2em] font-mono-em text-[#78716C]">Focus Mode</div>
+                <h3 className="font-display text-xl font-bold mt-1">Calm Study Music</h3>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-[#E7E5E4]">
+              <iframe
+                width="100%"
+                height="80"
+                src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=0"
+                title="Lofi calm study music"
+                allow="autoplay; encrypted-media"
+                data-testid="study-music-player"
+              />
+            </div>
+            <p className="text-xs text-[#78716C] mt-3">Play calm background music while you study — pause anytime.</p>
+          </div>
               ))}
             </div>
           </div>
