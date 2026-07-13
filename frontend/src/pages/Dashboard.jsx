@@ -189,9 +189,6 @@ export default function Dashboard() {
             </div>
             <p className="text-xs text-[#78716C] mt-3">Play calm background music while you study — pause anytime.</p>
           </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Right column: Calendar, Leaderboard, Achievements, Recent */}
