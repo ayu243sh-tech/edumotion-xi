@@ -208,6 +208,35 @@ PYQ_QUESTIONS = {
         {"year": 2020, "q": "Explain any three asanas useful for the prevention of hypertension."},
         {"year": 2019, "q": "Discuss the role of asanas in managing back pain."},
     ],
+    "ch12-eco-national-income": [
+        {"year": 2023, "q": "Distinguish between GDP at market price and National Income (NNP at factor cost)."},
+        {"year": 2022, "q": "Why are intermediate goods not included while measuring national income? Explain with an example."},
+        {"year": 2021, "q": "Calculate National Income from the given data using the expenditure method (numerical problem based on GDPmp, depreciation, NFIA, and net indirect taxes)."},
+        {"year": 2020, "q": "Explain any three limitations of using GDP as an index of a country's welfare."},
+        {"year": 2019, "q": "Define externalities. Give an example of a negative externality and explain its impact on welfare."},
+        {"year": 2018, "q": "Distinguish between Real GDP and Nominal GDP. Which is a better indicator of economic growth and why?"},
+    ],
+    "ch2-Indian-eco-eve": [
+        {"year": 2023, "q": "Describe the state of India's agricultural sector on the eve of independence."},
+        {"year": 2022, "q": "Why was India's economy described as 'backward and stagnant' under British colonial rule?"},
+        {"year": 2021, "q": "Explain the drain of wealth theory as it relates to India's colonial economy."},
+        {"year": 2020, "q": "What was the impact of British rule on India's traditional handicraft industries?"},
+        {"year": 2019, "q": "Discuss the demographic condition of India during the colonial period."},
+    ],
+    "ch12-Indian-1950-90": [
+        {"year": 2023, "q": "Explain any three land reform measures introduced by the Indian government after independence."},
+        {"year": 2022, "q": "What was the Green Revolution? Explain any two of its limitations."},
+        {"year": 2021, "q": "Discuss the role of the public sector in the initial phase of India's economic planning."},
+        {"year": 2020, "q": "Explain the meaning and objective of 'import substitution' as a trade strategy."},
+        {"year": 2019, "q": "Why was the need for economic reforms felt in India by the late 1980s?"},
+    ],
+    "ch3-Economics-reforms": [
+        {"year": 2023, "q": "Explain the changing role of the state in the Indian economy since the introduction of reforms in 1991."},
+        {"year": 2022, "q": "What is meant by disinvestment? Explain its objectives."},
+        {"year": 2021, "q": "Evaluate the positive and negative impacts of the LPG (Liberalisation, Privatisation, Globalisation) policy."},
+        {"year": 2020, "q": "Why did the Indian government need to borrow from international organisations in 1991?"},
+        {"year": 2019, "q": "Distinguish between liberalisation, privatisation, and globalisation."},
+    ],
         
         
 }
@@ -298,6 +327,30 @@ FLASHCARDS = {
         {"front": "Asanas for diabetes", "back": "Bhujangasana, Paschimottanasana, Pavanmuktasana, Ardha Matsyendrasana."},
         {"front": "Asanas for hypertension", "back": "Tadasana, Vajrasana, Pavanmuktasana, Shavasana."},
         {"front": "Lifestyle diseases", "back": "Diseases caused by unhealthy habits — sedentary lifestyle, poor diet, stress — e.g. obesity, diabetes, hypertension."},
+    ],
+    "ch12-eco-national-income": [
+        {"front": "GDP", "back": "Gross Domestic Product — market value of all final goods and services produced within a country's domestic territory in a year."},
+        {"front": "GNP", "back": "Gross National Product = GDP + Net Factor Income from Abroad (NFIA)."},
+        {"front": "Net Indirect Tax", "back": "Indirect taxes minus subsidies; used to convert between factor cost and market price."},
+        {"front": "Three methods of measuring National Income", "back": "Product (value added) method, Income method, and Expenditure method."},
+    ],
+    "ch2-Indian-eco-eve": [
+        {"front": "Drain of Wealth", "back": "The theory that Britain systematically transferred India's wealth and resources to Britain without adequate compensation."},
+        {"front": "Deindustrialisation", "back": "Decline of India's traditional handicraft industries under British rule, without adequate replacement by modern industry."},
+        {"front": "Occupational structure", "back": "On the eve of independence, over 70% of India's workforce was dependent on agriculture."},
+        {"front": "Demographic condition", "back": "High birth and death rates, low life expectancy (around 32 years), and high infant mortality characterized colonial India."},
+    ],
+    "ch12-Indian-1950-90": [
+        {"front": "Land Ceiling", "back": "Fixing the maximum size of landholding an individual/household could own, to reduce concentration of land ownership."},
+        {"front": "Green Revolution", "back": "Large increase in food grain production due to High Yielding Variety (HYV) seeds, mainly benefiting wheat in Punjab, Haryana, and western UP."},
+        {"front": "Import Substitution", "back": "An inward-looking trade strategy replacing imports with domestically produced goods to promote self-reliance."},
+        {"front": "Planning Commission", "back": "Set up in 1950 to formulate and oversee India's Five-Year Plans."},
+    ],
+    "ch3-Economics-reforms": [
+        {"front": "Liberalisation", "back": "Removing government restrictions and controls on economic activities, allowing market forces to operate more freely."},
+        {"front": "Privatisation", "back": "Transferring ownership or management of public sector enterprises to the private sector."},
+        {"front": "Globalisation", "back": "Integrating a country's economy with the world economy through free flow of goods, capital, and services."},
+        {"front": "Disinvestment", "back": "Sale of a part of government's equity in public sector undertakings to the private sector."},
     ],
 }
 
@@ -422,6 +475,40 @@ QUIZZES = {
         {"q": "Which of these is considered a lifestyle disease?", "options": ["Malaria", "Obesity", "Chickenpox", "Common cold"], "answer": 1},
         {"q": "Yoga helps prevent lifestyle diseases mainly by:", "options": ["Increasing stress", "Improving metabolism and reducing stress", "Encouraging inactivity", "None of these"], "answer": 1},
         {"q": "Vajrasana is beneficial for:", "options": ["Only eyesight", "Obesity and digestion", "Only hearing", "Only memory"], "answer": 1},
+    ],
+    "ch12-eco-national-income": [
+        {"q": "GNP at MP equals:", "options": ["GDPmp - Depreciation", "GDPmp + NFIA", "GDPmp × Depreciation", "GDPmp - NFIA"], "answer": 1},
+        {"q": "Which is NOT a method of measuring National Income?", "options": ["Income method", "Product method", "Expenditure method", "Population method"], "answer": 3},
+        {"q": "Intermediate goods are excluded from GDP to avoid:", "options": ["Inflation", "Double counting", "Tax evasion", "Currency devaluation"], "answer": 1},
+        {"q": "GDP measures production within:", "options": ["A country's normal residents only", "A country's domestic territory", "Only exports", "Only government sector"], "answer": 1},
+        {"q": "Real GDP is calculated using:", "options": ["Current year prices", "Base year (constant) prices", "Future projected prices", "Average world prices"], "answer": 1},
+        {"q": "Who made one of the first attempts at national income estimation in India?", "options": ["Simon Kuznets", "Dadabhai Naoroji", "J.M. Keynes", "Amartya Sen"], "answer": 1},
+        {"q": "NNP at Factor Cost is also known as:", "options": ["Gross National Product", "National Income", "Personal Income", "Disposable Income"], "answer": 1},
+        {"q": "Which of these is a limitation of GDP as a measure of welfare?", "options": ["It is too easy to calculate", "It ignores externalities and income distribution", "It always overstates poverty", "It has no limitations"], "answer": 1},
+    ],
+    "ch2-Indian-eco-eve": [
+        {"q": "On the eve of independence, most of India's workforce was engaged in:", "options": ["Industry", "Agriculture", "Services", "Trade"], "answer": 1},
+        {"q": "The 'drain of wealth' refers to:", "options": ["India's investment abroad", "Transfer of India's wealth to Britain", "Trade surplus with Britain", "Gold reserves growth"], "answer": 1},
+        {"q": "British rule led to the decline of India's:", "options": ["IT sector", "Traditional handicraft industries", "Space program", "Banking sector"], "answer": 1},
+        {"q": "Life expectancy in colonial India was approximately:", "options": ["65 years", "50 years", "32 years", "80 years"], "answer": 2},
+        {"q": "The main aim of British economic policies in India was to:", "options": ["Develop Indian industry", "Serve British economic interests", "Reduce poverty in India", "Promote Indian exports"], "answer": 1},
+        {"q": "India's foreign trade under British rule mainly served:", "options": ["Indian industrialists", "British interests", "Indian farmers", "Regional trade"], "answer": 1},
+    ],
+    "ch12-Indian-1950-90": [
+        {"q": "The Planning Commission was established in:", "options": ["1947", "1950", "1956", "1991"], "answer": 1},
+        {"q": "Land ceiling refers to:", "options": ["Minimum land required for farming", "Maximum size of landholding an individual can own", "Land tax rate", "Land irrigation limit"], "answer": 1},
+        {"q": "The Green Revolution mainly benefited which crop first?", "options": ["Rice", "Wheat", "Cotton", "Sugarcane"], "answer": 1},
+        {"q": "India's trade strategy in the first seven Five-Year Plans was:", "options": ["Outward-looking", "Inward-looking (import substitution)", "Neutral", "Export-only"], "answer": 1},
+        {"q": "The Karve Committee (1955) focused on:", "options": ["Banking reforms", "Small-scale industries", "Land reforms", "Foreign trade"], "answer": 1},
+        {"q": "Which two states are cited as successful examples of land reform implementation?", "options": ["Punjab and Haryana", "West Bengal and Kerala", "Gujarat and Maharashtra", "UP and Bihar"], "answer": 1},
+    ],
+    "ch3-Economics-reforms": [
+        {"q": "LPG in economic reforms stands for:", "options": ["Liquid Petroleum Gas", "Liberalisation, Privatisation, Globalisation", "Land, Property, Growth", "Loans, Profit, Growth"], "answer": 1},
+        {"q": "The New Economic Policy was introduced in:", "options": ["1985", "1991", "1996", "2000"], "answer": 1},
+        {"q": "Disinvestment refers to:", "options": ["Increasing government investment", "Sale of government equity in PSUs", "Foreign direct investment only", "Banning private investment"], "answer": 1},
+        {"q": "Which sectors remain reserved for the public sector after reforms?", "options": ["IT and Telecom", "Atomic energy and railways", "Retail and banking", "Agriculture only"], "answer": 1},
+        {"q": "The 1991 crisis was triggered mainly by:", "options": ["A stock market crash", "Balance of payments crisis and low forex reserves", "A pandemic", "Natural disasters"], "answer": 1},
+        {"q": "Globalisation primarily involves:", "options": ["Isolating the domestic economy", "Integrating the domestic economy with the world economy", "Banning imports", "Nationalising all industries"], "answer": 1},
     ],
 }
 
