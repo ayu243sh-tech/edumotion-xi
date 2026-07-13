@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 from seed_data import (
     CLASSES, SUBJECTS, CHAPTERS, LATEST_UPLOADS, REVIEWS,
     LEADERBOARD, PYQ_QUESTIONS, FLASHCARDS, QUIZZES, ACHIEVEMENTS,
+    CURRENT_AFFAIRS,
 )
 
 ROOT_DIR = Path(__file__).parent
@@ -103,6 +104,8 @@ async def search(q: str = "", class_id: Optional[str] = None, subject_id: Option
 @api_router.get("/catalog/current-affairs")
 async def current_affairs():
     return CURRENT_AFFAIRS
+
+
 # ---------- Visits (in-memory, resets on restart) ----------
 @api_router.post("/visits")
 async def track_visit(request: Request):
