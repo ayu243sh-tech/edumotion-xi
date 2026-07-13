@@ -100,58 +100,9 @@ async def search(q: str = "", class_id: Optional[str] = None, subject_id: Option
     return {"count": len(results), "results": results}
     // src/components/CurrentAffairsFAB.jsx
     
-import { useState, useEffect } from "react";
-import { Newspaper, X } from "lucide-react";
-import { api } from "@/lib/api";
-
-export default function CurrentAffairsFAB() {
-  const [open, setOpen] = useState(false);
-  const [cards, setCards] = useState([]);
-  const [index, setIndex] = useState(0);
-  const [flipped, setFlipped] = useState(false);
-
-  useEffect(() => {
-    if (open && cards.length === 0) {
-      api.get("/catalog/current-affairs").then((r) => setCards(r.data));
-    }
-  }, [open]);
-
-  const next = () => {
-    setFlipped(false);
-    setIndex((i) => (i + 1) % cards.length);
-  };
-
-  return (
-    <>
-      <button
-        onClick={() => setOpen(true)}
-        className="fixed bottom-6 left-6 z-40 flex items-center gap-2 bg-[#F5B400] hover:bg-[#D99E00] text-[#292524] pl-4 pr-5 py-3 rounded-full shadow-lg"
-      >
-        <Newspaper className="w-5 h-5" />
-        <span className="text-sm font-semibold">Current Affairs</span>
-      </button>
-
-      {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm" onClick={() => setOpen(false)}>
-          <div className="bg-white w-[90%] max-w-md rounded-[20px] p-6 relative" onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => setOpen(false)} className="absolute top-4 right-4 text-[#78716C]"><X /></button>
-            {cards.length === 0 ? (
-              <div className="text-center text-[#78716C] py-10">Loading...</div>
-            ) : (
-              <>
-                <button onClick={() => setFlipped(!flipped)} className="w-full min-h-[160px] flex items-center justify-center text-center p-6 bg-[#FAF9F6] rounded-2xl border">
-                  <span className="font-display text-lg">{flipped ? cards[index].back : cards[index].front}</span>
-                </button>
-                <button onClick={next} className="mt-4 w-full bg-[#7B1E1E] text-white rounded-full py-2.5 font-semibold">Next</button>
-              </>
-            )}
-          </div>
-        </div>
-      )}
-    </>
-  );
-}
-
+@api_router.get("/catalog/current-affairs")
+async def current_affairs():
+    return CURRENT_AFFAIRS
 # ---------- Visits (in-memory, resets on restart) ----------
 @api_router.post("/visits")
 async def track_visit(request: Request):
