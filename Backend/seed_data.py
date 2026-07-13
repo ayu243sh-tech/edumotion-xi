@@ -10,7 +10,7 @@ CLASSES = [
 
 SUBJECTS = [
     {"id": "mathematics", "name": "Mathematics", "icon": "Sigma", "color": "#962A2A", "classes": ["class-9", "class-10", "class-11", "class-12"]},
-    {"id": "geography", "name": "geography", "icon": "Globe2", "color": "#B45309", "classes": ["class-9", "class-10", "class-11", "class-12"]},
+    {"id": "geography", "name": "Geography", "icon": "Globe2", "color": "#B45309", "classes": ["class-9", "class-10", "class-11", "class-12"]},
     {"id": "english", "name": "English", "icon": "BookOpen", "color": "#0F766E", "classes": ["class-9", "class-10", "class-11", "class-12"]},
     {"id": "hindi", "name": "Hindi", "icon": "Languages", "color": "#F5B400", "classes": ["class-9", "class-10"]},
     {"id": "computer", "name": "Computer", "icon": "Cpu", "color": "#1E40AF", "classes": ["class-9", "class-10"]},
