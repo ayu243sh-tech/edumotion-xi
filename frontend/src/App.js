@@ -4,17 +4,13 @@ import { Toaster } from "@/components/ui/sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatFAB from "@/components/AIChatFAB";
+import CurrentAffairsFAB from "@/components/CurrentAffairsFAB";
 
 import Home from "@/pages/Home";
 import Dashboard from "@/pages/Dashboard";
 import Search from "@/pages/Search";
 import ClassDetail from "@/pages/ClassDetail";
 import Chapter from "@/pages/Chapter";
-import CurrentAffairsFAB from "@/components/CurrentAffairsFAB";
-// ...
-<AIChatFAB />
-<CurrentAffairsFAB />
-}
 
 function Layout() {
   return (
@@ -23,6 +19,7 @@ function Layout() {
       <main className="min-h-[60vh]"><Outlet /></main>
       <Footer />
       <AIChatFAB />
+      <CurrentAffairsFAB />
     </>
   );
 }
