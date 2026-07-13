@@ -626,7 +626,5 @@ CURRENT_AFFAIRS = [
     {"front": "World Tourism Day", "back": "September 27."},
     {"front": "International Day of Older Persons", "back": "October 1."},
 ]
-    
-]
 
 
