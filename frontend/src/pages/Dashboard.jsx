@@ -178,7 +178,7 @@ export default function Dashboard() {
          </div>
        </div>
       <audio controls loop className="w-full" data-testid="study-music-player">
-       <source src="/music/calm-study.mp3" type="audio/mpeg" />
+       <source src="https://drive.google.com/file/d/1hZd972sXMN1e0a0iMhHWG8DFlRuj90Ax/preview" type="audio/mpeg" />
       Your browser does not support the audio element.
      </audio>
     <p className="text-xs text-[#78716C] mt-3">Play calm background music while you study — pause anytime.</p>
