@@ -85,7 +85,15 @@ async def search(q: str = "", class_id: Optional[str] = None, subject_id: Option
             continue
         results.append({"type": "chapter", "id": ch["id"], "title": ch["name"], "subject_id": ch["subject_id"], "class_id": ch["class_id"], "difficulty": ch["difficulty"]})
     if not type or type == "upload":
+        chapter_lookup = {c["id"]: c for c in CHAPTERS}
         for u in LATEST_UPLOADS:
+            linked_chapter = chapter_lookup.get(u["chapter_id"])
+            if not linked_chapter:
+                continue  # upload points to a chapter that no longer exists — skip it
+            if class_id and linked_chapter["class_id"] != class_id:
+                continue
+            if subject_id and linked_chapter["subject_id"] != subject_id:
+                continue
             if q_lower and q_lower not in u["title"].lower():
                 continue
             results.append({"type": u["type"], "id": u["id"], "title": u["title"], "chapter_id": u["chapter_id"]})
