@@ -185,10 +185,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Right column: Calendar, Leaderboard, Achievements, Recent */}
-        <div className="md:col-span-4 space-y-6">
-
-
+  
         {/* Right column: Calendar, Leaderboard, Achievements, Recent */}
         <div className="md:col-span-4 space-y-6">
           <div className="bg-white rounded-[20px] border border-[#E7E5E4] p-5 bento-shadow" data-testid="study-planner">
