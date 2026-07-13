@@ -517,5 +517,12 @@ ACHIEVEMENTS = [
     {"id": "first-100", "name": "First 100 Chapters", "icon": "📚", "description": "Completed your first 100 chapters"},
     {"id": "quiz-master", "name": "Quiz Master", "icon": "🏆", "description": "Aced 25 chapter quizzes"},
     {"id": "perfect", "name": "Perfect Score", "icon": "⭐", "description": "Scored 100% in a chapter test"},
+   ],
+}
+    CURRENT_AFFAIRS = [
+    {"front": "Who is the current President of India?", "back": "Droupadi Murmu (since July 2022)."},
+    {"front": "What is India's most recent Union Budget year?", "back": "2026-27, presented by Finance Minister Nirmala Sitharaman."},
+    # add more — update this list whenever you want fresh content
 ]
+
 
