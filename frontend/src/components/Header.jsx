@@ -27,6 +27,7 @@ export default function Header() {
             <span className="inline-flex items-center gap-1"><Search className="w-4 h-4"/> Search</span>
           </NavLink>
           <NavLink to="/dashboard" className={({isActive}) => isActive ? "text-[#7B1E1E]" : "text-[#292524] hover:text-[#7B1E1E]"} data-testid="nav-dashboard">Dashboard</NavLink>
+          <NavLink to="/library" className={({isActive}) => isActive ? "text-[#7B1E1E]" : "text-[#292524] hover:text-[#7B1E1E]"}>Library</NavLink>
         </nav>
 
         <div className="flex items-center gap-3">
