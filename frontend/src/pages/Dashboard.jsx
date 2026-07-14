@@ -153,7 +153,7 @@ export default function Dashboard() {
             <div className="flex items-center justify-between mb-6">
               <div>
                 <div className="text-xs uppercase tracking-[0.2em] font-mono-em text-[#78716C]">Performance</div>
-               <h3 className="font-display text-xl font-bold mt-1">Weekly study time</h3>
+                <h3 className="font-display text-xl font-bold mt-1">Weekly study time</h3>
               </div>
               <div className="text-sm text-[#78716C]">{weekly_minutes.reduce((a, b) => a + b, 0)} min total</div>
             </div>
@@ -169,7 +169,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-         {/* Calm Study Music */}
+          {/* Calm Study Music */}
           <div className="bg-white rounded-[20px] border border-[#E7E5E4] p-6 bento-shadow" data-testid="study-music-card">
             <div className="flex items-center justify-between mb-4">
               <div>
@@ -178,6 +178,9 @@ export default function Dashboard() {
               </div>
             </div>
             <audio controls loop className="w-full" data-testid="study-music-player">
+              {/* TODO: replace with a working link once the MP3 is compressed under ~50MB.
+                  Drive's /uc?export=download intercepts large files with a warning page
+                  instead of streaming raw audio, which breaks this player. */}
               <source src="https://drive.google.com/uc?export=download&id=1hZd972sXMN1e0a0iMhHWG8DFlRuj90Ax" type="audio/mpeg" />
               Your browser does not support the audio element.
             </audio>
@@ -185,7 +188,6 @@ export default function Dashboard() {
           </div>
         </div>
 
-  
         {/* Right column: Calendar, Leaderboard, Achievements, Recent */}
         <div className="md:col-span-4 space-y-6">
           <div className="bg-white rounded-[20px] border border-[#E7E5E4] p-5 bento-shadow" data-testid="study-planner">
