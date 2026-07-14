@@ -106,6 +106,22 @@ async def search(q: str = "", class_id: Optional[str] = None, subject_id: Option
 async def current_affairs():
     return CURRENT_AFFAIRS
 
+@api_router.get("/catalog/books")
+async def get_books(class_id: Optional[str] = None, subject_id: Optional[str] = None):
+    items = BOOKS
+    if class_id:
+        items = [b for b in items if b["class_id"] == class_id]
+    if subject_id:
+        items = [b for b in items if b["subject_id"] == subject_id]
+    return items
+
+@api_router.get("/catalog/books/{book_id}")
+async def get_book(book_id: str):
+    book = next((b for b in BOOKS if b["id"] == book_id), None)
+    if not book:
+        raise HTTPException(status_code=404, detail="Book not found")
+    return book
+
 
 # ---------- Visits (in-memory, resets on restart) ----------
 @api_router.post("/visits")
