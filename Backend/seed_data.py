@@ -90,12 +90,11 @@ CHAPTERS = [
 # NOTE: "drive_link" added below as a placeholder — replace with the actual
 # Google Drive link once you've uploaded the corresponding file.
 LATEST_UPLOADS = [
-    {"id": "u1", "type": "notes", "title": "Electricity – Complete Revision PDF", "chapter_id": "ch-electricity", "date": "2026-02-10", "drive_link": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/view"},
-    {"id": "u2", "type": "video", "title": "Light: Spherical Mirrors Explained", "chapter_id": "ch-light", "date": "2026-02-09", "drive_link": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/view"},
-    {"id": "u3", "type": "test", "title": "Quadratic Equations – Chapter Test", "chapter_id": "ch-quadratic", "date": "2026-02-08", "drive_link": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/view"},
-    {"id": "u4", "type": "notes", "title": "Life Processes – Mind Map", "chapter_id": "ch-life-processes", "date": "2026-02-07", "drive_link": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/view"},
-    {"id": "u5", "type": "video", "title": "Kinematics: Motion Graphs", "chapter_id": "ch-kinematics", "date": "2026-02-06", "drive_link": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/view"},
-    {"id": "u6", "type": "test", "title": "Trigonometry Quick Quiz", "chapter_id": "ch-trigonometry", "date": "2026-02-05", "drive_link": "https://drive.google.com/file/d/YOUR_FILE_ID_HERE/view"},
+    {"id": "u1", "type": "notes", "title": "Kings, Farmers and Towns – PYQ Set", "chapter_id": "ch2-Kinf-farmer", "date": "2026-07-12", "drive_link": "https://drive.google.com/file/d/1oF-hlEFEzpl3dxlideCTcdZDqLe0XDCz/view"},
+    {"id": "u2", "type": "notes", "title": "The Cold War Era – Notes", "chapter_id": "ch12-polsci-coldwar", "date": "2026-07-12", "drive_link": "https://drive.google.com/file/d/184Ff26mXJtiBFt0vUQmzBk4AeyfbV5Zo/view"},
+    {"id": "u3", "type": "notes", "title": "Lost Spring – Notes", "chapter_id": "ch12-eng-lost-spring", "date": "2026-07-12", "drive_link": "https://drive.google.com/file/d/1_GP8Y8A4YRvci2wE18ZOFlPDhFmV8Yen/view"},
+    {"id": "u4", "type": "notes", "title": "My Mother at Sixty-Six – Notes", "chapter_id": "ch12-eng-mother-66", "date": "2026-07-12", "drive_link": "https://drive.google.com/file/d/1fORYTFagw7MQTgzzsynGTqh4fYVR2bWo/view"},
+    {"id": "u5", "type": "notes", "title": "Management of Sports Events – Notes", "chapter_id": "ch12-pe-sports-mgmt", "date": "2026-07-12", "drive_link": "https://drive.google.com/file/d/1pt8UwXsb8ORk1JsGBta95a5yYN6LyNw9/view"},
 ]
 
 REVIEWS = [
