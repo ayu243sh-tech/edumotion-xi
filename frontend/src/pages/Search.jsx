@@ -28,6 +28,7 @@ export default function Search() {
     });
   }, []);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const p = { q };
     if (classId) p.class_id = classId;
