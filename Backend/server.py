@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from seed_data import (
     CLASSES, SUBJECTS, CHAPTERS, LATEST_UPLOADS, REVIEWS,
     LEADERBOARD, PYQ_QUESTIONS, FLASHCARDS, QUIZZES, ACHIEVEMENTS,
-    CURRENT_AFFAIRS,
+    CURRENT_AFFAIRS, BOOKS,
 )
 
 ROOT_DIR = Path(__file__).parent
