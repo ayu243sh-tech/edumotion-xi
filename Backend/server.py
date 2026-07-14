@@ -59,7 +59,8 @@ async def get_chapter(chapter_id: str):
 
 @api_router.get("/catalog/latest-uploads")
 async def latest_uploads():
-    return LATEST_UPLOADS
+    chapter_ids = {c["id"] for c in CHAPTERS}
+    return [u for u in LATEST_UPLOADS if u["chapter_id"] in chapter_ids]
 
 @api_router.get("/catalog/reviews")
 async def reviews():
