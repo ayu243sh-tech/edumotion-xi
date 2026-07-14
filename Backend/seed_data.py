@@ -1,7 +1,152 @@
 """Seed catalog: classes, subjects, chapters, notes, videos, tests, PYQs, reviews."""
 from datetime import datetime, timezone
 
-CLASSES = [
+CLASSES = [05:41:48.251 Running build in Washington, D.C., USA (East) – iad1
+05:41:48.252 Build machine configuration: 2 cores, 8 GB
+05:41:48.378 Cloning github.com/ayu243sh-tech/edumotion-xi (Branch: main, Commit: ec18eaa)
+05:41:48.380 Previous build caches not available.
+05:41:48.828 Cloning completed: 450.000ms
+05:41:49.185 Running "vercel build"
+05:41:49.211 Vercel CLI 55.0.0
+05:41:50.025 Running "install" command: `yarn install`...
+05:41:50.378 yarn install v1.22.19
+05:41:50.411 info No lockfile found.
+05:41:50.423 [1/4] Resolving packages...
+05:41:51.455 warning Resolution field "underscore@1.13.8" is incompatible with requested version "underscore@1.13.6"
+05:41:51.663 warning Resolution field "uuid@11.1.1" is incompatible with requested version "uuid@^8.3.2"
+05:41:52.528 warning svgo@2.8.1: included some *.test.js files by mistake, the test files were omitted in v2.8.2
+05:41:52.551 warning svgo > stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+05:41:55.565 warning Resolution field "form-data@4.0.4" is incompatible with requested version "form-data@^4.0.5"
+05:41:56.753 warning Resolution field "resolve-url-loader@5.0.0" is incompatible with requested version "resolve-url-loader@^4.0.0"
+05:41:56.754 warning Resolution field "webpack-dev-server@5.2.4" is incompatible with requested version "webpack-dev-server@^4.6.0"
+05:41:56.990 warning react-scripts > eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+05:41:57.188 warning react-scripts > workbox-webpack-plugin@6.6.1: this package has been deprecated
+05:41:57.240 warning Resolution field "serialize-javascript@7.0.5" is incompatible with requested version "serialize-javascript@^6.0.0"
+05:41:57.604 warning react-scripts > eslint > @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+05:41:57.699 warning react-scripts > @svgr/webpack > @svgr/plugin-svgo > svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+05:41:57.704 warning react-scripts > @svgr/webpack > @svgr/plugin-svgo > svgo > stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+05:41:57.707 warning Resolution field "nth-check@2.0.1" is incompatible with requested version "nth-check@^1.0.2"
+05:41:57.791 warning react-scripts > source-map-loader > abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+05:41:57.809 warning Resolution field "@babel/plugin-transform-modules-systemjs@7.29.4" is incompatible with requested version "@babel/plugin-transform-modules-systemjs@^7.29.7"
+05:41:57.936 warning react-scripts > react-dev-utils > fork-ts-checker-webpack-plugin > memfs@3.6.0: this will be v4
+05:41:58.223 warning react-scripts > babel-preset-react-app > @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+05:41:58.241 warning react-scripts > babel-preset-react-app > @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+05:41:58.243 warning react-scripts > babel-preset-react-app > @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+05:41:58.247 warning react-scripts > babel-preset-react-app > @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+05:41:58.250 warning react-scripts > babel-preset-react-app > @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+05:41:58.258 warning react-scripts > babel-preset-react-app > @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+05:41:58.413 warning react-scripts > workbox-webpack-plugin > workbox-build@6.6.1: this package has been deprecated
+05:41:58.429 warning react-scripts > workbox-webpack-plugin > workbox-build > source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+05:41:58.505 warning react-scripts > jest > @jest/core > rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+05:41:58.823 warning react-scripts > eslint > file-entry-cache > flat-cache > rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+05:41:58.916 warning react-scripts > eslint > @humanwhocodes/config-array > @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+05:41:59.600 warning react-scripts > react-dev-utils > fork-ts-checker-webpack-plugin > glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+05:41:59.600 warning react-scripts > workbox-webpack-plugin > workbox-build > glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+05:41:59.601 warning react-scripts > jest > @jest/core > rimraf > glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+05:41:59.601 warning react-scripts > jest > jest-cli > jest-config > glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+05:41:59.601 warning react-scripts > jest > @jest/core > jest-runtime > glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+05:41:59.602 warning react-scripts > jest > @jest/core > @jest/reporters > glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+05:41:59.602 warning react-scripts > babel-jest > babel-plugin-istanbul > test-exclude > glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+05:41:59.831 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-sw@6.6.1: this package has been deprecated
+05:41:59.834 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-core@6.6.1: this package has been deprecated
+05:41:59.837 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-window@6.6.1: this package has been deprecated
+05:41:59.839 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-window > workbox-core@6.6.1: this package has been deprecated
+05:41:59.842 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-recipes@6.6.1: this package has been deprecated
+05:41:59.846 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-recipes > workbox-core@6.6.1: this package has been deprecated
+05:41:59.856 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-streams@6.6.1: this package has been deprecated
+05:41:59.857 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-streams > workbox-core@6.6.1: this package has been deprecated
+05:41:59.862 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-routing@6.6.1: this package has been deprecated
+05:41:59.862 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-recipes > workbox-routing@6.6.1: this package has been deprecated
+05:41:59.863 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-streams > workbox-routing@6.6.1: this package has been deprecated
+05:41:59.863 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-routing > workbox-core@6.6.1: this package has been deprecated
+05:41:59.867 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-expiration@6.6.1: this package has been deprecated
+05:41:59.868 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-recipes > workbox-expiration@6.6.1: this package has been deprecated
+05:41:59.869 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-expiration > workbox-core@6.6.1: this package has been deprecated
+05:41:59.874 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-precaching@6.6.1: this package has been deprecated
+05:41:59.875 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-recipes > workbox-precaching@6.6.1: this package has been deprecated
+05:41:59.877 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-precaching > workbox-core@6.6.1: this package has been deprecated
+05:41:59.877 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-precaching > workbox-routing@6.6.1: this package has been deprecated
+05:41:59.885 warning react-scripts > workbox-webpack-plugin > workbox-build > rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+05:41:59.887 warning Resolution field "serialize-javascript@7.0.5" is incompatible with requested version "serialize-javascript@^4.0.0"
+05:41:59.894 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-strategies@6.6.1: this package has been deprecated
+05:41:59.895 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-recipes > workbox-strategies@6.6.1: this package has been deprecated
+05:41:59.895 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-precaching > workbox-strategies@6.6.1: this package has been deprecated
+05:41:59.896 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-strategies > workbox-core@6.6.1: this package has been deprecated
+05:41:59.904 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-range-requests@6.6.1: this package has been deprecated
+05:41:59.906 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-range-requests > workbox-core@6.6.1: this package has been deprecated
+05:41:59.908 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-background-sync@6.6.1: this package has been deprecated
+05:41:59.910 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-background-sync > workbox-core@6.6.1: this package has been deprecated
+05:41:59.912 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-broadcast-update@6.6.1: this package has been deprecated
+05:41:59.913 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-broadcast-update > workbox-core@6.6.1: this package has been deprecated
+05:41:59.924 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-google-analytics@6.6.1: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+05:41:59.927 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-google-analytics > workbox-core@6.6.1: this package has been deprecated
+05:41:59.928 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-google-analytics > workbox-routing@6.6.1: this package has been deprecated
+05:41:59.928 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-google-analytics > workbox-strategies@6.6.1: this package has been deprecated
+05:41:59.928 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-google-analytics > workbox-background-sync@6.6.1: this package has been deprecated
+05:41:59.933 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-cacheable-response@6.6.1: workbox-background-sync@6.6.1
+05:41:59.934 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-recipes > workbox-cacheable-response@6.6.1: workbox-background-sync@6.6.1
+05:41:59.935 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-cacheable-response > workbox-core@6.6.1: this package has been deprecated
+05:41:59.939 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-navigation-preload@6.6.1: this package has been deprecated
+05:41:59.940 warning react-scripts > workbox-webpack-plugin > workbox-build > workbox-navigation-preload > workbox-core@6.6.1: this package has been deprecated
+05:42:00.541 warning react-scripts > @svgr/webpack > @svgr/plugin-svgo > svgo > coa > q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+05:42:00.541 
+05:42:00.542 (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+05:42:00.923 warning react-scripts > react-dev-utils > fork-ts-checker-webpack-plugin > glob > inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+05:42:01.593 warning react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+05:42:01.756 warning react-scripts > workbox-webpack-plugin > workbox-build > @rollup/plugin-replace > magic-string > sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+05:42:01.795 warning react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > data-urls > abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+05:42:01.799 warning react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+05:42:01.803 warning react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > domexception@2.0.1: Use your platform's native DOMException instead
+05:42:01.815 warning react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > whatwg-encoding@1.0.5: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+05:42:01.819 warning Resolution field "@tootallnate/once@2.0.1" is incompatible with requested version "@tootallnate/once@1"
+05:42:01.828 warning react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > html-encoding-sniffer > whatwg-encoding@1.0.5: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+05:42:02.516 warning @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+05:42:02.702 warning Resolution field "@eslint/plugin-kit@0.3.4" is incompatible with requested version "@eslint/plugin-kit@^0.2.7"
+05:42:02.717 warning Resolution field "js-yaml@4.1.1" is incompatible with requested version "js-yaml@^4.3.0"
+05:42:02.901 [2/4] Fetching packages...
+05:42:32.395 [3/4] Linking dependencies...
+05:42:32.398 warning " > @babel/plugin-transform-modules-systemjs@7.29.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+05:42:32.399 warning "@babel/plugin-transform-modules-systemjs > @babel/helper-module-transforms@7.29.7" has unmet peer dependency "@babel/core@^7.0.0".
+05:42:32.400 warning "webpack-dev-server > webpack-dev-middleware > memfs@4.64.0" has unmet peer dependency "tslib@2".
+05:42:32.422 warning " > react-day-picker@8.10.1" has incorrect peer dependency "date-fns@^2.28.0 || ^3.0.0".
+05:42:32.423 warning " > react-day-picker@8.10.1" has incorrect peer dependency "react@^16.8.0 || ^17.0.0 || ^18.0.0".
+05:42:32.427 warning "react-scripts > react-dev-utils > fork-ts-checker-webpack-plugin@6.5.3" has unmet peer dependency "typescript@>= 2.7".
+05:42:32.431 warning " > @babel/plugin-proposal-private-property-in-object@7.21.11" has unmet peer dependency "@babel/core@^7.0.0-0".
+05:42:32.434 warning "react-scripts > eslint-config-react-app > eslint-plugin-flowtype@8.0.3" has unmet peer dependency "@babel/plugin-syntax-flow@^7.14.5".
+05:42:32.434 warning "react-scripts > eslint-config-react-app > eslint-plugin-flowtype@8.0.3" has unmet peer dependency "@babel/plugin-transform-react-jsx@^7.14.9".
+05:42:32.444 warning "react-scripts > eslint-config-react-app > @typescript-eslint/eslint-plugin > tsutils@3.21.0" has unmet peer dependency "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta".
+05:42:32.448 warning " > recharts@3.6.0" has unmet peer dependency "react-is@^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0".
+05:42:32.449 warning "@craco/craco > cosmiconfig-typescript-loader@1.0.9" has unmet peer dependency "@types/node@*".
+05:42:32.450 warning "@craco/craco > cosmiconfig-typescript-loader@1.0.9" has unmet peer dependency "typescript@>=3".
+05:42:32.451 warning "@craco/craco > cosmiconfig-typescript-loader > ts-node@10.9.2" has unmet peer dependency "@types/node@*".
+05:42:32.451 warning "@craco/craco > cosmiconfig-typescript-loader > ts-node@10.9.2" has unmet peer dependency "typescript@>=2.7".
+05:42:32.496 warning Workspaces can only be enabled in private projects.
+05:42:32.528 warning Workspaces can only be enabled in private projects.
+05:42:52.308 [4/4] Building fresh packages...
+05:42:53.814 success Saved lockfile.
+05:42:53.838 Done in 63.46s.
+05:42:55.707 yarn run v1.22.19
+05:42:55.738 $ craco build
+05:42:57.091 (node:343) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+05:42:57.092 (Use `node --trace-deprecation ...` to show where the warning was created)
+05:42:57.094 Creating an optimized production build...
+05:43:24.938 
+05:43:24.938 Treating warnings as errors because process.env.CI = true.
+05:43:24.939 Most CI servers set it automatically.
+05:43:24.940 
+05:43:24.940 Failed to compile.
+05:43:24.941 
+05:43:24.941 [eslint] 
+05:43:24.941 src/components/CurrentAffairsFAB.jsx
+05:43:24.941   Line 14:6:  React Hook useEffect has a missing dependency: 'cards.length'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+05:43:24.942 
+05:43:24.942 src/pages/Search.jsx
+05:43:24.942   Line 38:6:  React Hook useEffect has a missing dependency: 'setParams'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+05:43:24.942 
+05:43:24.943 
+05:43:25.030 error Command failed with exit code 1.
+05:43:25.030 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+05:43:25.063 Error: Command "yarn build" exited with 1
     {"id": "class-9", "name": "Class 9", "tag": "Foundation Builder", "color": "#7B1E1E"},
     {"id": "class-10", "name": "Class 10", "tag": "Board Year", "color": "#962A2A"},
     {"id": "class-11", "name": "Class 11", "tag": "Stream Choice", "color": "#F5B400"},
@@ -65,10 +210,10 @@ CHAPTERS = [
     {"id": "ch12-One-party", "class_id": "class-12", "subject_id": "political-science", "name": "Era of One Party Dominance", "difficulty": "Easy", "duration": "2h 50m", "thumbnail": "https://images.pexels.com/photos/20474699/pexels-photo-20474699.jpeg", "trending": False, "overview": "Origins of the Cold War, alliances, arms race, and non-alignment.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1-ieHvjpFvKxTWZ3EKcw0nsZU1VO3O8f-/preview"},
 
     # Economics
-   {"id": "ch12-eco-national-income", "class_id": "class-12", "subject_id": "economics", "name": "National Income Accounting", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
-     {"id": "ch2-Indian-eco-eve", "class_id": "class-12", "subject_id": "economics", "name": "Indian Economy on the eve of Independence", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
-     {"id": "ch12-Indian-1950-90", "class_id": "class-12", "subject_id": "economics", "name": "Indian Economy 1950-1990", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
-     {"id": "ch3-Economics-refoms", "class_id": "class-12", "subject_id": "economics", "name": "Economics reforms since 1991", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+   {"id": "ch12-eco-national-income", "class_id": "class-12", "subject_id": "economics", "name": "National Income Accounting", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/8139596/pexels-photo-8139596.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+     {"id": "ch2-Indian-eco-eve", "class_id": "class-12", "subject_id": "economics", "name": "Indian Economy on the eve of Independence", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/14907338/pexels-photo-14907338.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+     {"id": "ch12-Indian-1950-90", "class_id": "class-12", "subject_id": "economics", "name": "Indian Economy 1950-1990", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/13369323/pexels-photo-13369323.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+     {"id": "ch3-Economics-refoms", "class_id": "class-12", "subject_id": "economics", "name": "Economics reforms since 1991", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/15195538/pexels-photo-15195538.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
     
     # ---------- CLASS 12 - Physical Education ----------
     {"id": "ch12-pe-sports-mgmt", "class_id": "class-12", "subject_id": "physical-education", "name": "Management of Sports Events", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/9276888/pexels-photo-9276888.jpeg", "trending": False, "overview": "Planning, organizing committees, budgeting, and conducting tournaments.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1pt8UwXsb8ORk1JsGBta95a5yYN6LyNw9/preview"},
