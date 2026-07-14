@@ -7,6 +7,7 @@ export default function CurrentAffairsFAB() {
   const [cards, setCards] = useState([]);
   const [flippedIdx, setFlippedIdx] = useState(null);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (open && cards.length === 0) {
       api.get("/catalog/current-affairs").then((r) => setCards(r.data));
