@@ -147,6 +147,11 @@ PYQ_QUESTIONS = {
         {"year": 2023, "q": "Decribe any three features of ancient numismatics."},
         {"year": 2022, "q": "Examine the nature and characteristics of the land grants in ancient Indian Society."},
         {"year": 2022, "q": "Mauryan Empire was considered as a major landmark in Indian history.Justify the statement."},
+        {"year": 2024, "q": "How do historians came to know about the Mauryas?Explain the administrative structure of the Mauryan Empire?"},
+        {"year": 2023, "q": "Ashokan icscriptions are the most significant sources to understand the administration of Ashoka. Explain the statement."},
+        {"year": 2022, "q": "Examine the various strategies used to enhance agricultural output from the sixth BCE onwards."},
+        {"year": 2022, "q": "How do coinage in ancient India contribute to trade and develpment?"},
+        
     ],
     "ch12-polsci-coldwar": [
         {"year": 2019, "q": "Explain any three reasons each for the 'arms race' as well as the 'arms control' during the Cold War."},
