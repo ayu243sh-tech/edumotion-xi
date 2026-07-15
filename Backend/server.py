@@ -1,6 +1,7 @@
 from fastapi import FastAPI, APIRouter, HTTPException, Request
 from starlette.middleware.cors import CORSMiddleware
 import os
+import httpx
 import logging
 from pathlib import Path
 from dotenv import load_dotenv
@@ -122,7 +123,40 @@ async def get_book(book_id: str):
         raise HTTPException(status_code=404, detail="Book not found")
     return book
 
+GEMINI_SYSTEM_PROMPT = (
+    "You are Edumotion AI, a friendly and encouraging study assistant for Indian "
+    "school students in Classes 9-12 (CBSE board). Explain concepts clearly and "
+    "step by step, using simple language. Keep answers focused and exam-relevant. "
+    "If asked something outside academics, gently redirect to studies."
+)
 
+@api_router.post("/ai/chat")
+async def ai_chat(request: Request):
+    body = await request.json()
+    message = body.get("message", "").strip()
+    if not message:
+        raise HTTPException(status_code=400, detail="Message is required")
+
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        raise HTTPException(status_code=500, detail="AI service is not configured")
+
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
+    payload = {
+        "contents": [{"parts": [{"text": message}]}],
+        "systemInstruction": {"parts": [{"text": GEMINI_SYSTEM_PROMPT}]},
+    }
+
+    try:
+        async with httpx.AsyncClient(timeout=30) as client:
+            resp = await client.post(url, json=payload)
+        data = resp.json()
+        reply = data["candidates"][0]["content"]["parts"][0]["text"]
+    except Exception:
+        reply = "Sorry, I couldn't reach the AI right now. Please try again in a moment."
+
+    return {"reply": reply}
+    
 # ---------- Visits (in-memory, resets on restart) ----------
 @api_router.post("/visits")
 async def track_visit(request: Request):
