@@ -58,10 +58,10 @@ CHAPTERS = [
 # ---------- CLASS 11 (continued) ----------
     # Political Science
     {"id": "ch11-polsci-constitution", "class_id": "class-11", "subject_id": "political-science", "name": "Constitution: Why and How?", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/12367652/pexels-photo-12367652.jpeg", "trending": False, "overview": "Need for a constitution, constituent assembly, and its guiding values.", "video_url": "https://youtu.be/embed/yQCLtPkACi8?si=HeNaUKaCnyFnk600", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/previe"},
-    {"id": "ch11-polsci-rights", "class_id": "class-11", "subject_id": "political-science", "name": "Rights in the Indian Constitution", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/12367652/pexels-photo-12367652.jpeg", "trending": False, "overview": "Need for a constitution, constituent assembly, and its guiding values.", "video_url": "", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/previe"},
-    {"id": "ch11-polsci-theory", "class_id": "class-11", "subject_id": "political-science", "name": "Political Theory- an introduction", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/12367652/pexels-photo-12367652.jpeg", "trending": False, "overview": "Need for a constitution, constituent assembly, and its guiding values.", "video_url": "https://youtu.be/embed/_4VcIXo3lPY?si=FOUdrThwD4ZxXJZV", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/previe"},
-    {"id": "ch11-polsci-freedom", "class_id": "class-11", "subject_id": "political-science", "name": "Freedom", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/12367652/pexels-photo-12367652.jpeg", "trending": False, "overview": "Need for a constitution, constituent assembly, and its guiding values.", "video_url": "https://youtu.be/embed/jFAPd57uRPg?si=rol2SCxDpUjEuuiV", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/previe"},
-    {"id": "ch11-polsci-election", "class_id": "class-11", "subject_id": "political-science", "name": "ELection and Representation", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/12367652/pexels-photo-12367652.jpeg", "trending": False, "overview": "Need for a constitution, constituent assembly, and its guiding values.", "video_url": "https://youtu.be/embed/LJFYFURGlBc?si=URnS0RmIkvj6YI4z", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/previe"},
+    {"id": "ch11-polsci-rights", "class_id": "class-11", "subject_id": "political-science", "name": "Rights in the Indian Constitution", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/12367652/pexels-photo-12367652.jpeg", "trending": False, "overview": "Fundamental Rights, freedoms, and constitutional protection of citizens.", "video_url": "", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/previe"},
+    {"id": "ch11-polsci-theory", "class_id": "class-11", "subject_id": "political-science", "name": "Political Theory- an introduction", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/12367652/pexels-photo-12367652.jpeg", "trending": False, "overview": "Political theory, key concepts, and its role in understanding politics.", "video_url": "https://youtu.be/embed/_4VcIXo3lPY?si=FOUdrThwD4ZxXJZV", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/previe"},
+    {"id": "ch11-polsci-freedom", "class_id": "class-11", "subject_id": "political-science", "name": "Freedom", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/12367652/pexels-photo-12367652.jpeg", "trending": False, "overview": "Freedom, rights, equality, and democratic values.", "video_url": "https://youtu.be/embed/jFAPd57uRPg?si=rol2SCxDpUjEuuiV", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/previe"},
+    {"id": "ch11-polsci-election", "class_id": "class-11", "subject_id": "political-science", "name": "ELection and Representation", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/12367652/pexels-photo-12367652.jpeg", "trending": False, "overview": "Elections, voting, representation, and India's democratic process.", "video_url": "https://youtu.be/embed/LJFYFURGlBc?si=URnS0RmIkvj6YI4z", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/previe"},
 
     # Economics
     {"id": "ch11-eco-basics", "class_id": "class-11", "subject_id": "economics", "name": "Introduction to Economics", "difficulty": "Easy", "duration": "2h 00m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Scarcity, choice, opportunity cost, and central problems of an economy.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
@@ -69,13 +69,16 @@ CHAPTERS = [
     # ---------- CLASS 12 (continued) ----------
     # Political Science
     {"id": "ch12-polsci-coldwar", "class_id": "class-12", "subject_id": "political-science", "name": "The Cold War Era", "difficulty": "Medium", "duration": "3h 00m", "thumbnail": "https://images.pexels.com/photos/10181132/pexels-photo-10181132.jpeg", "trending": False, "overview": "Origins of the Cold War, alliances, arms race, and non-alignment.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/184Ff26mXJtiBFt0vUQmzBk4AeyfbV5Zo/preview"},
-    {"id": "ch12-One-party", "class_id": "class-12", "subject_id": "political-science", "name": "Era of One Party Dominance", "difficulty": "Easy", "duration": "2h 50m", "thumbnail": "https://images.pexels.com/photos/20474699/pexels-photo-20474699.jpeg", "trending": False, "overview": "Origins of the Cold War, alliances, arms race, and non-alignment.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1-ieHvjpFvKxTWZ3EKcw0nsZU1VO3O8f-/preview"},
+    {"id": "ch12-One-party", "class_id": "class-12", "subject_id": "political-science", "name": "Era of One Party Dominance", "difficulty": "Easy", "duration": "2h 50m", "thumbnail": "https://images.pexels.com/photos/20474699/pexels-photo-20474699.jpeg", "trending": False, "overview": "Congress dominance, early elections, opposition parties, and Indian democracy after independence.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1-ieHvjpFvKxTWZ3EKcw0nsZU1VO3O8f-/preview"},
+    { "id": "ch12-planned-development", "class_id": "class-12", "subject_id": "political-science", "name": "Politics of Planned Development", "difficulty": "Medium", "duration": "3h 10m", "thumbnail": "https://images.pexels.com/photos/4386366/pexels-photo-4386366.jpeg", "trending": False, "overview": "Five-Year Plans, mixed economy, public sector, Green Revolution, and economic development in independent India.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+    {"id":"ch12-india-external-relations","class_id":"class-12","subject_id":"political-science","name":"India's External Relations","difficulty":"Medium","duration":"3h 00m","thumbnail":"https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg","trending":False,"overview":"India's foreign policy, Panchsheel, NAM, relations with neighbours, and major international events.","video_url":"https://www.youtube.com/embed/YOUR_VIDEO_ID","notes_pdf":"https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+    {"id":"ch12-congress-system","class_id":"class-12","subject_id":"political-science","name":"Challenges to and Restoration of the Congress System","difficulty":"Medium","duration":"3h 15m","thumbnail":"https://images.pexels.com/photos/1550337/pexels-photo-1550337.jpeg","trending":False,"overview":"Political challenges, 1967 elections, Congress split, Emergency, and restoration of the Congress system.","video_url":"https://www.youtube.com/embed/YOUR_VIDEO_ID","notes_pdf":"https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
 
     # Economics
    {"id": "ch12-eco-national-income", "class_id": "class-12", "subject_id": "economics", "name": "National Income Accounting", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/8139596/pexels-photo-8139596.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
-     {"id": "ch2-Indian-eco-eve", "class_id": "class-12", "subject_id": "economics", "name": "Indian Economy on the eve of Independence", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/14907338/pexels-photo-14907338.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
-     {"id": "ch12-Indian-1950-90", "class_id": "class-12", "subject_id": "economics", "name": "Indian Economy 1950-1990", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/13369323/pexels-photo-13369323.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
-     {"id": "ch3-Economics-refoms", "class_id": "class-12", "subject_id": "economics", "name": "Economics reforms since 1991", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/15195538/pexels-photo-15195538.jpeg", "trending": False, "overview": "GDP, GNP, NDP, and methods of measuring national income.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+     {"id": "ch2-Indian-eco-eve", "class_id": "class-12", "subject_id": "economics", "name": "Indian Economy on the eve of Independence", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/14907338/pexels-photo-14907338.jpeg", "trending": False, "overview": "Colonial economic conditions, stagnant agriculture, limited industrialisation, and underdeveloped infrastructure before independence.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+     {"id": "ch12-Indian-1950-90", "class_id": "class-12", "subject_id": "economics", "name": "Indian Economy 1950-1990", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/13369323/pexels-photo-13369323.jpeg", "trending": False, "overview": "Planned development, public sector expansion, Green Revolution, and economic policies in India from 1950–1990.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+     {"id": "ch3-Economics-refoms", "class_id": "class-12", "subject_id": "economics", "name": "Economics reforms since 1991", "difficulty": "Hard", "duration": "3h 45m", "thumbnail": "https://images.pexels.com/photos/15195538/pexels-photo-15195538.jpeg", "trending": False, "overview": "Liberalisation, privatisation, globalisation, and the transformation of India's economy since 1991.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
     
     # ---------- CLASS 12 - Physical Education ----------
     {"id": "ch12-pe-sports-mgmt", "class_id": "class-12", "subject_id": "physical-education", "name": "Management of Sports Events", "difficulty": "Medium", "duration": "2h 30m", "thumbnail": "https://images.pexels.com/photos/9276888/pexels-photo-9276888.jpeg", "trending": False, "overview": "Planning, organizing committees, budgeting, and conducting tournaments.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1pt8UwXsb8ORk1JsGBta95a5yYN6LyNw9/preview"},
@@ -83,6 +86,7 @@ CHAPTERS = [
     {"id": "ch12-pe-women-sports", "class_id": "class-12", "subject_id": "physical-education", "name": "Children and Women in Sports", "difficulty": "Easy", "duration": "2h 00m", "thumbnail": "https://images.pexels.com/photos/38366608/pexels-photo-38366608.jpeg", "trending": False, "overview": "Motor development in children, common sports injuries, and women's participation in sports.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1zyoMikKbezxsoqpFEal8iYKrkLg-xaAc/preview"},
 
     {"id": "ch12-pe-yoga-lifestyle", "class_id": "class-12", "subject_id": "physical-education", "name": "Yoga as Preventive Measure for Lifestyle Disease", "difficulty": "Easy", "duration": "2h 15m", "thumbnail": "https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg", "trending": False, "overview": "Obesity, diabetes, asthma, hypertension, and back pain management through yoga.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+    {"id": "ch12-pe-cwsn", "class_id": "class-12", "subject_id": "physical-education", "name": "Physical Education and Sports for CWSN", "difficulty": "Easy", "duration": "2h 15m", "thumbnail": "https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg", "trending": False, "overview": ""overview": "Inclusion, adapted sports, disability classification, and rehabilitation through physical education."", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1P4ooYoN8oYExB3_bf1FwNzTIwZW2c25T/preview"},
 
     # ---------- CLASS 12 - English ----------
     {"id": "ch12-eng-last-lesson", "class_id": "class-12", "subject_id": "english", "name": "The Third Level", "difficulty": "Easy", "duration": "1h 30m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Alsace under Prussian rule, loss of language and identity, and the value of one's mother tongue.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1QAFnoWnOPvbrc-NhfGnq5XIMjScsy0dV/preview"},
@@ -280,6 +284,57 @@ PYQ_QUESTIONS = {
         {"year": 2019, "q": "Why does Tishani Doshi call her trip to Antarctica a 'Journey to the End of the Earth'?"},
         {"year": 2022, "q": "Identify Tishani Doshi's writing style in the chapter and state two aspects that characterise it, using examples from the text."},
     ],
+    "ch12-planned-development": [
+    {"year": 2024, "q": "Explain the objectives of the First Five-Year Plan."},
+    {"year": 2024, "q": "Describe the features of India's mixed economy."},
+    {"year": 2023, "q": "Why did India adopt the strategy of planned development after Independence?"},
+    {"year": 2023, "q": "Explain any three achievements of the Green Revolution."},
+    {"year": 2022, "q": "Discuss the role of the Planning Commission in India's development."},
+    {"year": 2022, "q": "Differentiate between public sector and private sector."},
+    {"year": 2021, "q": "What were the major objectives of the Second Five-Year Plan?"},
+    {"year": 2021, "q": "Explain the criticism of the mixed economy model."},
+    {"year": 2020, "q": "Why was agriculture given priority in the First Five-Year Plan?"},
+    {"year": 2020, "q": "Explain the impact of land reforms in India."},
+    {"year": 2019, "q": "Describe the contribution of P.C. Mahalanobis in India's planning process."},
+    {"year": 2019, "q": "Explain the importance of heavy industries in India's economic development."},
+    {"year": 2018, "q": "State the major features of India's economic planning."},
+    {"year": 2017, "q": "Evaluate the successes and failures of planned development."},
+    {"year": 2016, "q": "Discuss the objectives of land reforms after Independence."},
+],
+"ch12-india-external-relations":[
+{"year":2024,"q":"Explain the basic principles of India's foreign policy."},
+{"year":2024,"q":"Describe the significance of Panchsheel Agreement."},
+{"year":2023,"q":"Discuss India's role in the Non-Aligned Movement."},
+{"year":2023,"q":"Explain India's relations with China after Independence."},
+{"year":2022,"q":"Why did India adopt the policy of Non-Alignment?"},
+{"year":2022,"q":"Discuss the causes and consequences of the 1962 India-China War."},
+{"year":2021,"q":"Explain India's role during the Bangladesh Liberation War of 1971."},
+{"year":2021,"q":"Describe India's relations with Pakistan after Independence."},
+{"year":2020,"q":"Explain the importance of Panchsheel in international relations."},
+{"year":2020,"q":"Discuss the objectives of India's foreign policy."},
+{"year":2019,"q":"Explain the role of Jawaharlal Nehru in shaping India's foreign policy."},
+{"year":2019,"q":"Describe the significance of the Shimla Agreement."},
+{"year":2018,"q":"Discuss the causes of the India-China border dispute."},
+{"year":2017,"q":"Evaluate India's contribution to world peace."},
+{"year":2016,"q":"Explain India's relations with Nepal and Sri Lanka."},
+],
+"ch12-congress-system":[
+{"year":2024,"q":"Explain the causes of the split in the Congress party in 1969."},
+{"year":2024,"q":"Discuss the significance of the 1967 General Elections."},
+{"year":2023,"q":"Explain the main features of the Emergency (1975–77)."},
+{"year":2023,"q":"Why is the 1967 election considered a political turning point?"},
+{"year":2022,"q":"Describe the reasons for the restoration of the Congress system in 1971."},
+{"year":2022,"q":"Explain the slogan 'Garibi Hatao' and its political significance."},
+{"year":2021,"q":"Discuss the impact of the Emergency on Indian democracy."},
+{"year":2021,"q":"Explain the rise of non-Congress governments after 1967."},
+{"year":2020,"q":"Why was the Congress party divided in 1969?"},
+{"year":2020,"q":"Describe the role of Indira Gandhi in restoring the Congress system."},
+{"year":2019,"q":"Explain the significance of the Janata Party government."},
+{"year":2019,"q":"Discuss the consequences of the Emergency."},
+{"year":2018,"q":"Explain the reasons behind the victory of Congress in the 1971 elections."},
+{"year":2017,"q":"Describe the political developments between 1967 and 1977."},
+{"year":2016,"q":"Explain any three effects of the Emergency on Indian politics."},
+],
         
         
 }
@@ -432,6 +487,93 @@ FLASHCARDS = {
         {"front": "Journey details", "back": "Crossed 9 time zones, 6 checkpoints, and 3 bodies of water; the trip lasted nearly 100 hours."},
         {"front": "Environmental message", "back": "Antarctica's simple ecosystem is highly sensitive to human interference, warning of risks like ozone depletion."},
     ],
+    "ch12-planned-development": [
+
+{"front":"Planning Commission","back":"Established in 1950 to formulate Five-Year Plans for India's economic development."},
+
+{"front":"First Five-Year Plan","back":"1951–56; focused mainly on agriculture, irrigation and rehabilitation after Partition."},
+
+{"front":"Second Five-Year Plan","back":"1956–61; based on Mahalanobis Model emphasizing heavy industries."},
+
+{"front":"Mixed Economy","back":"An economic system where both public and private sectors coexist."},
+
+{"front":"Public Sector","back":"Industries owned and controlled by the government."},
+
+{"front":"Private Sector","back":"Industries owned by individuals or companies."},
+
+{"front":"P.C. Mahalanobis","back":"Economist who designed the Second Five-Year Plan focusing on industrialisation."},
+
+{"front":"Land Reforms","back":"Measures to abolish zamindari and improve farmers' ownership rights."},
+
+{"front":"Green Revolution","back":"Increase in food grain production using HYV seeds, fertilizers and irrigation."},
+
+{"front":"HYV Seeds","back":"High Yielding Variety seeds introduced during the Green Revolution."},
+
+{"front":"Food Security","back":"Ensuring sufficient food supply for the population."},
+
+{"front":"Heavy Industries","back":"Industries producing machinery, steel and infrastructure equipment."},
+
+{"front":"Self-Reliance","back":"Reducing dependence on imports through domestic production."},
+
+{"front":"Import Substitution","back":"Producing goods domestically instead of importing them."},
+
+{"front":"Five-Year Plans","back":"Government plans prepared every five years for economic growth."},
+
+{"front":"Economic Planning","back":"Government's systematic effort to allocate resources for development."},
+
+{"front":"Nehru's Vision","back":"Industrialisation with democratic socialism and scientific development."},
+
+{"front":"Planning vs Market","back":"Planning emphasizes government control while markets rely on demand and supply."},
+
+{"front":"Achievements","back":"Industrial growth, irrigation projects and increased agricultural production."},
+
+{"front":"Limitations","back":"Slow growth, poverty, unemployment and regional inequalities remained."},
+],
+"ch12-india-external-relations":[
+{"front":"Foreign Policy","back":"A country's strategy for dealing with other nations."},
+{"front":"Architect of Foreign Policy","back":"Jawaharlal Nehru played the leading role in shaping India's foreign policy."},
+{"front":"Panchsheel","back":"Five Principles of Peaceful Coexistence signed by India and China in 1954."},
+{"front":"Five Principles","back":"Mutual respect, non-aggression, non-interference, equality, peaceful coexistence."},
+{"front":"NAM","back":"Non-Aligned Movement formed in 1961 to remain independent of Cold War blocs."},
+{"front":"NAM Founders","back":"Nehru, Tito, Nasser, Sukarno and Nkrumah."},
+{"front":"Bandung Conference","back":"Held in Indonesia in 1955; promoted Afro-Asian solidarity."},
+{"front":"India-China War","back":"Fought in 1962 over border disputes."},
+{"front":"McMahon Line","back":"Boundary between India and China in the eastern sector."},
+{"front":"India-Pakistan War 1965","back":"Conflict mainly over Kashmir."},
+{"front":"Bangladesh War","back":"1971 war led to the creation of Bangladesh."},
+{"front":"Shimla Agreement","back":"Signed in 1972 between India and Pakistan after the 1971 war."},
+{"front":"SAARC","back":"South Asian Association for Regional Cooperation established in 1985."},
+{"front":"Peaceful Coexistence","back":"Respecting sovereignty and avoiding conflicts."},
+{"front":"Non-Alignment","back":"Not joining either the US or Soviet bloc."},
+{"front":"Neighbourhood Policy","back":"Maintaining peaceful relations with neighbouring countries."},
+{"front":"UN Peacekeeping","back":"India has contributed troops to many UN peacekeeping missions."},
+{"front":"Strategic Autonomy","back":"Freedom to take independent foreign policy decisions."},
+{"front":"Objectives","back":"Peace, security, development and international cooperation."},
+{"front":"Importance","back":"Protects national interests while promoting global peace."},
+],
+"ch12-congress-system":[
+{"front":"1967 Elections","back":"Marked the decline of Congress dominance in several states."},
+{"front":"Political Earthquake","back":"The 1967 elections significantly changed Indian politics."},
+{"front":"Congress Split","back":"Occurred in 1969 due to differences between Indira Gandhi and the Syndicate."},
+{"front":"Syndicate","back":"Group of senior Congress leaders opposing Indira Gandhi."},
+{"front":"Congress (O)","back":"Organisation Congress formed after the 1969 split."},
+{"front":"Congress (R)","back":"Requisitionists led by Indira Gandhi after the split."},
+{"front":"Garibi Hatao","back":"Popular slogan used by Indira Gandhi in the 1971 elections."},
+{"front":"1971 Elections","back":"Congress (R) won a massive majority under Indira Gandhi."},
+{"front":"Emergency","back":"Declared on 25 June 1975 under Article 352."},
+{"front":"Emergency Period","back":"Lasted from 1975 to 1977."},
+{"front":"Reasons for Emergency","back":"Internal disturbance and political instability were cited."},
+{"front":"Civil Liberties","back":"Many Fundamental Rights were suspended during the Emergency."},
+{"front":"Press Censorship","back":"Newspapers were subjected to government censorship."},
+{"front":"Janata Party","back":"Formed by opposition parties to defeat Congress in 1977."},
+{"front":"1977 Elections","back":"Congress lost power for the first time at the Centre."},
+{"front":"Morarji Desai","back":"First non-Congress Prime Minister of India."},
+{"front":"Congress Restoration","back":"Congress returned to power in 1980 under Indira Gandhi."},
+{"front":"Political Opposition","back":"Became stronger after the decline of one-party dominance."},
+{"front":"Indian Democracy","back":"Remained resilient despite political crises."},
+{"front":"Significance","back":"Marked the transition from one-party dominance to competitive politics."},
+],
+
 }
 
 QUIZZES = {
@@ -631,6 +773,73 @@ QUIZZES = {
         {"q": "The journey crossed how many time zones?", "options": ["Five", "Seven", "Nine", "Twelve"], "answer": 2},
         {"q": "Why is Antarctica important for climate study?", "options": ["It has no ice", "Its ice cores preserve climate history", "It has dense biodiversity", "It has active volcanoes"], "answer": 1},
     ],
+    "ch12-planned-development":[
+{"q":"The Planning Commission was established in:","options":["1947","1950","1952","1956"],"answer":1},
+{"q":"The First Five-Year Plan began in:","options":["1948","1950","1951","1952"],"answer":2},
+{"q":"The Second Five-Year Plan emphasized:","options":["Agriculture","Heavy Industries","Education","Health"],"answer":1},
+{"q":"Who prepared the model for the Second Five-Year Plan?","options":["Nehru","P.C. Mahalanobis","B.R. Ambedkar","Rajendra Prasad"],"answer":1},
+{"q":"India adopted which economic model?","options":["Capitalist","Socialist","Mixed Economy","Communist"],"answer":2},
+{"q":"The First Five-Year Plan mainly focused on:","options":["Steel","Agriculture","Defence","Transport"],"answer":1},
+{"q":"Which sector was reserved mainly for the government?","options":["Public Sector","Private Sector","Cooperative Sector","Foreign Sector"],"answer":0},
+{"q":"The Green Revolution is associated with:","options":["Tourism","Agriculture","Mining","Banking"],"answer":1},
+{"q":"HYV stands for:","options":["High Yielding Variety","High Year Value","Hybrid Yield Venture","High Yield Value"],"answer":0},
+{"q":"Land reforms aimed to abolish:","options":["Monarchy","Zamindari","Panchayats","Municipalities"],"answer":1},
+{"q":"Heavy industries include:","options":["Steel Plants","Hotels","Schools","Hospitals"],"answer":0},
+{"q":"Who was India's first Prime Minister?","options":["Rajendra Prasad","Jawaharlal Nehru","Lal Bahadur Shastri","Indira Gandhi"],"answer":1},
+{"q":"Planning in India was inspired mainly by:","options":["USA","Britain","Soviet Union","Japan"],"answer":2},
+{"q":"The objective of self-reliance was:","options":["Increase imports","Reduce dependence on imports","Increase taxes","Increase tourism"],"answer":1},
+{"q":"Which plan emphasized rapid industrialisation?","options":["First","Second","Third","Fourth"],"answer":1},
+{"q":"Five-Year Plans were prepared by:","options":["Election Commission","Planning Commission","Finance Commission","NITI Aayog"],"answer":1},
+{"q":"Green Revolution mainly increased production of:","options":["Tea","Cotton","Food Grains","Coffee"],"answer":2},
+{"q":"The mixed economy combines:","options":["Agriculture and Mining","Public and Private sectors","Exports and Imports","Banks and Markets"],"answer":1},
+{"q":"The main aim of economic planning was:","options":["Economic Development","War","Colonisation","Privatisation"],"answer":0},
+{"q":"Which crop benefited the most from the Green Revolution initially?","options":["Wheat","Tea","Cotton","Sugarcane"],"answer":0},
+],
+"ch12-india-external-relations":[
+{"q":"Who is regarded as the architect of India's foreign policy?","options":["Sardar Patel","Jawaharlal Nehru","Rajendra Prasad","Lal Bahadur Shastri"],"answer":1},
+{"q":"Panchsheel Agreement was signed in:","options":["1952","1954","1956","1962"],"answer":1},
+{"q":"Panchsheel was signed between:","options":["India and Pakistan","India and China","India and Nepal","India and Sri Lanka"],"answer":1},
+{"q":"NAM was established in:","options":["1955","1961","1965","1971"],"answer":1},
+{"q":"The first NAM Summit was held at:","options":["Bandung","Belgrade","New Delhi","Cairo"],"answer":1},
+{"q":"Which country fought a war with India in 1962?","options":["Pakistan","China","Nepal","Sri Lanka"],"answer":1},
+{"q":"The India-China War was mainly due to:","options":["Trade","Border dispute","Water dispute","Nuclear issue"],"answer":1},
+{"q":"Bangladesh became independent in:","options":["1965","1971","1975","1980"],"answer":1},
+{"q":"The Shimla Agreement was signed in:","options":["1971","1972","1975","1985"],"answer":1},
+{"q":"India follows which foreign policy?","options":["Military Alliance","Non-Alignment","Colonialism","Isolation"],"answer":1},
+{"q":"Bandung Conference was held in:","options":["India","Indonesia","China","Egypt"],"answer":1},
+{"q":"Which organization promotes cooperation in South Asia?","options":["NATO","SAARC","ASEAN","EU"],"answer":1},
+{"q":"SAARC was established in:","options":["1975","1985","1991","2001"],"answer":1},
+{"q":"The McMahon Line is associated with:","options":["India-China Border","India-Pakistan Border","India-Nepal Border","India-Bangladesh Border"],"answer":0},
+{"q":"The main objective of Panchsheel was:","options":["War","Peaceful coexistence","Trade monopoly","Colonisation"],"answer":1},
+{"q":"Which war resulted in the creation of Bangladesh?","options":["1947 War","1965 War","1971 War","1999 War"],"answer":2},
+{"q":"Which Prime Minister signed the Panchsheel Agreement?","options":["Indira Gandhi","Jawaharlal Nehru","Morarji Desai","Rajiv Gandhi"],"answer":1},
+{"q":"India has actively participated in:","options":["UN Peacekeeping Missions","NATO Operations","Warsaw Pact","Colonial Expansion"],"answer":0},
+{"q":"Non-Alignment means:","options":["Joining NATO","Remaining independent of power blocs","Supporting USSR only","Avoiding diplomacy"],"answer":1},
+{"q":"The primary aim of India's foreign policy is:","options":["Expansion","Peace and National Interest","Colonisation","Military Rule"],"answer":1},
+],
+"ch12-congress-system":[
+{"q":"The General Elections of 1967 are known for:","options":["Congress expansion","Political turning point","Emergency","LPG reforms"],"answer":1},
+{"q":"The Congress party split in:","options":["1965","1967","1969","1971"],"answer":2},
+{"q":"Who led Congress (R)?","options":["Morarji Desai","Indira Gandhi","Jagjivan Ram","Kamaraj"],"answer":1},
+{"q":"The slogan 'Garibi Hatao' was given by:","options":["Jawaharlal Nehru","Indira Gandhi","Rajiv Gandhi","Lal Bahadur Shastri"],"answer":1},
+{"q":"Emergency was declared in:","options":["1971","1975","1977","1980"],"answer":1},
+{"q":"Emergency was declared under which Article?","options":["352","356","370","324"],"answer":0},
+{"q":"Emergency lasted from:","options":["1975–77","1967–69","1971–72","1980–82"],"answer":0},
+{"q":"During the Emergency, which rights were restricted?","options":["Fundamental Rights","Property Rights only","Voting Rights","Directive Principles"],"answer":0},
+{"q":"Who was the Prime Minister during the Emergency?","options":["Jawaharlal Nehru","Indira Gandhi","Rajiv Gandhi","Morarji Desai"],"answer":1},
+{"q":"The Janata Party came to power in:","options":["1971","1975","1977","1980"],"answer":2},
+{"q":"India's first non-Congress Prime Minister was:","options":["Charan Singh","Atal Bihari Vajpayee","Morarji Desai","V.P. Singh"],"answer":2},
+{"q":"Congress returned to power in:","options":["1977","1980","1984","1989"],"answer":1},
+{"q":"The 1971 election gave Congress a:","options":["Minority","Coalition","Massive Majority","Hung Parliament"],"answer":2},
+{"q":"The Syndicate consisted of:","options":["Judges","Congress leaders","Military officers","Governors"],"answer":1},
+{"q":"The 1967 elections weakened:","options":["Supreme Court","Congress dominance","Election Commission","President"],"answer":1},
+{"q":"Press censorship was imposed during:","options":["Green Revolution","Emergency","1962 War","NAM Summit"],"answer":1},
+{"q":"The Emergency is often viewed as a challenge to:","options":["Federalism","Democracy","Judiciary","Secularism"],"answer":1},
+{"q":"Which leader restored Congress to power in 1980?","options":["Rajiv Gandhi","Indira Gandhi","Nehru","Morarji Desai"],"answer":1},
+{"q":"The Congress split mainly occurred because of:","options":["Language issue","Leadership conflict","Foreign policy","Border dispute"],"answer":1},
+{"q":"The period after 1967 marked the rise of:","options":["One-party rule","Coalition and opposition politics","Military rule","Monarchy"],"answer":1},
+],
+
 }
 ACHIEVEMENTS = [
     {"id": "streak-7", "name": "7-Day Streak", "icon": "🔥", "description": "Studied 7 days in a row"},
