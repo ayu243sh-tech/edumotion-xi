@@ -148,14 +148,20 @@ async def ai_chat(request: Request):
     }
 
     try:
-        async with httpx.AsyncClient(timeout=30) as client:
-            resp = await client.post(url, json=payload)
-        data = resp.json()
-        reply = data["candidates"][0]["content"]["parts"][0]["text"]
-    except Exception:
-        reply = "Sorry, I couldn't reach the AI right now. Please try again in a moment."
+       async with httpx.AsyncClient(timeout=30) as client:
+        resp = await client.post(url, json=payload)
 
-    return {"reply": reply}
+    print("Status:", resp.status_code)
+    print("Response:", resp.text)
+
+    resp.raise_for_status()
+
+    data = resp.json()
+    reply = data["candidates"][0]["content"]["parts"][0]["text"]
+
+except Exception as e:
+    print("Gemini Error:", e)
+    raise HTTPException(status_code=500, detail=str(e))
     
 # ---------- Visits (in-memory, resets on restart) ----------
 @api_router.post("/visits")
