@@ -751,12 +751,12 @@ CURRENT_AFFAIRS = [
 
 BOOKS = [
     {
-        "id": "book-phy-11-p1",
-        "title": "Physics Class 11 (Part 1)",
-        "author": "NCERT",
+        "id": "book-phy-12",
+        "title": "Physical Education 12th",
+        "author": "Edumotion",
         "cover": "https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg",
-        "class_id": "class-11",
-        "subject_id": "physics",
+        "class_id": "class-12",
+        "subject_id": "physical-education",
         "total_pages": 250,
         "pdf_url": "https://drive.google.com/file/d/YOUR_FILE_ID/preview",
         "chapters": [
