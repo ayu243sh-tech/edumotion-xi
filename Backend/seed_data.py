@@ -21,6 +21,8 @@ SUBJECTS = [
     {"id": "political-science", "name": "Political Science", "icon": "Landmark", "color": "#B45309", "classes": ["class-9","class-10","class-11", "class-12"]},
     {"id": "economics", "name": "Economics", "icon": "IndianRupee", "color": "#B45309", "classes": ["class-9", "class-10","class-11", "class-12"]},
     {"id": "physical-education", "name": "Physical Education", "icon": "Dumbbell", "color": "#0F766E", "classes": ["class-12","class-11"]},
+    {"id": "Soci-ology", "name": "Sociology", "icon": "BookOpen", "color": "#7B1E1E", "classes": ["class-12","class-11"]},
+    {"id": "pyscho-logy", "name": "Psychology", "icon": "BookOpen", "color": "#B45309", "classes": ["class-12","class-11"]},
     
 ]
 
