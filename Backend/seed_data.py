@@ -84,12 +84,12 @@ CHAPTERS = [
 
     # ---------- CLASS 12 - English ----------
     {"id": "ch12-eng-last-lesson", "class_id": "class-12", "subject_id": "english", "name": "The Third Level", "difficulty": "Easy", "duration": "1h 30m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Alsace under Prussian rule, loss of language and identity, and the value of one's mother tongue.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1QAFnoWnOPvbrc-NhfGnq5XIMjScsy0dV/preview"},
-
     {"id": "ch12-eng-lost-spring", "class_id": "class-12", "subject_id": "english", "name": "Lost Spring", "difficulty": "Medium", "duration": "1h 45m", "thumbnail": "https://images.pexels.com/photos/2616865/pexels-photo-2616865.jpeg", "trending": False, "overview": "Childhood lost to poverty, child labour, and broken promises in Saheb and Mukesh's stories.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1_GP8Y8A4YRvci2wE18ZOFlPDhFmV8Yen/preview"},
-
     {"id": "ch12-eng-mother-66", "class_id": "class-12", "subject_id": "english", "name": "My Mother at Sixty-Six", "difficulty": "Easy", "duration": "1h 00m", "thumbnail": "https://images.pexels.com/photos/14183652/pexels-photo-14183652.jpeg", "trending": False, "overview": "Ageing, mortality, and a daughter's fear of losing her mother, told through a car ride to the airport.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/1fORYTFagw7MQTgzzsynGTqh4fYVR2bWo/preview"},
-
     {"id": "ch12-eng-deep-water", "class_id": "class-12", "subject_id": "english", "name": "Deep Water", "difficulty": "Medium", "duration": "1h 45m", "thumbnail": "https://images.pexels.com/photos/32511262/pexels-photo-32511262.jpeg", "trending": False, "overview": "William Douglas's childhood fear of water and how he overcame it through determination.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+    {"id": "ch12-eng-tiger-king", "class_id": "class-12", "subject_id": "english", "name": "The Tiger King", "difficulty": "Medium", "duration": "1h 45m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "A satire on a Maharaja who defies a prophecy of death by a tiger, only to be killed by a wooden toy tiger's splinter.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+    {"id": "ch12-eng-last-lesson-daudet", "class_id": "class-12", "subject_id": "english", "name": "The Last Lesson", "difficulty": "Easy", "duration": "1h 15m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Alsace under Prussian rule, the loss of the French language, and the value of one's mother tongue.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
+    {"id": "ch12-eng-journey-earth", "class_id": "class-12", "subject_id": "english", "name": "Journey to the End of the Earth", "difficulty": "Medium", "duration": "1h 30m", "thumbnail": "https://images.pexels.com/photos/YOUR_PHOTO_ID/pexels-photo-YOUR_PHOTO_ID.jpeg", "trending": False, "overview": "Tishani Doshi's expedition to Antarctica and what it reveals about Earth's geological history and climate change.", "video_url": "https://www.youtube.com/embed/YOUR_VIDEO_ID", "notes_pdf": "https://drive.google.com/file/d/YOUR_FILE_ID/preview"},
 ]
 
 # NOTE: "drive_link" added below as a placeholder — replace with the actual
@@ -259,6 +259,25 @@ PYQ_QUESTIONS = {
         {"year": 2011, "q": "Describe how Buddha's teachings have been reconstructed from the stories of the Sutta Pitaka."},
         {"year": 2014, "q": "Explain the ideas of Buddha and Mahavira on the authority of the Vedas."},
     ],
+    "ch12-eng-tiger-king": [
+        {"year": 2017, "q": "How did the Maharaja deal with the high-ranking British officer who wanted to shoot a tiger?"},
+        {"year": 2017, "q": "Which problem did the Maharaja face when he had killed seventy tigers? How did he solve it?"},
+        {"year": 2017, "q": "How did the Tiger King die? Did the astrologer's prediction come true?"},
+        {"year": 2018, "q": "'Knowing too much of your future is never a good thing.' Examine how knowing the future paved the way for the king's end."},
+        {"year": 2019, "q": "Did the prophecy of the astrologer come true at the end of the story? How?"},
+    ],
+    "ch12-eng-last-lesson-daudet": [
+        {"year": 2019, "q": "What changes did the order from Berlin cause in the school that day?"},
+        {"year": 2018, "q": "How did Franz's feelings about M. Hamel and school change during the last lesson?"},
+        {"year": 2017, "q": "Why did M. Hamel find it difficult to continue teaching towards the end of the lesson?"},
+        {"year": 2016, "q": "What was the reaction of the elderly villagers who came to attend the last lesson?"},
+    ],
+    "ch12-eng-journey-earth": [
+        {"year": 2011, "q": "How do geological phenomena help us to know about the history of mankind?"},
+        {"year": 2020, "q": "What are the reasons for the melting of ice-shelves in Antarctica?"},
+        {"year": 2019, "q": "Why does Tishani Doshi call her trip to Antarctica a 'Journey to the End of the Earth'?"},
+        {"year": 2022, "q": "Identify Tishani Doshi's writing style in the chapter and state two aspects that characterise it, using examples from the text."},
+    ],
         
         
 }
@@ -389,6 +408,27 @@ FLASHCARDS = {
         {"front": "Sangha", "back": "The organization of Buddhist monks and nuns (bhikkhus and bhikkhunis) who spread the Buddha's teachings."},
         {"front": "Symbols of the Buddha", "back": "Early Buddhist art avoided depicting the Buddha directly, using symbols like the empty seat, the wheel, and the stupa instead."},
         {"front": "Begums of Bhopal", "back": "Shahjehan Begum and Sultan Jehan Begum funded the preservation of the Sanchi stupa, helping it survive intact."},
+    ],
+    "ch12-eng-tiger-king": [
+        {"front": "Author", "back": "Kalki (pen name of R. Krishnamurthy) — the story is a satire on royal arrogance."},
+        {"front": "The prophecy", "back": "An astrologer predicts the infant prince will be killed by the hundredth tiger he encounters."},
+        {"front": "How the king dies", "back": "Ironically killed by a splinter from a wooden toy tiger, after having 'killed' 100 real tigers."},
+        {"front": "Theme", "back": "Fate cannot be escaped; also a satire on the arrogance and irresponsibility of those in power."},
+        {"front": "The dewan's trick", "back": "When the king couldn't find a 100th tiger, the dewan arranged a tame one to be shot to complete the count."},
+    ],
+    "ch12-eng-last-lesson-daudet": [
+        {"front": "Author", "back": "Alphonse Daudet — set in Alsace, France, during Prussian annexation."},
+        {"front": "M. Hamel", "back": "The French teacher giving his final lesson before German replaces French in schools."},
+        {"front": "Franz", "back": "The young narrator who regrets not having studied harder, realizing the value of his lesson only now."},
+        {"front": "Theme", "back": "The importance of one's mother tongue and the pain of losing cultural/linguistic identity under occupation."},
+        {"front": "Ending", "back": "M. Hamel writes 'Vive La France!' on the blackboard, unable to speak further, as the lesson ends."},
+    ],
+    "ch12-eng-journey-earth": [
+        {"front": "Author", "back": "Tishani Doshi — recounts her expedition to Antarctica aboard the Akademik Shokalskiy."},
+        {"front": "Gondwana", "back": "The ancient supercontinent that included India and Antarctica, existing around 650 million years ago."},
+        {"front": "Why Antarctica matters", "back": "Its ice cores preserve records of Earth's climate history, helping scientists study past and future changes."},
+        {"front": "Journey details", "back": "Crossed 9 time zones, 6 checkpoints, and 3 bodies of water; the trip lasted nearly 100 hours."},
+        {"front": "Environmental message", "back": "Antarctica's simple ecosystem is highly sensitive to human interference, warning of risks like ozone depletion."},
     ],
 }
 
@@ -566,6 +606,28 @@ QUIZZES = {
         {"q": "Which symbol was commonly used to represent the Buddha in early art?", "options": ["A lion", "An empty seat", "A crown", "A sword"], "answer": 1},
         {"q": "New tradition within Buddhism emphasizing devotion was called:", "options": ["Hinayana", "Mahayana", "Digambara", "Shwetambara"], "answer": 1},
         {"q": "Fa Xian and Xuan Zang traveled to India from:", "options": ["Japan", "China", "Sri Lanka", "Persia"], "answer": 1},
+    ],
+    "ch12-eng-tiger-king": [
+        {"q": "Who wrote 'The Tiger King'?", "options": ["R.K. Narayan", "Kalki", "Ruskin Bond", "Khushwant Singh"], "answer": 1},
+        {"q": "The astrologer predicted the king would be killed by:", "options": ["A snake", "The hundredth tiger", "A horse", "Poison"], "answer": 1},
+        {"q": "How did the Tiger King actually die?", "options": ["A tiger attack", "A splinter from a wooden toy tiger", "Old age", "A hunting accident"], "answer": 1},
+        {"q": "How many tigers had the king killed before facing difficulty finding more?", "options": ["50", "70", "90", "99"], "answer": 1},
+        {"q": "The story is primarily a:", "options": ["Tragedy", "Satire", "Romance", "Mystery"], "answer": 1},
+        {"q": "Who secretly arranged a tame tiger for the king to shoot?", "options": ["The astrologer", "The dewan", "The British officer", "The queen"], "answer": 1},
+    ],
+    "ch12-eng-last-lesson-daudet": [
+        {"q": "Who wrote 'The Last Lesson'?", "options": ["Anton Chekhov", "Alphonse Daudet", "Guy de Maupassant", "Victor Hugo"], "answer": 1},
+        {"q": "The story is set in which region?", "options": ["Alsace", "Normandy", "Provence", "Brittany"], "answer": 0},
+        {"q": "Which language was being replaced in schools?", "options": ["German replacing French", "French replacing German", "English replacing French", "Latin replacing French"], "answer": 0},
+        {"q": "What does M. Hamel write on the board at the end?", "options": ["Goodbye France", "Vive La France!", "Merci beaucoup", "Au revoir"], "answer": 1},
+        {"q": "Who is the narrator of the story?", "options": ["M. Hamel", "Franz", "The mayor", "Franz's father"], "answer": 1},
+    ],
+    "ch12-eng-journey-earth": [
+        {"q": "Who wrote 'Journey to the End of the Earth'?", "options": ["Tishani Doshi", "Anees Jung", "Kamala Das", "Ruskin Bond"], "answer": 0},
+        {"q": "The author traveled to Antarctica aboard which vessel?", "options": ["Titanic", "Akademik Shokalskiy", "Endurance", "Discovery"], "answer": 1},
+        {"q": "Antarctica and India were once part of which supercontinent?", "options": ["Pangaea", "Gondwana", "Laurasia", "Rodinia"], "answer": 1},
+        {"q": "The journey crossed how many time zones?", "options": ["Five", "Seven", "Nine", "Twelve"], "answer": 2},
+        {"q": "Why is Antarctica important for climate study?", "options": ["It has no ice", "Its ice cores preserve climate history", "It has dense biodiversity", "It has active volcanoes"], "answer": 1},
     ],
 }
 ACHIEVEMENTS = [
