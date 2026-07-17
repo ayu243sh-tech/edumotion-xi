@@ -134,6 +134,7 @@ GEMINI_SYSTEM_PROMPT = (
 async def ai_chat(request: Request):
     body = await request.json()
     message = body.get("message", "").strip()
+
     if not message:
         raise HTTPException(status_code=400, detail="Message is required")
 
@@ -141,47 +142,49 @@ async def ai_chat(request: Request):
     if not api_key:
         raise HTTPException(status_code=500, detail="AI service is not configured")
 
-    url = f"https://api.groq.com/openai/v1/chat/completions"
+    url = "https://api.groq.com/openai/v1/chat/completions"
+
     payload = {
-    "model": "llama-3.3-70b-versatile",
-    "messages": [
-        {
-            "role": "system",
-            "content": GEMINI_SYSTEM_PROMPT
-        },
-        {
-            "role": "user",
-            "content": message
-        }
-    ]
-}
-    try:
-    async with httpx.AsyncClient(timeout=30) as client:
-        resp = await client.post(
-            url,
-            json=payload,
-            headers={
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json",
+        "model": "llama-3.3-70b-versatile",
+        "messages": [
+            {
+                "role": "system",
+                "content": GEMINI_SYSTEM_PROMPT
             },
-        )
+            {
+                "role": "user",
+                "content": message
+            }
+        ]
+    }
 
-    print("Status Code:", resp.status_code)
-    print("Response:", resp.text)
+    try:
+        async with httpx.AsyncClient(timeout=30) as client:
+            resp = await client.post(
+                url,
+                json=payload,
+                headers={
+                    "Authorization": f"Bearer {api_key}",
+                    "Content-Type": "application/json",
+                },
+            )
 
-    data = resp.json()
+        print("Status Code:", resp.status_code)
+        print("Response:", resp.text)
 
-    if resp.status_code != 200:
-        print("Groq Error:", data)
-        raise Exception(data.get("error", {}).get("message", "Unknown API error"))
+        data = resp.json()
 
-    reply = data["choices"][0]["message"]["content"]
+        if resp.status_code != 200:
+            print("Groq Error:", data)
+            raise Exception(data.get("error", {}).get("message", "Unknown API error"))
 
-except Exception as e:
-    print("Groq Error:", e)
-    reply = f"Groq Error: {e}"
+        reply = data["choices"][0]["message"]["content"]
 
-return {"reply": reply}
+    except Exception as e:
+        print("Groq Error:", e)
+        reply = f"Groq Error: {e}"
+
+    return {"reply": reply}
     
 # ---------- Visits (in-memory, resets on restart) ----------
 @api_router.post("/visits")
