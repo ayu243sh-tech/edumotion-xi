@@ -54,7 +54,6 @@ export default function AIChatFAB() {
                 </div>
                 <div>
                   <div className="font-display font-bold text-[#292524]">Edumotion AI</div>
-                  <div className="text-[10px] uppercase font-mono-em tracking-[0.2em] text-[#78716C]">Powered by Gemini</div>
                 </div>
               </div>
               <button onClick={() => setOpen(false)} data-testid="ai-close-button" className="text-[#78716C] hover:text-[#7B1E1E]"><X /></button>
