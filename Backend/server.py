@@ -137,25 +137,46 @@ async def ai_chat(request: Request):
     if not message:
         raise HTTPException(status_code=400, detail="Message is required")
 
-    api_key = os.environ.get("GEMINI_API_KEY")
+    api_key = os.environ.get("EDUMOTION_API_KEY")
     if not api_key:
         raise HTTPException(status_code=500, detail="AI service is not configured")
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
+    url = f"https://api.groq.com/openai/v1/chat/completions"
     payload = {
-        "contents": [{"parts": [{"text": message}]}],
-        "systemInstruction": {"parts": [{"text": GEMINI_SYSTEM_PROMPT}]},
-    }
-
+    "model": "llama-3.3-70b-versatile",
+    "messages": [
+        {
+            "role": "system",
+            "content": GEMINI_SYSTEM_PROMPT
+        },
+        {
+            "role": "user",
+            "content": message
+        }
+    ]
+}
     try:
         async with httpx.AsyncClient(timeout=30) as client:
-            resp = await client.post(url, json=payload)
+            resp = await client.post(
+    url,
+    json=payload,
+    headers={
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+    },
+)
 
         print("Status Code:", resp.status_code)
         print("Response:", resp.text)
 
         data = resp.json()
-        reply = data["candidates"][0]["content"]["parts"][0]["text"]
+
+if resp.status_code != 200:
+    print("Groq Error:", data)
+    raise Exception(data.get("error", {}).get("message", "Unknown API error"))
+
+reply = data["choices"][0]["message"]["content"]
+        reply = data["choices"][0]["message"]["content"]
 
     except Exception as e:
         print("Gemini Error:", e)
