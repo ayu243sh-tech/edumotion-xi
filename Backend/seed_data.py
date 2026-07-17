@@ -1359,7 +1359,7 @@ BOOKS = [
         "id": "book-phys-12",
         "title": "IMPORTANT POLITICAL LEADERS",
         "author": "Edumotion",
-        "cover": ""https://images.pexels.com/photos/9276888/pexels-photo-9276888.jpeg",
+        "cover": "https://images.pexels.com/photos/9276888/pexels-photo-9276888.jpeg",
         "class_id": "class-12",
         "subject_id": "physical-education",
         "total_pages": 22,
