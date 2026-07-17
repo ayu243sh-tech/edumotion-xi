@@ -148,13 +148,13 @@ async def ai_chat(request: Request):
     }
 
     try:
-      async with httpx.AsyncClient(timeout=30) as client:
-        resp = await client.post(url, json=payload)
+     async with httpx.AsyncClient(timeout=30) as client:
+    resp = await client.post(url, json=payload)
 
-    print("Status Code:", resp.status_code)
-    print("Response:", resp.text)
+print("Status Code:", resp.status_code)
+print("Response:", resp.text)
 
-    data = resp.json()
+data = resp.json()
     reply = data["candidates"][0]["content"]["parts"][0]["text"]
 
 except Exception as e:
