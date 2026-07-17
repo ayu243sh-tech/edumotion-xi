@@ -1359,7 +1359,7 @@ BOOKS = [
         "id": "IMP_POLITICAL_LEAD",
         "title": "IMPORTANT POLITICAL LEADERS",
         "author": "EDUMOTION",
-        "cover": "https://drive.google.com/file/d/10RJnFkGDcBl-E9cDl72vpYHDlUvAb2qd/view?usp=drive_link",
+        "cover": "https://drive.google.com/file/d/10RJnFkGDcBl-E9cDl72vpYHDlUvAb2qd/preview",
         "class_id": "class-12",
         "total_pages": 22,
         "pdf_url": "https://drive.google.com/file/d/1DGgeq0SS3iGn3rIt_lJjxKtke_Zx2trR/preview",
