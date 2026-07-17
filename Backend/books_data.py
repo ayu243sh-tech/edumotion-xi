@@ -17,6 +17,22 @@ BOOKS = [
         ],
     },
     {
+        "id": "book-phys-12",
+        "title": "IMPORTANT POLITICAL LEADERS",
+        "author": "NCERT",
+        "cover": "https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg"
+        "class_id": "class-12",
+        "subject_id": "physical-education",
+        "total_pages": 22,
+        "pdf_url": "https://github.com/ayu243sh-tech/edumotion-xi/blob/d676803dddf4c942503715efeabce40283ed9776/IMPORTANT%20POLITICAL%20LEADERS.pdf",
+        "chapters": [
+            {"title": "Chaudary Charan Singh to Dr.BR Ambedkar", "page": 1},
+            {"title": "Indira Gandhi to P.V Narasimha Rao", "page": 7},
+            {"title": "Deen Dayal Upadhyay to C.N. Annadurai", "page": 13},
+            {"title": "M. Karunanidhi to V.P. Singh", "page": 19},
+        ],
+    },
+    {
         "id": "IMP_POLITICAL_LEAD",
         "title": "IMPORTANT POLITICAL LEADERS",
         "author": "EDUMOTION",
