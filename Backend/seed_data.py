@@ -1359,11 +1359,11 @@ BOOKS = [
         "id": "book-phys-12",
         "title": "IMPORTANT POLITICAL LEADERS",
         "author": "Edumotion",
-        "cover": "https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg",
+        "cover": "https://drive.google.com/file/d/10RJnFkGDcBl-E9cDl72vpYHDlUvAb2qd/preview",
         "class_id": "class-12",
         "subject_id": "physical-education",
         "total_pages": 22,
-        "pdf_url": "https://github.com/ayu243sh-tech/edumotion-xi/blob/d676803dddf4c942503715efeabce40283ed9776/IMPORTANT%20POLITICAL%20LEADERS.pdf",
+        "pdf_url": "https://drive.google.com/file/d/1DGgeq0SS3iGn3rIt_lJjxKtke_Zx2trR/preview",
         "chapters": [
             {"title": "Chaudary Charan Singh to Dr.BR Ambedkar", "page": 1},
             {"title": "Indira Gandhi to P.V Narasimha Rao", "page": 7},
