@@ -9,6 +9,8 @@ export default function AIChatFAB() {
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [lastreply, setLastReply] = useState("");
+  
   const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -24,13 +26,59 @@ export default function AIChatFAB() {
     setLoading(true);
     try {
       const res = await api.post("/ai/chat", { message: text });
-      setMessages((m) => [...m, { id: `a-${Date.now()}`, role: "assistant", content: res.data.reply }]);
+
+const reply = res.data.reply;
+
+setLastReply(reply);
+
+setMessages((m) => [
+  ...m,
+  {
+    id: `a-${Date.now()}`,
+    role: "assistant",
+    content: reply
+  }
+]);
     } catch (e) {
       setMessages((m) => [...m, { id: `a-${Date.now()}`, role: "assistant", content: "Sorry, I couldn't reach the AI right now. Please try again." }]);
     } finally {
       setLoading(false);
     }
   };
+  const downloadPDF = async (content) => {
+  try {
+    const res = await api.post(
+      "/generate-pdf",
+      {
+        title: "Edumotion AI Notes",
+        content: content,
+      },
+      {
+        responseType: "blob",
+      }
+    );
+
+    const url = window.URL.createObjectURL(new Blob([res.data]));
+
+    const link = document.createElement("a");
+
+    link.href = url;
+
+    link.download = "Edumotion_Notes.pdf";
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    link.remove();
+
+    window.URL.revokeObjectURL(url);
+
+  } catch (err) {
+    console.error(err);
+    alert("Failed to generate PDF");
+  }
+};
 
   return (
     <>
@@ -60,10 +108,27 @@ export default function AIChatFAB() {
             </div>
             <div ref={scrollRef} className="flex-1 overflow-y-auto px-5 py-4 space-y-3">
               {messages.map((m) => (
-                <div key={m.id} className={`max-w-[85%] text-sm leading-relaxed whitespace-pre-wrap ${m.role === "user" ? "ml-auto bg-[#7B1E1E] text-white rounded-2xl rounded-br-md px-4 py-2.5" : "bg-[#F5F5F4] text-[#292524] rounded-2xl rounded-bl-md px-4 py-2.5"}`}>
-                  {m.content}
-                </div>
-              ))}
+  <div key={m.id}>
+    <div
+      className={`max-w-[85%] text-sm leading-relaxed whitespace-pre-wrap ${
+        m.role === "user"
+          ? "ml-auto bg-[#7B1E1E] text-white rounded-2xl rounded-br-md px-4 py-2.5"
+          : "bg-[#F5F5F4] text-[#292524] rounded-2xl rounded-bl-md px-4 py-2.5"
+      }`}
+    >
+      {m.content}
+    </div>
+
+    {m.role === "assistant" && m.content === lastReply && (
+      <button
+        onClick={() => downloadPDF(lastReply)}
+        className="mt-2 mb-3 text-xs bg-[#F5B400] hover:bg-[#D99E00] px-3 py-1 rounded-lg"
+      >
+        📄 Download PDF
+      </button>
+    )}
+  </div>
+))}
               {loading && (
                 <div className="bg-[#F5F5F4] text-[#78716C] rounded-2xl rounded-bl-md px-4 py-2.5 max-w-[85%] flex items-center gap-2">
                   <Loader2 className="w-4 h-4 animate-spin" /> Thinking...
