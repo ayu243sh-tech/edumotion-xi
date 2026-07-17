@@ -7,7 +7,7 @@ BOOKS = [
         "class_id": "class-11",
         "subject_id": "physics",
         "total_pages": 250,
-        "pdf_url": "https://drive.google.com/file/d/YOUR_FILE_ID/preview",
+        "pdf_url": "https://github.com/ayu243sh-tech/edumotion-xi/blob/d676803dddf4c942503715efeabce40283ed9776/IMPORTANT%20POLITICAL%20LEADERS.pdf",
         "chapters": [
             {"title": "Physical World", "page": 1},
             {"title": "Units and Measurements", "page": 13},
@@ -20,7 +20,7 @@ BOOKS = [
         "id": "IMP_POLITICAL_LEAD",
         "title": "IMPORTANT POLITICAL LEADERS",
         "author": "EDUMOTION",
-        "cover": "https://drive.google.com/file/d/10RJnFkGDcBl-E9cDl72vpYHDlUvAb2qd/preview",
+        "cover": "https://github.com/ayu243sh-tech/edumotion-xi/blob/976bc6eda68532b609c971aab0eca0aceff16205/WhatsApp%20Image%202026-07-17%20at%209.14.19%20AM%20(1).jpeg",
         "class_id": "class-12",
         "total_pages": 22,
         "pdf_url": "https://github.com/ayu243sh-tech/edumotion-xi/blob/d676803dddf4c942503715efeabce40283ed9776/IMPORTANT%20POLITICAL%20LEADERS.pdf",
