@@ -17,20 +17,13 @@ BOOKS = [
         ],
     },
     {
-        "id": "book-eng-12-flamingo",
-        "title": "Flamingo — English Class 12",
-        "author": "NCERT",
-        "cover": "https://images.pexels.com/photos/2616865/pexels-photo-2616865.jpeg",
+        "id": "IMP_POLITICAL_LEAD",
+        "title": "IMPORTANT POLITICAL LEADERS",
+        "author": "EDUMOTION",
+        "cover": "https://drive.google.com/file/d/10RJnFkGDcBl-E9cDl72vpYHDlUvAb2qd/preview",
         "class_id": "class-12",
-        "subject_id": "english",
-        "total_pages": 180,
-        "pdf_url": "https://drive.google.com/file/d/YOUR_FILE_ID/preview",
-        "chapters": [
-            {"title": "The Third Level", "page": 1},
-            {"title": "Lost Spring", "page": 18},
-            {"title": "My Mother at Sixty-Six", "page": 32},
-            {"title": "Deep Water", "page": 40},
-        ],
+        "total_pages": 22,
+        "pdf_url": "https://drive.google.com/file/d/1DGgeq0SS3iGn3rIt_lJjxKtke_Zx2trR/preview",
     },
     # Add more books here, following the same structure.
     # "chapters" page numbers should match the actual PDF's page layout
