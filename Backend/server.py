@@ -1,5 +1,5 @@
 from fastapi import FastAPI, APIRouter, HTTPException, Request
-from fastapi responses import Fileresponse
+from fastapi responses import FileResponse
 from pydantic import BaseModel
 from pdf_generator import generate_pdf
 
