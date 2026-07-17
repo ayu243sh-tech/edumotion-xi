@@ -1,4 +1,8 @@
 from fastapi import FastAPI, APIRouter, HTTPException, Request
+from fastapi responses import Fileresponse
+from pydantic import BaseModel
+from pdf_generator import generate_pdf
+
 from starlette.middleware.cors import CORSMiddleware
 import os
 import httpx
@@ -22,6 +26,10 @@ api_router = APIRouter(prefix="/api")
 
 # In-memory visit counter (resets on restart — no persistence needed)
 _visits = {}  # { "2026-07-11": {"ip1", "ip2", ...} }
+
+class PDFRequest(BaseModel):
+    title: str
+    content: str
 
 
 # ---------- Catalog Routes ----------
@@ -203,6 +211,16 @@ async def visits_today():
 @api_router.get("/")
 async def root():
     return {"message": "Edumotion XI API"}
+
+@api_router.post("/generate-pdf")
+async def generate_pdf_api(request: PDFRequest):
+    pdf_path = generate_pdf(request.title, request.content)
+
+    return FileResponse(
+        pdf_path,
+        media_type="application/pdf",
+        filename=f"{request.title}.pdf"
+    )
 
 app.include_router(api_router)
 
