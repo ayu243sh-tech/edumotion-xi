@@ -147,19 +147,21 @@ async def ai_chat(request: Request):
         "systemInstruction": {"parts": [{"text": GEMINI_SYSTEM_PROMPT}]},
     }
 
-   try:
-    async with httpx.AsyncClient(timeout=30) as client:
-        resp = await client.post(url, json=payload)
+       try:
+        async with httpx.AsyncClient(timeout=30) as client:
+            resp = await client.post(url, json=payload)
 
-    print("Status Code:", resp.status_code)
-    print("Response:", resp.text)
+        print("Status Code:", resp.status_code)
+        print("Response:", resp.text)
 
-    data = resp.json()
-    reply = data["candidates"][0]["content"]["parts"][0]["text"]
+        data = resp.json()
+        reply = data["candidates"][0]["content"]["parts"][0]["text"]
 
-except Exception as e:
-    print("Gemini Error:", e)
-    reply = f"Gemini Error: {e}"
+    except Exception as e:
+        print("Gemini Error:", e)
+        reply = f"Gemini Error: {e}"
+
+    return {"reply": reply}
     
 # ---------- Visits (in-memory, resets on restart) ----------
 @api_router.post("/visits")
