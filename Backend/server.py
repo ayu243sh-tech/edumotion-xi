@@ -147,7 +147,7 @@ async def ai_chat(request: Request):
         "systemInstruction": {"parts": [{"text": GEMINI_SYSTEM_PROMPT}]},
     }
 
-       try:
+    try:
         async with httpx.AsyncClient(timeout=30) as client:
             resp = await client.post(url, json=payload)
 
