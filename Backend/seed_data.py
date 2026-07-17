@@ -1362,7 +1362,7 @@ BOOKS = [
         "cover": "https://drive.google.com/file/d/10RJnFkGDcBl-E9cDl72vpYHDlUvAb2qd/preview",
         "class_id": "class-12",
         "total_pages": 22,
-        "pdf_url": "https://drive.google.com/file/d/1DGgeq0SS3iGn3rIt_lJjxKtke_Zx2trR/preview",
+        "pdf_url": "https://github.com/ayu243sh-tech/edumotion-xi/blob/d676803dddf4c942503715efeabce40283ed9776/IMPORTANT%20POLITICAL%20LEADERS.pdf",
     },
 ]
 
