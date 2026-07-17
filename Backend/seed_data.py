@@ -1375,7 +1375,7 @@ BOOKS = [
         "id": "IMP_POLITICAL_LEAD",
         "title": "IMPORTANT POLITICAL LEADERS",
         "author": "EDUMOTION",
-        "cover": "https://drive.google.com/file/d/10RJnFkGDcBl-E9cDl72vpYHDlUvAb2qd/preview",
+        "cover": "https://drive.google.com/file/d/10RJnFkGDcBl-E9cDl72vpYHDlUvAb2qd/view?usp=drive_link",
         "class_id": "class-12",
         "total_pages": 22,
         "pdf_url": "https://github.com/ayu243sh-tech/edumotion-xi/blob/d676803dddf4c942503715efeabce40283ed9776/IMPORTANT%20POLITICAL%20LEADERS.pdf",
