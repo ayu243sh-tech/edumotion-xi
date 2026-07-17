@@ -1359,7 +1359,7 @@ BOOKS = [
         "id": "book-phys-12",
         "title": "IMPORTANT POLITICAL LEADERS",
         "author": "Edumotion",
-        "cover": "https://drive.google.com/file/d/10RJnFkGDcBl-E9cDl72vpYHDlUvAb2qd/preview",
+        "cover": ""https://images.pexels.com/photos/9276888/pexels-photo-9276888.jpeg",
         "class_id": "class-12",
         "subject_id": "physical-education",
         "total_pages": 22,
@@ -1370,15 +1370,6 @@ BOOKS = [
             {"title": "Deen Dayal Upadhyay to C.N. Annadurai", "page": 13},
             {"title": "M. Karunanidhi to V.P. Singh", "page": 19},
         ],
-    },
-    {
-        "id": "IMP_POLITICAL_LEAD",
-        "title": "IMPORTANT POLITICAL LEADERS",
-        "author": "EDUMOTION",
-        "cover": "https://drive.google.com/file/d/10RJnFkGDcBl-E9cDl72vpYHDlUvAb2qd/view?usp=drive_link",
-        "class_id": "class-12",
-        "total_pages": 22,
-        "pdf_url": "https://github.com/ayu243sh-tech/edumotion-xi/blob/d676803dddf4c942503715efeabce40283ed9776/IMPORTANT%20POLITICAL%20LEADERS.pdf",
     },
 ]
 
