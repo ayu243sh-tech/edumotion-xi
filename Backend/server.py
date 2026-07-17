@@ -156,33 +156,32 @@ async def ai_chat(request: Request):
     ]
 }
     try:
-        async with httpx.AsyncClient(timeout=30) as client:
-            resp = await client.post(
-    url,
-    json=payload,
-    headers={
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
-    },
-)
+    async with httpx.AsyncClient(timeout=30) as client:
+        resp = await client.post(
+            url,
+            json=payload,
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            },
+        )
 
-        print("Status Code:", resp.status_code)
-        print("Response:", resp.text)
+    print("Status Code:", resp.status_code)
+    print("Response:", resp.text)
 
-        data = resp.json()
+    data = resp.json()
 
-if resp.status_code != 200:
-    print("Groq Error:", data)
-    raise Exception(data.get("error", {}).get("message", "Unknown API error"))
+    if resp.status_code != 200:
+        print("Groq Error:", data)
+        raise Exception(data.get("error", {}).get("message", "Unknown API error"))
 
-reply = data["choices"][0]["message"]["content"]
-        reply = data["choices"][0]["message"]["content"]
+    reply = data["choices"][0]["message"]["content"]
 
-    except Exception as e:
-        print("Gemini Error:", e)
-        reply = f"Gemini Error: {e}"
+except Exception as e:
+    print("Groq Error:", e)
+    reply = f"Groq Error: {e}"
 
-    return {"reply": reply}
+return {"reply": reply}
     
 # ---------- Visits (in-memory, resets on restart) ----------
 @api_router.post("/visits")
