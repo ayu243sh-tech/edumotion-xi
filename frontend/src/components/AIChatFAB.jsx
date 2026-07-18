@@ -9,7 +9,7 @@ export default function AIChatFAB() {
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [lastreply, setLastReply] = useState("");
+  const [lastReply, setLastReply] = useState("");
   
   const scrollRef = useRef(null);
 
