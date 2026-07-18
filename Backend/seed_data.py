@@ -1372,6 +1372,17 @@ BOOKS = [
             {"title": "M. Karunanidhi to V.P. Singh", "page": 19},
         ],
     },
+    {
+        "id": "book-general-example",
+        "title": "The Constitution of India Handbook",
+        "author": "Edumotion",
+        "cover": "https://images.pexels.com/photos/38621903/pexels-photo-38621903.jpeg",
+        "class_id": "general",
+        "subject_id": "general",
+        "total_pages": 208,
+        "pdf_url": "https://drive.google.com/file/d/1W4ATAYrbSU2uMSdFU7mXOcOEnWYIY6bA/preview",
+        "chapters": [],
+    },
 ]
 
 
