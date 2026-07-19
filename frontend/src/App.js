@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIChatFAB from "@/components/AIChatFAB";
 import CurrentAffairsFAB from "@/components/CurrentAffairsFAB";
-import About from "@/pages/About";
 
 import Home from "@/pages/Home";
 import Dashboard from "@/pages/Dashboard";
@@ -36,7 +35,6 @@ function App() {
             <Route path="/class/:classId" element={<ClassDetail />} />
             <Route path="/chapter/:chapterId" element={<Chapter />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/about" element={<About />} />
   
           </Route>
         </Routes>
