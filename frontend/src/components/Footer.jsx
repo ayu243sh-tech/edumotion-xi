@@ -37,7 +37,6 @@ export default function Footer() {
         <div className="md:col-span-2">
           <div className="text-xs uppercase tracking-[0.2em] font-mono-em text-[#78716C] mb-4">Company</div>
           <ul className="space-y-2 text-sm">
-            <li><Link className="hover:text-[#7B1E1E]" to="/about">About</Link></li>
             <li><a className="hover:text-[#7B1E1E]" href="#">Contact</a></li>
             <li><a className="hover:text-[#7B1E1E]" href="#">Careers</a></li>
           </ul>
