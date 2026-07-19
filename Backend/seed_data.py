@@ -1364,7 +1364,7 @@ BOOKS = [
         "class_id": "class-12",
         "subject_id": "physical-education",
         "total_pages": 22,
-        "pdf_url": "https://drive.google.com/file/d/1DGgeq0SS3iGn3rIt_lJjxKtke_Zx2trR/preview",
+        "pdf_url": "/books/IMPORTANT POLITICAL LEADERS.pdf",
         "chapters": [
             {"title": "Chaudary Charan Singh to Dr.BR Ambedkar", "page": 1},
             {"title": "Indira Gandhi to P.V Narasimha Rao", "page": 7},
@@ -1380,7 +1380,7 @@ BOOKS = [
         "class_id": "general",
         "subject_id": "general",
         "total_pages": 208,
-        "pdf_url": "https://drive.google.com/file/d/1W4ATAYrbSU2uMSdFU7mXOcOEnWYIY6bA/preview",
+        "pdf_url": "Indian Constitution Handbook.pdf",
         "chapters": [],
     },
 ]
