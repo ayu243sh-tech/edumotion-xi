@@ -1379,7 +1379,7 @@ BOOKS = [
         "cover": "https://images.pexels.com/photos/38621903/pexels-photo-38621903.jpeg",
         "class_id": "general",
         "subject_id": "general",
-        "total_pages": 208,
+        "total_pages": 40,
         "pdf_url": "Indian Constitution Handbook.pdf",
         "chapters": [],
     },
