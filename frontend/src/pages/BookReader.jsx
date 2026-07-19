@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Document, Page, pdfjs } from "react-pdf";
 import { motion, AnimatePresence } from "framer-motion";
 import { api } from "@/lib/api";
 import { isBookmarked, toggleBookmark, getCurrentPage, setCurrentPage } from "@/lib/library";
