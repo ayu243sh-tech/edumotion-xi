@@ -1,13 +1,23 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Document, Page, pdfjs } from "react-pdf";
+import { motion, AnimatePresence } from "framer-motion";
 import { api } from "@/lib/api";
 import { isBookmarked, toggleBookmark, getCurrentPage, setCurrentPage } from "@/lib/library";
-import { Bookmark, Search, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { Bookmark, Search, ChevronLeft, ChevronRight } from "lucide-react";
+
+// Loaded from CDN to avoid webpack worker-bundling issues with craco/CRA.
+// IMPORTANT: this version number must match the pdfjs-dist version that
+// your installed react-pdf version bundles — check node_modules/pdfjs-dist/package.json
+// after `yarn install` and update the URL below if they don't match.
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js`;
 
 export default function BookReader() {
   const { bookId } = useParams();
   const [book, setBook] = useState(null);
   const [page, setPage] = useState(1);
+  const [numPages, setNumPages] = useState(null);
+  const [direction, setDirection] = useState(0); // 1 = forward, -1 = backward
   const [bookmarked, setBookmarked] = useState(false);
   const [query, setQuery] = useState("");
 
@@ -21,20 +31,13 @@ export default function BookReader() {
 
   if (!book) return null;
 
+  const total = numPages || book.total_pages;
+
   const goToPage = (p) => {
-    const clamped = Math.max(1, Math.min(book.total_pages, p));
+    const clamped = Math.max(1, Math.min(total, p));
+    setDirection(clamped > page ? 1 : -1);
     setPage(clamped);
     setCurrentPage(bookId, clamped);
-  };
-
-  // Google Drive's embedded /preview viewer is continuous-scroll only — it
-  // doesn't support jumping to a specific page via URL. So "page" here just
-  // tracks reading progress locally; to actually jump to a page, we open
-  // Drive's standalone /view viewer in a new tab, which does honor #page=N.
-  const openAtPage = (p) => {
-    goToPage(p);
-    const viewUrl = book.pdf_url.replace("/preview", "/view");
-    window.open(`${viewUrl}#page=${p}`, "_blank", "noopener");
   };
 
   const handleBookmark = () => {
@@ -46,6 +49,12 @@ export default function BookReader() {
   const filteredChapters = hasChapters
     ? book.chapters.filter((c) => c.title.toLowerCase().includes(query.toLowerCase()))
     : [];
+
+  const variants = {
+    enter: (dir) => ({ x: dir > 0 ? 300 : -300, opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (dir) => ({ x: dir > 0 ? -300 : 300, opacity: 0 }),
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-8" data-testid="book-reader-page">
@@ -93,14 +102,13 @@ export default function BookReader() {
                 filteredChapters.map((c) => (
                   <button
                     key={c.title}
-                    onClick={() => openAtPage(c.page)}
+                    onClick={() => goToPage(c.page)}
                     data-testid={`chapter-link-${c.page}`}
-                    className={`w-full flex items-center justify-between text-left text-sm py-2 px-3 rounded-lg transition-colors ${
+                    className={`w-full text-left text-sm py-2 px-3 rounded-lg transition-colors ${
                       page === c.page ? "bg-[#FDE68A]/60 text-[#7B1E1E] font-semibold" : "hover:bg-[#FAF9F6]"
                     }`}
                   >
-                    <span>{c.title}</span>
-                    <ExternalLink className="w-3.5 h-3.5 shrink-0 ml-2 opacity-60" />
+                    {c.title}
                   </button>
                 ))
               )}
@@ -110,9 +118,9 @@ export default function BookReader() {
 
         {/* Right: reader */}
         <div className="md:col-span-9">
-          <div className="bg-white rounded-[20px] border border-[#E7E5E4] p-4 mb-4 flex items-center justify-between flex-wrap gap-3">
+          <div className="bg-white rounded-[20px] border border-[#E7E5E4] p-4 mb-4 flex items-center justify-between">
             <button
-              onClick={() => openAtPage(page - 1)}
+              onClick={() => goToPage(page - 1)}
               disabled={page <= 1}
               data-testid="prev-page-button"
               className="flex items-center gap-1 text-sm font-semibold text-[#7B1E1E] disabled:text-[#E7E5E4] disabled:cursor-not-allowed"
@@ -125,23 +133,16 @@ export default function BookReader() {
               <input
                 type="number"
                 value={page}
-                onChange={(e) => setPage(Math.max(1, Math.min(book.total_pages, Number(e.target.value) || 1)))}
+                onChange={(e) => goToPage(Number(e.target.value) || 1)}
                 data-testid="page-number-input"
                 className="w-14 text-center border border-[#E7E5E4] rounded-lg py-1"
               />
-              <span>of {book.total_pages}</span>
-              <button
-                onClick={() => openAtPage(page)}
-                data-testid="jump-to-page-button"
-                className="ml-2 text-xs bg-[#F5B400] hover:bg-[#D99E00] text-[#292524] rounded-full px-3 py-1.5 font-semibold flex items-center gap-1"
-              >
-                <ExternalLink className="w-3 h-3" /> Open at this page
-              </button>
+              <span>of {total}</span>
             </div>
 
             <button
-              onClick={() => openAtPage(page + 1)}
-              disabled={page >= book.total_pages}
+              onClick={() => goToPage(page + 1)}
+              disabled={page >= total}
               data-testid="next-page-button"
               className="flex items-center gap-1 text-sm font-semibold text-[#7B1E1E] disabled:text-[#E7E5E4] disabled:cursor-not-allowed"
             >
@@ -149,22 +150,50 @@ export default function BookReader() {
             </button>
           </div>
 
-          <div className="bg-white rounded-[20px] border border-[#E7E5E4] overflow-hidden">
-            <iframe
-              src={book.pdf_url}
-              title={book.title}
-              className="w-full aspect-[3/4] md:aspect-[4/3]"
-              data-testid="book-pdf-viewer"
+          <div
+            className="bg-white rounded-[20px] border border-[#E7E5E4] overflow-hidden flex items-center justify-center relative"
+            style={{ minHeight: "70vh" }}
+          >
+            {/* Tap zones for book-like navigation */}
+            <button
+              onClick={() => goToPage(page - 1)}
+              disabled={page <= 1}
+              aria-label="Previous page"
+              className="absolute left-0 top-0 bottom-0 w-1/4 z-10 disabled:cursor-default"
             />
+            <button
+              onClick={() => goToPage(page + 1)}
+              disabled={page >= total}
+              aria-label="Next page"
+              className="absolute right-0 top-0 bottom-0 w-1/4 z-10 disabled:cursor-default"
+            />
+
+            <Document
+              file={book.pdf_url}
+              onLoadSuccess={({ numPages: n }) => setNumPages(n)}
+              loading={<div className="text-[#78716C] py-20">Loading book...</div>}
+              error={<div className="text-[#78716C] py-20 text-center px-6">Couldn't load this PDF. Make sure the file is hosted somewhere that allows direct access (see notes-README).</div>}
+            >
+              <AnimatePresence mode="wait" custom={direction}>
+                <motion.div
+                  key={page}
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <Page pageNumber={page} width={620} renderTextLayer={false} renderAnnotationLayer={false} />
+                </motion.div>
+              </AnimatePresence>
+            </Document>
           </div>
-          <p className="text-xs text-[#78716C] mt-2">
-            This preview scrolls continuously. Use "Open at this page" or a chapter link to jump straight to that page in a new tab.
-          </p>
 
           <div className="mt-3 h-1.5 bg-[#F5F5F4] rounded-full overflow-hidden">
             <div
               className="h-full bg-[#F5B400] rounded-full transition-all"
-              style={{ width: `${(page / book.total_pages) * 100}%` }}
+              style={{ width: `${(page / total) * 100}%` }}
             />
           </div>
         </div>
