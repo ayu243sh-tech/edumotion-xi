@@ -7,6 +7,7 @@ import AIChatFAB from "@/components/AIChatFAB";
 import CurrentAffairsFAB from "@/components/CurrentAffairsFAB";
 import Library from "@/pages/Library";
 import BookReader from "@/pages/BookReader";
+import About from "@/pages/About";
 
 import Home from "@/pages/Home";
 import Dashboard from "@/pages/Dashboard";
@@ -39,6 +40,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/library" element={<Library />} />
             <Route path="/library/:bookId" element={<BookReader />} />
+            <Route path="/about" element={<About />} />
   
           </Route>
         </Routes>
