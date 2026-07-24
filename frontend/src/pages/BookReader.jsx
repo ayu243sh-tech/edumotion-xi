@@ -12,11 +12,17 @@ export default function BookReader() {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    api.get(/catalog/books/${bookId}).then((r) => {
-      setBook(r.data);
-      setPage(getCurrentPage(bookId));
+    let ignore = false;
+    api.get(`/catalog/books/${bookId}`).then((r) => {
+      if (!ignore) {
+        setBook(r.data);
+        setPage(getCurrentPage(bookId));
+      }
     });
     setBookmarked(isBookmarked(bookId));
+    return () => {
+      ignore = true;
+    };
   }, [bookId]);
 
   if (!book) return null;
@@ -25,6 +31,7 @@ export default function BookReader() {
     const clamped = Math.max(1, Math.min(book.total_pages, p));
     setPage(clamped);
     setCurrentPage(bookId, clamped);
+    return clamped;
   };
 
   // Google Drive's embedded /preview viewer is continuous-scroll only — it
@@ -32,9 +39,9 @@ export default function BookReader() {
   // tracks reading progress locally; to actually jump to a page, we open
   // Drive's standalone /view viewer in a new tab, which does honor #page=N.
   const openAtPage = (p) => {
-    goToPage(p);
+    const clamped = goToPage(p);
     const viewUrl = book.pdf_url.replace("/preview", "/view");
-    window.open(${viewUrl}#page=${p}, "_blank", "noopener");
+    window.open(`${viewUrl}#page=${clamped}`, "_blank", "noopener");
   };
 
   const handleBookmark = () => {
@@ -66,7 +73,7 @@ export default function BookReader() {
               bookmarked ? "bg-[#7B1E1E] text-white" : "border border-[#E7E5E4] text-[#292524] hover:border-[#7B1E1E]"
             }`}
           >
-            <Bookmark className={w-4 h-4 ${bookmarked ? "fill-white" : ""}} />
+            <Bookmark className={`w-4 h-4 ${bookmarked ? "fill-white" : ""}`} />
             {bookmarked ? "Bookmarked" : "Bookmark this book"}
           </button>
 
@@ -92,9 +99,9 @@ export default function BookReader() {
               ) : (
                 filteredChapters.map((c) => (
                   <button
-                    key={c.title}
+                    key={c.page}
                     onClick={() => openAtPage(c.page)}
-                    data-testid={chapter-link-${c.page}}
+                    data-testid={`chapter-link-${c.page}`}
                     className={`w-full flex items-center justify-between text-left text-sm py-2 px-3 rounded-lg transition-colors ${
                       page === c.page ? "bg-[#FDE68A]/60 text-[#7B1E1E] font-semibold" : "hover:bg-[#FAF9F6]"
                     }`}
@@ -125,7 +132,7 @@ export default function BookReader() {
               <input
                 type="number"
                 value={page}
-                onChange={(e) => setPage(Math.max(1, Math.min(book.total_pages, Number(e.target.value) || 1)))}
+                onChange={(e) => goToPage(Number(e.target.value) || 1)}
                 data-testid="page-number-input"
                 className="w-14 text-center border border-[#E7E5E4] rounded-lg py-1"
               />
@@ -164,7 +171,7 @@ export default function BookReader() {
           <div className="mt-3 h-1.5 bg-[#F5F5F4] rounded-full overflow-hidden">
             <div
               className="h-full bg-[#F5B400] rounded-full transition-all"
-              style={{ width: ${(page / book.total_pages) * 100}% }}
+              style={{ width: `${(page / book.total_pages) * 100}%` }}
             />
           </div>
         </div>
