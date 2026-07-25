@@ -576,6 +576,7 @@ FLASHCARDS = {
         {"front": "Privatisation", "back": "Transferring ownership or management of public sector enterprises to the private sector."},
         {"front": "Globalisation", "back": "Integrating a country's economy with the world economy through free flow of goods, capital, and services."},
         {"front": "Disinvestment", "back": "Sale of a part of government's equity in public sector undertakings to the private sector."},
+    ],
 
 "ch4-Indian-eco-reforms-since-1991": [
     {"front": "Economic Reforms 1991", "back": "A set of policy measures — Liberalisation, Privatisation, and Globalisation (LPG) — introduced to address the 1991 economic crisis and reorient the economy toward market-oriented growth."},
