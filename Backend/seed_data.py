@@ -576,9 +576,7 @@ FLASHCARDS = {
         {"front": "Privatisation", "back": "Transferring ownership or management of public sector enterprises to the private sector."},
         {"front": "Globalisation", "back": "Integrating a country's economy with the world economy through free flow of goods, capital, and services."},
         {"front": "Disinvestment", "back": "Sale of a part of government's equity in public sector undertakings to the private sector."},
-        Here's Chapter: Liberalisation, Privatisation and Globalisation (LPG Reforms) — the chapter that follows 1950-1990:
 
-json
 "ch4-Indian-eco-reforms-since-1991": [
     {"front": "Economic Reforms 1991", "back": "A set of policy measures — Liberalisation, Privatisation, and Globalisation (LPG) — introduced to address the 1991 economic crisis and reorient the economy toward market-oriented growth."},
     {"front": "Economic Crisis of 1991", "back": "A balance of payments crisis triggered by high fiscal deficit, rising prices, and foreign exchange reserves insufficient to cover even two weeks of imports."},
