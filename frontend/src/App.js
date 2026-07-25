@@ -11,8 +11,6 @@ import Dashboard from "@/pages/Dashboard";
 import Search from "@/pages/Search";
 import ClassDetail from "@/pages/ClassDetail";
 import Chapter from "@/pages/Chapter";
-import Library from "@/pages/Library";
-import BookReader from "@/pages/BookReader";
 
 function Layout() {
   return (
@@ -37,8 +35,6 @@ function App() {
             <Route path="/class/:classId" element={<ClassDetail />} />
             <Route path="/chapter/:chapterId" element={<Chapter />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/library" element={<Library />} />
-            <Route path="/library/:bookId" element={<BookReader />} />
   
           </Route>
         </Routes>
