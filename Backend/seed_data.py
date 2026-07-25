@@ -491,7 +491,6 @@ FLASHCARDS = {
         {"front": "Lifestyle diseases", "back": "Diseases caused by unhealthy habits — sedentary lifestyle, poor diet, stress — e.g. obesity, diabetes, hypertension."},
     ],
     "ch12-eco-national-income": [
-        "ch12-eco-national-income": [
     {"front": "GDP", "back": "Gross Domestic Product — market value of all final goods and services produced within a country's domestic territory in a year."},
     {"front": "GNP", "back": "Gross National Product = GDP + Net Factor Income from Abroad (NFIA)."},
     {"front": "Net Indirect Tax", "back": "Indirect taxes minus subsidies; used to convert between factor cost and market price."},
