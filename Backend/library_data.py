@@ -84,7 +84,7 @@ BOOKS = {
         "subject": "Political Science",
         "cover": "https://covers.example.com/polsci-part2.jpg",
         "pdf_url": "https://drive.google.com/file/d/REPLACE_WITH_FILE_ID/preview",
-        "total_pages": 200,
+        "total_pages": 150,
         "difficulty": "Medium",
         "chapters": [
             {"title": "Era of One-Party Dominance", "page": 1},
