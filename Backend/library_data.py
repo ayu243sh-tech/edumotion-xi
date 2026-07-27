@@ -60,7 +60,6 @@ BOOKS = {
             {"title": "Thinkers, Beliefs And Buildings", "page": 85},
         ],
     },
-    },
     "ncert-history-themes-2": {
         "id": "ncert-history-themes-2",
         "title": "Themes in Indian History - Part II",
