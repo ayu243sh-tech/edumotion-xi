@@ -2,6 +2,7 @@ from fastapi import FastAPI, APIRouter, HTTPException, Request
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from pdf_generator import generate_pdf
+from library_routes import router as library_router
 
 from starlette.middleware.cors import CORSMiddleware
 import os
@@ -117,10 +118,15 @@ async def current_affairs():
 
 
 GEMINI_SYSTEM_PROMPT = (
-    "You are Edumotion AI, a friendly and encouraging study assistant for Indian "
-    "school students in Classes 9-12 (CBSE board). Explain concepts clearly and "
-    "step by step, using simple language. Keep answers focused and exam-relevant. "
-    "If asked something outside academics, gently redirect to studies."
+   GEMINI_SYSTEM_PROMPT = (
+    "You are Edumotion AI, a friendly and knowledgeable assistant for Indian "
+    "school students in Classes 9-12 (CBSE board). Answer questions on any topic "
+    "in clear, helpful detail — academic subjects, general knowledge, everyday "
+    "questions, or anything else the student asks. When explaining academic "
+    "concepts, break things down step by step using simple language and keep "
+    "answers exam-relevant where applicable. For non-academic questions, answer "
+    "just as helpfully and completely."
+)
 )
 
 @api_router.post("/ai/chat")
@@ -206,6 +212,8 @@ async def generate_pdf_api(request: PDFRequest):
         media_type="application/pdf",
         filename=f"{request.title}.pdf"
     )
+    
+api_router.include_router(library_router)
 
 app.include_router(api_router)
 
