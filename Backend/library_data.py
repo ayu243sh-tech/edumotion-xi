@@ -184,16 +184,6 @@ BOOKS = {
         "cover": "https://covers.example.com/vistas-12.jpg",
         "pdf_url": "https://drive.google.com/file/d/1Uya1WUKK_CIzdqXhF87mi6IJtSlHYjCd/preview",
     },
-    "vistas-12-ch5": {
-        "id": "vistas-12-ch5",
-        "title": "Should Wizard Hit Mommy",
-        "book_title": "Vistas",
-        "author": "NCERT",
-        "class_level": "12",
-        "subject": "English",
-        "cover": "https://covers.example.com/vistas-12.jpg",
-        "pdf_url": "https://drive.google.com/file/d/1SySZjz_MkL4H-uKRv5vTHmCvfwkYDTXC/view?usp=sharing/preview",
-    },
     "vistas-12-ch6": {
         "id": "vistas-12-ch6",
         "title": "On the Face of It",
@@ -203,16 +193,6 @@ BOOKS = {
         "subject": "English",
         "cover": "https://covers.example.com/vistas-12.jpg",
         "pdf_url": "https://drive.google.com/file/d/REPLACE_WITH_FILE_ID_CH6/preview",
-    },
-    "vistas-12-ch7": {
-        "id": "vistas-12-ch7",
-        "title": "Evans Tries an O-Level",
-        "book_title": "Vistas",
-        "author": "NCERT",
-        "class_level": "12",
-        "subject": "English",
-        "cover": "https://covers.example.com/vistas-12.jpg",
-        "pdf_url": "https://drive.google.com/file/d/REPLACE_WITH_FILE_ID_CH7/preview",
     },
     "vistas-12-ch8": {
         "id": "vistas-12-ch8",
@@ -231,7 +211,7 @@ BOOKS = {
         "author": "NCERT",
         "class_level": "12",
         "subject": "English",
-        "cover": "https://covers.example.com/vistas-12.jpg",
+        "cover": "https://drive.google.com/uc?export=view&id=16MZ4SOfRJt8flKUFlcnHq30-Sj5TNZDt",
         "pdf_url": "https://drive.google.com/file/d/12KafWzgPschCfZd8uQXoitj62mvrFmWG/preview",
     },
     "Flamingo-12-ch2": {
@@ -241,7 +221,7 @@ BOOKS = {
         "author": "NCERT",
         "class_level": "12",
         "subject": "English",
-        "cover": "https://covers.example.com/vistas-12.jpg",
+        "cover": "https://drive.google.com/uc?export=view&id=114yAsvWX-axrC6fxE76QAfAe-olGZ9YR",
         "pdf_url": "https://drive.google.com/file/d/1RXXU-BPhRX_ntowEDyjRPOIporhz4Voa/view?usp=sharing/preview",
     },
     "Flamingo-12-ch3": {
@@ -251,7 +231,7 @@ BOOKS = {
         "author": "NCERT",
         "class_level": "12",
         "subject": "English",
-        "cover": "https://covers.example.com/vistas-12.jpg",
+        "cover": "https://drive.google.com/uc?export=view&id=1_YsOdIV4SCwb5YA9e0dTUKQ3zAbOieeB",
         "pdf_url": "https://drive.google.com/file/d/1E1I3_6u2QEOIGVZxXUFnPFnF-36QmP78/preview",
     },
     "Flamingo-12-ch4": {
@@ -261,7 +241,7 @@ BOOKS = {
         "author": "NCERT",
         "class_level": "12",
         "subject": "English",
-        "cover": "https://covers.example.com/vistas-12.jpg",
+        "cover": "https://drive.google.com/uc?export=view&id=1Sgck2QRztCu0e-2xWuJi1VuAZobEpEn-",
         "pdf_url": "https://drive.google.com/file/d/1PG0o0T-oLHTY5w8yFcyfGcbSnu9_cY33/preview",
     },
     "Flamingo-12-ch5": {
@@ -271,7 +251,7 @@ BOOKS = {
         "author": "NCERT",
         "class_level": "12",
         "subject": "English",
-        "cover": "https://covers.example.com/vistas-12.jpg",
+        "cover": "https://drive.google.com/uc?export=view&id=1aPkdJle4n8ohPAlIo-rfTuUQ3BcMvDx4",
         "pdf_url": "https://drive.google.com/file/d/1SySZjz_MkL4H-uKRv5vTHmCvfwkYDTXC/preview",
     },
     "Poem-12-ch1": {
