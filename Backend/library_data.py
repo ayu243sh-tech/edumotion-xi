@@ -172,7 +172,6 @@ BOOKS = {
         "cover": "https://covers.example.com/vistas-12.jpg",
         "pdf_url": "https://drive.google.com/file/d/REPLACE_WITH_FILE_ID_CH8/preview",
     },
-     },
     "Flamingo-12-ch1": {
         "id": "Flamingo-12-ch1",
         "title": "The Last Lesson",
