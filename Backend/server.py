@@ -126,7 +126,6 @@ GEMINI_SYSTEM_PROMPT = (
     "answers exam-relevant where applicable. For non-academic questions, answer "
     "just as helpfully and completely."
 )
-)
 
 @api_router.post("/ai/chat")
 async def ai_chat(request: Request):
