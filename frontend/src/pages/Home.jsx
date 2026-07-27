@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import {
   BookOpen, Video, ClipboardList, FileText, CalendarDays, Bot, Search as SearchIcon,
-  Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu,
+  Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu, Library,
 } from "lucide-react";
 
 const QUICK_ACCESS = [
@@ -16,6 +16,7 @@ const QUICK_ACCESS = [
   { id: "pyqs", label: "PYQs", icon: FileText, accent: "#B45309", bg: "#FFEDD5" },
   { id: "planner", label: "Study Planner", icon: CalendarDays, accent: "#1E40AF", bg: "#DBEAFE" },
   { id: "ai", label: "AI Doubt Solver", icon: Bot, accent: "#7B1E1E", bg: "#F5E6E6" },
+  { id: "library", label: "Digital Library", icon: Library, accent: "#5B21B6", bg: "#EDE9FE" },
 ];
 
 const SUBJECT_ICONS = { science: FlaskConical, mathematics: Sigma, "social-science": Globe2, english: BookOpen, hindi: Languages, computer: Cpu };
@@ -130,7 +131,18 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
           {QUICK_ACCESS.map(({ id, label, icon: Icon, accent, bg }) => (
-            <button key={id} onClick={() => navigate(id === "ai" ? "/" : `/search?type=${id}`)} data-testid={`quick-access-${id}`} className="group bg-white rounded-[20px] border border-[#E7E5E4] p-6 text-left hover:-translate-y-1 transition-transform bento-shadow bento-shadow-hover">
+  <button
+    key={id}
+    onClick={() => {
+      if (id === "library") {
+        window.open("https://edumotioin-l-ib.vercel.app", "_blank", "noopener");
+      } else {
+        navigate(id === "ai" ? "/" : `/search?type=${id}`);
+      }
+    }}
+    data-testid={`quick-access-${id}`}
+    className="group bg-white rounded-[20px] border border-[#E7E5E4] p-6 text-left hover:-translate-y-1 transition-transform bento-shadow bento-shadow-hover"
+  >
               <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4" style={{ background: bg }}>
                 <Icon className="w-6 h-6" style={{ color: accent }} strokeWidth={1.5} />
               </div>
