@@ -118,7 +118,6 @@ async def current_affairs():
 
 
 GEMINI_SYSTEM_PROMPT = (
-   GEMINI_SYSTEM_PROMPT = (
     "You are Edumotion AI, a friendly and knowledgeable assistant for Indian "
     "school students in Classes 9-12 (CBSE board). Answer questions on any topic "
     "in clear, helpful detail — academic subjects, general knowledge, everyday "
