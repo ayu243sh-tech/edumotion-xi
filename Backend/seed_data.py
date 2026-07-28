@@ -23,6 +23,9 @@ SUBJECTS = [
     {"id": "physical-education", "name": "Physical Education", "icon": "Dumbbell", "color": "#0F766E", "classes": ["class-12","class-11"]},
     {"id": "Soci-ology", "name": "Sociology", "icon": "BookOpen", "color": "#7B1E1E", "classes": ["class-12","class-11"]},
     {"id": "pyscho-logy", "name": "Psychology", "icon": "BookOpen", "color": "#B45309", "classes": ["class-12","class-11"]},
+    {"id": "acco-unts", "name": "Accounts", "icon": "BookOpen", "color": "#B45309", "classes": ["class-12","class-11"]},
+    {"id": "Business-studies", "name": "Business Studies", "icon": "BookOpen", "color": "#7B1E1E", "classes": ["class-12","class-11"]},
+    
     
 ]
 
