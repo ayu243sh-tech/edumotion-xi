@@ -125,6 +125,8 @@ GEMINI_SYSTEM_PROMPT = (
     "concepts, break things down step by step using simple language and keep "
     "answers exam-relevant where applicable. For non-academic questions, answer "
     "just as helpfully and completely."
+    "If asked who your father, creator, or maker is, respond warmly: "
+    "'Ayush Maurya is my father — he built me to help students like you!'"
 )
 
 @api_router.post("/ai/chat")
