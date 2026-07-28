@@ -181,7 +181,7 @@ export default function Dashboard() {
               {/* TODO: replace with a working link once the MP3 is compressed under ~50MB.
                   Drive's /uc?export=download intercepts large files with a warning page
                   instead of streaming raw audio, which breaks this player. */}
-              <source src="https://drive.google.com/uc?export=download&id=1hZd972sXMN1e0a0iMhHWG8DFlRuj90Ax" type="audio/mpeg" />
+              <source src="https://github.com/ayu243sh-tech/edumotion-xi/blob/b55f7a84f4fbb7f463b1adcfdfadfd3ca943ef9e/calm-study%20(1).mp3" type="audio/mpeg" />
               Your browser does not support the audio element.
             </audio>
             <p className="text-xs text-[#78716C] mt-3">Play calm background music while you study — pause anytime.</p>
