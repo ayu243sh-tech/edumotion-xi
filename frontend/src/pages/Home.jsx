@@ -138,7 +138,7 @@ export default function Home() {
       if (id === "library") {
         window.open("https://edumotioin-l-ib.vercel.app", "_blank", "noopener");
       } else if (id === "resources") {
-        window.open("https://edumotion-resources.vercel.app", "_blank", "noopener");
+        window.open("https://edumotion-resources-one.vercel.app/", "_blank", "noopener");
       } else {
         navigate(id === "ai" ? "/" : `/search?type=${id}`);
       }
