@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import {
   BookOpen, Video, ClipboardList, FileText, CalendarDays, Bot, Search as SearchIcon,
-  Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu, Library,
+  Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu, Library,GraduationCap,
 } from "lucide-react";
 
 const QUICK_ACCESS = [
@@ -17,6 +17,7 @@ const QUICK_ACCESS = [
   { id: "planner", label: "Study Planner", icon: CalendarDays, accent: "#1E40AF", bg: "#DBEAFE" },
   { id: "ai", label: "AI Doubt Solver", icon: Bot, accent: "#7B1E1E", bg: "#F5E6E6" },
   { id: "library", label: "Digital Library", icon: Library, accent: "#5B21B6", bg: "#EDE9FE" },
+  { id: "resources", label: "Study Resources", icon: GraduationCap, accent: "#B45309", bg: "#FDE68A" },
 ];
 
 const SUBJECT_ICONS = { science: FlaskConical, mathematics: Sigma, "social-science": Globe2, english: BookOpen, hindi: Languages, computer: Cpu };
@@ -136,6 +137,8 @@ export default function Home() {
     onClick={() => {
       if (id === "library") {
         window.open("https://edumotioin-l-ib.vercel.app", "_blank", "noopener");
+      } else if (id === "resources") {
+        window.open("https://edumotion-resources.vercel.app", "_blank", "noopener");
       } else {
         navigate(id === "ai" ? "/" : `/search?type=${id}`);
       }
