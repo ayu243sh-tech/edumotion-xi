@@ -44,7 +44,7 @@ MODELS_3D = {
     },
     "Human Skull": {
         "id": "scene",
-        "title": "Scene Model",
+        "title": "Human Skull",
         "subject": "Biology",
         "class_level": "11",
         "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/scene-custom.glb",
