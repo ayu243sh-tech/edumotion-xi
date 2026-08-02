@@ -66,5 +66,21 @@ MODELS_3D = {
         "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/3d-vh-m-allen-brain-custom.glb",
         "hotspots": [],
     },
+    "human-lung": {
+        "id": "human-lung",
+        "title": "Human Lung",
+        "subject": "Biology",
+        "class_level": "11",
+        "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/3d-vh-f-lung-custom.glb",
+        "hotspots": [],
+    },
+    "dog-skull": {
+        "id": "dog-skull",
+        "title": "Dog Skull",
+        "subject": "Biology",
+        "class_level": "11",
+        "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/bespoke%20dog%20skull_logo-custom.glb",
+        "hotspots": [],
+    },
     # Add more models here, same shape — one entry per model.
 }
