@@ -18,5 +18,21 @@ MODELS_3D = {
             {"name": "Truncus Arteriosus", "position": "0.02 0.28 0.03", "normal": "0 1 0"},
         ],
     },
+    "lungs-heart": {
+    "id": "lungs-heart",
+    "title": "Lungs and Heart",
+    "subject": "Biology",
+    "class_level": "11",
+    "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/lungs_heart_reoriented-custom.glb",
+    "hotspots": [],
+},
+    "abnormal-ureters": {
+    "id": "abnormal-ureters",
+    "title": "Abnormal Ureters",
+    "subject": "Biology",
+    "class_level": "11",
+    "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/abnormal%20ureters-custom.glb",
+    "hotspots": [],
+},
     # Add more models here, same shape — one entry per model.
 }
