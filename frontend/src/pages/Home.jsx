@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import {
   BookOpen, Video, ClipboardList, FileText, CalendarDays, Bot, Search as SearchIcon,
-  Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu, Library,GraduationCap,
+  Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu, Library,GraduationCap, Box,
 } from "lucide-react";
 
 const QUICK_ACCESS = [
@@ -18,6 +18,7 @@ const QUICK_ACCESS = [
   { id: "ai", label: "AI Doubt Solver", icon: Bot, accent: "#7B1E1E", bg: "#F5E6E6" },
   { id: "library", label: "Digital Library", icon: Library, accent: "#5B21B6", bg: "#EDE9FE" },
   { id: "resources", label: "Study Resources", icon: GraduationCap, accent: "#B45309", bg: "#FDE68A" },
+  { id: "models3d", label: "3D Models", icon: Box, accent: "#3730A3", bg: "#E0E7FF" },
 ];
 
 const SUBJECT_ICONS = { science: FlaskConical, mathematics: Sigma, "social-science": Globe2, english: BookOpen, hindi: Languages, computer: Cpu };
@@ -134,15 +135,17 @@ export default function Home() {
           {QUICK_ACCESS.map(({ id, label, icon: Icon, accent, bg }) => (
   <button
     key={id}
-    onClick={() => {
-      if (id === "library") {
-        window.open("https://edumotioin-l-ib.vercel.app", "_blank", "noopener");
-      } else if (id === "resources") {
-        window.open("https://edumotion-resources-one.vercel.app/", "_blank", "noopener");
-      } else {
-        navigate(id === "ai" ? "/" : `/search?type=${id}`);
-      }
-    }}
+onClick={() => {
+  if (id === "library") {
+    window.open("https://edumotioin-l-ib.vercel.app", "_blank", "noopener");
+  } else if (id === "resources") {
+    window.open("https://edumotion-resources-one.vercel.app", "_blank", "noopener");
+  } else if (id === "models3d") {
+    window.open("https://edumotion-3d-zlzh-chi.vercel.app", "_blank", "noopener");
+  } else {
+    navigate(id === "ai" ? "/" : `/search?type=${id}`);
+  }
+}}
     data-testid={`quick-access-${id}`}
     className="group bg-white rounded-[20px] border border-[#E7E5E4] p-6 text-left hover:-translate-y-1 transition-transform bento-shadow bento-shadow-hover"
   >
