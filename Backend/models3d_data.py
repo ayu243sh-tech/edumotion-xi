@@ -34,5 +34,37 @@ MODELS_3D = {
     "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/abnormal%20ureters-custom.glb",
     "hotspots": [],
 },
+    "large-intestine": {
+        "id": "large-intestine",
+        "title": "Large Intestine",
+        "subject": "Biology",
+        "class_level": "11",
+        "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/sbu_f_intestine_large-custom.glb",
+        "hotspots": [],
+    },
+    "Human Skull": {
+        "id": "scene",
+        "title": "Scene Model",
+        "subject": "Biology",
+        "class_level": "11",
+        "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/scene-custom.glb",
+        "hotspots": [],
+    },
+    "pelvis": {
+        "id": "pelvis",
+        "title": "Pelvis",
+        "subject": "Biology",
+        "class_level": "11",
+        "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/vh_f_pelvis-custom.glb",
+        "hotspots": [],
+    },
+    "brain": {
+        "id": "brain",
+        "title": "Human Brain",
+        "subject": "Biology",
+        "class_level": "11",
+        "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/3d-vh-m-allen-brain-custom.glb",
+        "hotspots": [],
+    },
     # Add more models here, same shape — one entry per model.
 }
