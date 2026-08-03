@@ -42,14 +42,6 @@ MODELS_3D = {
         "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/sbu_f_intestine_large-custom.glb",
         "hotspots": [],
     },
-    "Human Skull": {
-        "id": "scene",
-        "title": "Human Skull",
-        "subject": "Biology",
-        "class_level": "11",
-        "model_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/models3d/skull_%203d200_100000-custom.glb",
-        "hotspots": [],
-    },
     "pelvis": {
         "id": "pelvis",
         "title": "Pelvis",
