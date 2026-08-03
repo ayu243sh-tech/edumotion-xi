@@ -203,7 +203,7 @@ SAMPLE_PAPERS = {
 
 # ---------- Previous Year Question Papers ----------
 PYQ_PAPERS = {
-    "eco-pyq-2024": {https://drive.google.com/file/d/1BsoAaQrtxlmj-vBePCZyoV-GPSU62QT7/view?usp=sharing
+    "eco-pyq-2024": {
         "id": "eco-pyq-2024",
         "title": "Economics PYQ 2024",
         "subject": "Economics",
