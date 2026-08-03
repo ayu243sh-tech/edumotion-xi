@@ -1,11 +1,10 @@
-# resources_routes.py
-# Read-only endpoints for the Study Materials / Resources hub.
-# No database, no auth — same pattern as library_routes.py.
-
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException
 from typing import Optional
 
-from resources_data import MCQ_SETS, SAMPLE_PAPERS, PYQ_PAPERS, IMPORTANT_QUESTIONS, MIND_MAPS
+from resources_data import (
+    RESOURCE_CHAPTERS, MCQ_SETS, IMPORTANT_QUESTIONS, MIND_MAPS,
+    FORMULA_SHEETS, SAMPLE_PAPERS, PYQ_PAPERS, PREMIUM_BOOKS,
+)
 
 router = APIRouter(prefix="/resources", tags=["resources"])
 
@@ -19,15 +18,45 @@ def _filter(items, subject=None, class_level=None):
     return result
 
 
-# ---------- MCQ Sets ----------
-@router.get("/mcq-sets")
-async def list_mcq_sets(subject: Optional[str] = None, class_level: Optional[str] = None):
-    sets = _filter(MCQ_SETS, subject, class_level)
-    # Don't send full question lists in the list view — just metadata + count
-    return [
-        {**{k: v for k, v in s.items() if k != "questions"}, "question_count": len(s["questions"])}
-        for s in sets
-    ]
+# ---------- Subjects (distinct list, per class — drives the subject cards) ----------
+@router.get("/subjects")
+async def list_subjects(class_level: Optional[str] = None):
+    chapters = list(RESOURCE_CHAPTERS.values())
+    if class_level:
+        chapters = [c for c in chapters if c["class_level"] == class_level]
+    subjects = {}
+    for c in chapters:
+        subjects.setdefault(c["subject"], 0)
+        subjects[c["subject"]] += 1
+    return [{"subject": s, "chapter_count": n} for s, n in subjects.items()]
+
+
+# ---------- Chapters (per subject + class — drives the chapter list) ----------
+@router.get("/chapters")
+async def list_chapters(subject: Optional[str] = None, class_level: Optional[str] = None):
+    return _filter(RESOURCE_CHAPTERS, subject, class_level)
+
+
+# ---------- Chapter detail — everything for ONE chapter in one call ----------
+@router.get("/chapters/{chapter_id}")
+async def get_chapter_detail(chapter_id: str):
+    chapter = RESOURCE_CHAPTERS.get(chapter_id)
+    if not chapter:
+        raise HTTPException(status_code=404, detail="Chapter not found")
+
+    mcq = next((m for m in MCQ_SETS.values() if m["chapter_id"] == chapter_id), None)
+    iq = next((q for q in IMPORTANT_QUESTIONS.values() if q["chapter_id"] == chapter_id), None)
+    mind_map = next((m for m in MIND_MAPS.values() if m["chapter_id"] == chapter_id), None)
+    formula_sheet = next((f for f in FORMULA_SHEETS.values() if f["chapter_id"] == chapter_id), None)
+
+    return {
+        "chapter": chapter,
+        "mcq_set": {**mcq, "question_count": len(mcq["questions"])} if mcq else None,
+        "important_questions": iq,
+        "mind_map": mind_map,
+        "formula_sheet": formula_sheet,
+    }
+
 
 @router.get("/mcq-sets/{set_id}")
 async def get_mcq_set(set_id: str):
@@ -66,27 +95,14 @@ async def get_pyq(pyq_id: str):
     return pyq
 
 
-# ---------- Important Questions ----------
-@router.get("/important-questions")
-async def list_important_questions(subject: Optional[str] = None, class_level: Optional[str] = None):
-    return _filter(IMPORTANT_QUESTIONS, subject, class_level)
+# ---------- Premium Books ----------
+@router.get("/premium-books")
+async def list_premium_books(subject: Optional[str] = None, class_level: Optional[str] = None):
+    return _filter(PREMIUM_BOOKS, subject, class_level)
 
-@router.get("/important-questions/{set_id}")
-async def get_important_questions(set_id: str):
-    item = IMPORTANT_QUESTIONS.get(set_id)
-    if not item:
-        raise HTTPException(status_code=404, detail="Not found")
-    return item
-
-
-# ---------- Mind Maps ----------
-@router.get("/mind-maps")
-async def list_mind_maps(subject: Optional[str] = None, class_level: Optional[str] = None):
-    return _filter(MIND_MAPS, subject, class_level)
-
-@router.get("/mind-maps/{map_id}")
-async def get_mind_map(map_id: str):
-    item = MIND_MAPS.get(map_id)
-    if not item:
-        raise HTTPException(status_code=404, detail="Mind map not found")
-    return item
+@router.get("/premium-books/{book_id}")
+async def get_premium_book(book_id: str):
+    book = PREMIUM_BOOKS.get(book_id)
+    if not book:
+        raise HTTPException(status_code=404, detail="Book not found")
+    return book
