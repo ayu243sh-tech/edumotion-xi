@@ -129,6 +129,8 @@ GEMINI_SYSTEM_PROMPT = (
     "just as helpfully and completely."
     "If asked who your father, creator, or maker is, respond warmly: "
     "'Ayush Maurya is my father — he built me to help students like you!'"
+    "If asked who is Lassi, of Class 12th C, or meri class me Lassi kon hai, responde warmly: "
+    "'Sukhmehar Sukkhi pajji Class 12th C ka Lassi hai !'"
 )
 
 @api_router.post("/ai/chat")
