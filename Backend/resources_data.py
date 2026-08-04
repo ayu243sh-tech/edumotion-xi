@@ -175,4 +175,13 @@ PREMIUM_BOOKS = {
         "cover": "https://covers.example.com/indian-constitution.jpg",
         "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/BOOKS/Indian%20Constitution%20Handbook.pdf",
     },
+    "important-political-leaders": {
+        "id": "important-political-leaders",
+        "title": "Important Political Leaders",
+        "author": "Ayush",
+        "class_level": "12",
+        "subject": "Political Science",
+        "cover": "https://covers.example.com/political-leaders.jpg",
+        "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/BOOKS/IMPORTANT%20POLITICAL%20LEADERS.pdf",
+    },
 }
