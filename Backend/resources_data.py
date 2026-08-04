@@ -166,14 +166,13 @@ PYQ_PAPERS = {
 
 # ---------- Premium Books (NEW — your handwritten books, Library-style) ----------
 PREMIUM_BOOKS = {
-    # Same shape as your Digital Library's BOOKS — title, author, cover, pdf_url, optional chapters.
-    # "eco-handwritten-notes": {
-    #     "id": "eco-handwritten-notes",
-    #     "title": "Economics — Handwritten Notes",
-    #     "author": "Ayush",
-    #     "class_level": "12",
-    #     "subject": "Economics",
-    #     "cover": "https://...jpg",
-    #     "pdf_url": "https://drive.google.com/file/d/REPLACE_WITH_FILE_ID/preview",
-    # },
+    "indian-constitution-handbook": {
+        "id": "indian-constitution-handbook",
+        "title": "Indian Constitution Handbook",
+        "author": "Ayush",
+        "class_level": "12",
+        "subject": "Political Science",
+        "cover": "https://covers.example.com/indian-constitution.jpg",
+        "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/BOOKS/Indian%20Constitution%20Handbook.pdf",
+    },
 }
