@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import {
   BookOpen, Video, ClipboardList, FileText, CalendarDays, Bot, Search as SearchIcon,
-  Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu, Library,GraduationCap, Box,
+  Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu, Library,GraduationCap, Box,Gamepad2
 } from "lucide-react";
 
 const QUICK_ACCESS = [
@@ -19,6 +19,7 @@ const QUICK_ACCESS = [
   { id: "library", label: "Digital Library", icon: Library, accent: "#5B21B6", bg: "#EDE9FE" },
   { id: "resources", label: "Study Resources", icon: GraduationCap, accent: "#B45309", bg: "#FDE68A" },
   { id: "models3d", label: "3D Models", icon: Box, accent: "#3730A3", bg: "#E0E7FF" },
+  { id: "games", label: "Game Break", icon: Gamepad2, accent: "#0F766E", bg: "#CCFBF1" },
 ];
 
 const SUBJECT_ICONS = { science: FlaskConical, mathematics: Sigma, "social-science": Globe2, english: BookOpen, hindi: Languages, computer: Cpu };
@@ -142,6 +143,8 @@ onClick={() => {
     window.open("https://edumotion-resources-one.vercel.app", "_blank", "noopener");
   } else if (id === "models3d") {
     window.open("https://edumotion-3d-zlzh-chi.vercel.app", "_blank", "noopener");
+      } else if (id === "games") {
+    window.open("https://edumotion-games-git-main-edumotion-xi.vercel.app/", "_blank", "noopener");
   } else {
     navigate(id === "ai" ? "/" : `/search?type=${id}`);
   }
