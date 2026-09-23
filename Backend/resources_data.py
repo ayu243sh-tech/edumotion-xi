@@ -14,6 +14,30 @@ RESOURCE_CHAPTERS = {
         "subject": "History",
         "class_level": "12",
     },
+    "eco-Money-Banking": {
+        "id": "eco-money-banking",
+        "title": "Money & Banking",
+        "subject": "Economics",
+        "class_level": "12",
+    },
+    "his-Mauryan": {
+        "id": "his-mauryan",
+        "title": "Kings,Farmers and Towns",
+        "subject": "History",
+        "class_level": "12",
+    },
+    "eco-government Budget": {
+        "id": "eco-governement",
+        "title": "Governement Budget",
+        "subject": "Economics",
+        "class_level": "12",
+    },
+    "his-Mahabharat": {
+        "id": "his-Mahabharat",
+        "title": "Kinship, Caste and Class",
+        "subject": "History",
+        "class_level": "12",
+    },
     # Add one entry per chapter you want covered in the Resource Hub.
 }
 
