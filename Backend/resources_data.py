@@ -92,7 +92,7 @@ MIND_MAPS = {
     "eco-national-income-mindmap": {
         "id": "eco-national-income-mindmap",
         "chapter_id": "eco-national-income",
-        "image_url": "https://drive.google.com/uc?export=view&id=REPLACE_WITH_FILE_ID",
+        "image_url": "https://supabase.com/dashboard/project/khvmrhnkooehyojkguev/storage/files/buckets/mind%20map?preview=image_42325090.jpg",
     },
 }
 
