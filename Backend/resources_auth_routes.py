@@ -11,7 +11,7 @@ router = APIRouter(prefix="/resources-auth", tags=["resources-auth"])
 
 _valid_sessions = {}  # token -> email
 
-GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+GOOGLE_CLIENT_ID = "301904325729-32r1k1kv1j8smpufnaac6r4t942gl5nn.apps.googleusercontent.com"
 
 
 class GoogleLoginBody(BaseModel):
