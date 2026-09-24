@@ -173,9 +173,17 @@ SAMPLE_PAPERS = {
         "year": "2026",
         "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/Eco5.pdf",
     },
-    "eco-sample-paper-5": {
+    "eco-sample-paper-26": {
         "id": "eco-sample-paper-26",
         "title": "Economics Sample Paper 26-27,
+        "subject": "Economics",
+        "class_level": "12",
+        "year": "2026",
+        "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/Economics-SQP.pdf",
+    },
+     "eco-sample-paper-26": {
+        "id": "eco-sample-paper-26",
+        "title": "Economics Sample Paper 26-27",
         "subject": "Economics",
         "class_level": "12",
         "year": "2026",
