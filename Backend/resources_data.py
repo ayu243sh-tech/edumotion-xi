@@ -181,6 +181,14 @@ SAMPLE_PAPERS = {
         "year": "2026",
         "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/Economics-SQP.pdf",
     },
+    "history-sample-paper-26": {
+        "id": "his-sample-paper-26",
+        "title": "History Sample Paper 26-27",
+        "subject": "History",
+        "class_level": "12",
+        "year": "2026",
+        "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/History-SQP.pdf",
+    },
 }
 
 # ---------- PYQs (top-level — unchanged) ----------
