@@ -189,9 +189,9 @@ SAMPLE_PAPERS = {
       "year": "2026",
       "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/History-SQP.pdf",
 },
-     "polsci-sample-paper-1": {
-        "id": "polsci-sample-paper-1",
-        "title": "Political Science Sample Paper 1",
+     "polsci-sample-paper-26": {
+        "id": "polsci-sample-paper-26",
+        "title": "Political Science Sample Paper 26-27",
         "subject": "Political Science",
         "class_level": "12",
         "year": "2026",
@@ -261,17 +261,17 @@ SAMPLE_PAPERS = {
         "year": "2026",
         "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/REPLACE_pe4.pdf",
     },
-    "pe-sample-paper-5": {
-        "id": "pe-sample-paper-5",
-        "title": "Physical Education Sample Paper 5",
+    "pe-sample-paper-26": {
+        "id": "pe-sample-paper-26",
+        "title": "Physical Education Sample Paper 26-27",
         "subject": "Physical Education",
         "class_level": "12",
         "year": "2026",
         "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/REPLACE_pe5.pdf",
     },
-    "bst-sample-paper-1": {
-        "id": "bst-sample-paper-1",
-        "title": "Business Studies Sample Paper 1",
+    "bst-sample-paper-26": {
+        "id": "bst-sample-paper-26",
+        "title": "Business Studies Sample Paper 26-27",
         "subject": "Business Studies",
         "class_level": "12",
         "year": "2026",
@@ -309,9 +309,9 @@ SAMPLE_PAPERS = {
         "year": "2026",
         "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/REPLACE_bst5.pdf",
     },
-    "accounts-sample-paper-1": {
-        "id": "accounts-sample-paper-1",
-        "title": "Accountancy Sample Paper 1",
+    "accounts-sample-paper-26": {
+        "id": "accounts-sample-paper-26",
+        "title": "Accountancy Sample Paper 26-27",
         "subject": "Accountancy",
         "class_level": "12",
         "year": "2026",
