@@ -195,7 +195,7 @@ SAMPLE_PAPERS = {
         "subject": "Political Science",
         "class_level": "12",
         "year": "2026",
-        "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/REPLACE_polsci1.pdf",
+        "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/PolSci-SQP.pdf",
     },
     "polsci-sample-paper-2": {
         "id": "polsci-sample-paper-2",
@@ -267,7 +267,7 @@ SAMPLE_PAPERS = {
         "subject": "Physical Education",
         "class_level": "12",
         "year": "2026",
-        "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/REPLACE_pe5.pdf",
+        "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/PhysicalEducation-SQP.pdf",
     },
     "bst-sample-paper-26": {
         "id": "bst-sample-paper-26",
@@ -275,7 +275,7 @@ SAMPLE_PAPERS = {
         "subject": "Business Studies",
         "class_level": "12",
         "year": "2026",
-        "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/REPLACE_bst1.pdf",
+        "pdf_url": "https://khvmrhnkooehyojkguev.supabase.co/storage/v1/object/public/Documents/BusinessStudies-SQP.pdf",
     },
     "bst-sample-paper-2": {
         "id": "bst-sample-paper-2",
