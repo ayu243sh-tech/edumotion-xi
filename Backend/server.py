@@ -5,6 +5,7 @@ from pdf_generator import generate_pdf
 from library_routes import router as library_router
 from resources_routes import router as resources_router
 from models3d_routes import router as models3d_router
+from resources_auth_routes import router as resources_auth_router
 
 from starlette.middleware.cors import CORSMiddleware
 import os
