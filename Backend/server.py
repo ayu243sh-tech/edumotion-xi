@@ -223,6 +223,7 @@ async def generate_pdf_api(request: PDFRequest):
 api_router.include_router(library_router)
 api_router.include_router(resources_router)
 api_router.include_router(models3d_router)
+api_router.include_router(resources_auth_router)
 app.include_router(api_router)
 
 app.add_middleware(
