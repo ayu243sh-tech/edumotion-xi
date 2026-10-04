@@ -10,12 +10,8 @@ import {
 } from "lucide-react";
 
 const QUICK_ACCESS = [
-  { id: "notes", label: "Notes", icon: BookOpen, accent: "#7B1E1E", bg: "#FDE68A" },
   { id: "videos", label: "Video Lectures", icon: Video, accent: "#962A2A", bg: "#FEF3C7" },
   { id: "tests", label: "Chapter Tests", icon: ClipboardList, accent: "#0F766E", bg: "#CCFBF1" },
-  { id: "pyqs", label: "PYQs", icon: FileText, accent: "#B45309", bg: "#FFEDD5" },
-  { id: "planner", label: "Study Planner", icon: CalendarDays, accent: "#1E40AF", bg: "#DBEAFE" },
-  { id: "ai", label: "AI Doubt Solver", icon: Bot, accent: "#7B1E1E", bg: "#F5E6E6" },
   { id: "library", label: "Digital Library", icon: Library, accent: "#5B21B6", bg: "#EDE9FE" },
   { id: "resources", label: "Study Resources", icon: GraduationCap, accent: "#B45309", bg: "#FDE68A" },
   { id: "models3d", label: "3D Models", icon: Box, accent: "#3730A3", bg: "#E0E7FF" },
