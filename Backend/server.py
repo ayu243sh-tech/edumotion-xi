@@ -6,6 +6,7 @@ from library_routes import router as library_router
 from resources_routes import router as resources_router
 from models3d_routes import router as models3d_router
 from resources_auth_routes import router as resources_auth_router
+from live_routes import router as live_router
 
 from starlette.middleware.cors import CORSMiddleware
 import os
@@ -224,6 +225,8 @@ api_router.include_router(library_router)
 api_router.include_router(resources_router)
 api_router.include_router(models3d_router)
 api_router.include_router(resources_auth_router)
+api_router.include_router(live_router)   
+
 app.include_router(api_router)
 
 app.add_middleware(
