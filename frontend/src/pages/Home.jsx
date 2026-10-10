@@ -16,6 +16,8 @@ const QUICK_ACCESS = [
   { id: "resources", label: "Study Resources", icon: GraduationCap, accent: "#B45309", bg: "#FDE68A" },
   { id: "models3d", label: "3D Models", icon: Box, accent: "#3730A3", bg: "#E0E7FF" },
   { id: "games", label: "Game Break", icon: Gamepad2, accent: "#0F766E", bg: "#CCFBF1" },
+  { id: "live", label: "Live Classes", icon: Radio, accent: "#B91C1C", bg: "#FEE2E2" },
+  { id: "batches", label: "Batches", icon: Users, accent: "#1E40AF", bg: "#DBEAFE" },
 ];
 
 const SUBJECT_ICONS = { science: FlaskConical, mathematics: Sigma, "social-science": Globe2, english: BookOpen, hindi: Languages, computer: Cpu };
@@ -140,6 +142,10 @@ onClick={() => {
   } else if (id === "models3d") {
     window.open("https://edumotion-3d-zlzh-chi.vercel.app", "_blank", "noopener");
       } else if (id === "games") {
+  } else if (id === "live") {
+  navigate("/live");
+ } else if (id === "batches") {
+  navigate("/batches");
     window.open("https://edumotion-games-git-main-edumotion-xi.vercel.app/", "_blank", "noopener");
   } else {
     navigate(id === "ai" ? "/" : `/search?type=${id}`);
