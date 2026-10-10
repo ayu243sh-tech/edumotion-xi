@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import {
   BookOpen, Video, ClipboardList, FileText, CalendarDays, Bot, Search as SearchIcon,
-  Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu, Library,GraduationCap, Box,Gamepad2
+  Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu, Library,GraduationCap, Box,Gamepad2, Radio, Users
 } from "lucide-react";
 
 const QUICK_ACCESS = [
