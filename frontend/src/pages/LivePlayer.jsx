@@ -4,6 +4,7 @@ import { api } from "@/lib/api";
 import { fmtDateTime, fmtCountdown } from "@/lib/liveTime";
 import StatusPill from "@/components/StatusPill";
 import ClassNotes from "@/components/ClassNotes";
+import DoubtBox from "@/components/DoubtBox";
 
 export default function LivePlayer() {
   const { classId } = useParams();
@@ -91,6 +92,11 @@ export default function LivePlayer() {
       {status !== "upcoming" && (
   <div className="mt-5">
     <ClassNotes classId={c.id} title={c.title} start={c.start} status={status} />
+  </div>
+)}
+  {status === "ended" && (
+  <div className="mt-5">
+    <DoubtBox classId={c.id} />
   </div>
 )}
     </div>
