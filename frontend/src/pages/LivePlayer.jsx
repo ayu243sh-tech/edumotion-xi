@@ -89,16 +89,18 @@ export default function LivePlayer() {
           )}
         </div>
       )}
+
       {status !== "upcoming" && (
-  <div className="mt-5">
-    <ClassNotes classId={c.id} title={c.title} start={c.start} status={status} />
-  </div>
-)}
-  {status === "ended" && (
-  <div className="mt-5">
-    <DoubtBox classId={c.id} />
-  </div>
-)}
+        <div className="mt-5">
+          <ClassNotes classId={c.id} title={c.title} start={c.start} status={status} />
+        </div>
+      )}
+
+      {status === "ended" && (
+        <div className="mt-5">
+          <DoubtBox classId={c.id} />
+        </div>
+      )}
     </div>
   );
 }
