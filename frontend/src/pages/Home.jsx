@@ -141,12 +141,12 @@ onClick={() => {
     window.open("https://edumotion-resources-one.vercel.app", "_blank", "noopener");
   } else if (id === "models3d") {
     window.open("https://edumotion-3d-zlzh-chi.vercel.app", "_blank", "noopener");
-      } else if (id === "games") {
-  } else if (id === "live") {
-  navigate("/live");
- } else if (id === "batches") {
-  navigate("/batches");
+  } else if (id === "games") {
     window.open("https://edumotion-games-git-main-edumotion-xi.vercel.app/", "_blank", "noopener");
+  } else if (id === "live") {
+    navigate("/live");
+  } else if (id === "batches") {
+    navigate("/batches");
   } else {
     navigate(id === "ai" ? "/" : `/search?type=${id}`);
   }
