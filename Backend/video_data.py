@@ -14,17 +14,11 @@ VIDEO_LECTURES = {
             {"title": "Harappan Civilization — Full Lecture", "youtube_id": "REPLACE_WITH_VIDEO_ID"},
         ],
     },
-    VIDEO_LECTURES = {
-    # ... keep any entries you already have ...
-
-    # Class 12 Economics — Indian Economy 1950–1990 (Ch 2)
     "ch3-Indian-eco-1950-1990": {
         "hindi": [
             {"title": "Indian Economy 1950–1990 — Full Lecture", "youtube_id": "PASTE_VIDEO_ID_HERE"},
         ],
     },
-
-    # Class 12 Economics — Economic Reforms since 1991 (Ch 3)
     "ch3-Economics-reforms": {
         "hindi": [
             {"title": "Economic Reforms 1991 — Full Lecture", "youtube_id": "PASTE_VIDEO_ID_HERE"},
