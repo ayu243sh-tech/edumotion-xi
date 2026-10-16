@@ -16,15 +16,14 @@ VIDEO_LECTURES = {
     },
     "ch3-Indian-eco-1950-1990": {
         "hindi": [
-            {"title": "Indian Economy 1950–1990 — Full Lecture", "youtube_id": "PASTE_VIDEO_ID_HERE"},
+            {"title": "Indian Economy 1950–1990 — Full Lecture", "youtube_id": "REPLACE_WITH_VIDEO_ID"},
         ],
     },
     "ch3-Economics-reforms": {
         "hindi": [
-            {"title": "Economic Reforms 1991 — Full Lecture", "youtube_id": "PASTE_VIDEO_ID_HERE"},
+            {"title": "Economic Reforms 1991 — Full Lecture", "youtube_id": "REPLACE_WITH_VIDEO_ID"},
         ],
     },
-}
     # Add more chapters here, same shape.
     # For a long lecture, add several parts to the list:
     #   {"title": "Part 1 — Town Planning", "youtube_id": "..."},
