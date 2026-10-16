@@ -15,6 +15,10 @@ import LiveClasses from "@/pages/LiveClasses";
 import LivePlayer from "@/pages/LivePlayer";
 import Batches from "@/pages/Batches";
 import BatchDetail from "@/pages/BatchDetail";
+import VideoClasses from "@/pages/VideoClasses";
+import VideoSubjects from "@/pages/VideoSubjects";
+import VideoChapters from "@/pages/VideoChapters";
+import VideoLecture from "@/pages/VideoLecture";
 
 function Layout() {
   return (
@@ -44,6 +48,10 @@ function App() {
             <Route path="/batches" element={<Batches />} />
             <Route path="/batches/:classLevel" element={<Batches />} />
             <Route path="/batch/:batchId" element={<BatchDetail />} />
+            <Route path="/videos" element={<VideoClasses />} />
+            <Route path="/videos/:classId" element={<VideoSubjects />} />
+            <Route path="/videos/:classId/:subjectId" element={<VideoChapters />} />
+            <Route path="/video-lecture/:chapterId" element={<VideoLecture />} />
   
           </Route>
         </Routes>
