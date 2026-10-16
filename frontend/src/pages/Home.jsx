@@ -135,7 +135,9 @@ export default function Home() {
   <button
     key={id}
 onClick={() => {
-  if (id === "library") {
+  if (id === "videos") {
+    navigate("/videos");
+  } else if (id === "library") {
     window.open("https://edumotioin-l-ib.vercel.app", "_blank", "noopener");
   } else if (id === "resources") {
     window.open("https://edumotion-resources-one.vercel.app", "_blank", "noopener");
