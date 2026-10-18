@@ -11,7 +11,7 @@ VIDEO_LECTURES = {
             {"title": "Harappan Civilization — Full Lecture", "youtube_id": "REPLACE_WITH_VIDEO_ID"},
         ],
         "english": [
-            {"title": "Harappan Civilization — Full Lecture", "youtube_id": "BesZIL3xJPE},
+            {"title": "Harappan Civilization — Full Lecture", "youtube_id": "BesZIL3xJPE"},
         ],
     },
     "ch3-Indian-eco-1950-1990": {
