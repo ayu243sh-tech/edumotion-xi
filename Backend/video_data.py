@@ -8,7 +8,7 @@
 VIDEO_LECTURES = {
     "ch11-his-harappan": {
         "hindi": [
-            {"title": "Harappan Civilization — Full Lecture", "youtube_id": "REPLACE_WITH_VIDEO_ID"},
+            {"title": "Harappan Civilization — Full Lecture", "youtube_id": "pOqwVk12J-4"},
         ],
         "english": [
             {"title": "Harappan Civilization — Full Lecture", "youtube_id": "BesZIL3xJPE"},
@@ -16,12 +16,12 @@ VIDEO_LECTURES = {
     },
     "ch3-Indian-eco-1950-1990": {
         "hindi": [
-            {"title": "Indian Economy 1950–1990 — Full Lecture", "youtube_id": "REPLACE_WITH_VIDEO_ID"},
+            {"title": "Indian Economy 1950–1990 — Full Lecture", "youtube_id": "VdJZxSR57xY"},
         ],
     },
     "ch3-Economics-reforms": {
         "hindi": [
-            {"title": "Economic Reforms 1991 — Full Lecture", "youtube_id": "REPLACE_WITH_VIDEO_ID"},
+            {"title": "Economic Reforms 1991 — Full Lecture", "youtube_id": "9Ca1KSI7xao"},
         ],
     },
     # Add more chapters here, same shape.
