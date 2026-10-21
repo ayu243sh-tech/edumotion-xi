@@ -1,4 +1,4 @@
-const CACHE_NAME = "edumotion-cache-v1";
+const CACHE_NAME = "edumotion-cache-v2";
 const OFFLINE_URL = "/";
 
 const PRECACHE_ASSETS = ["/", "/index.html", "/manifest.json"];
@@ -21,10 +21,15 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// Network-first for navigation, cache-first for static assets
 self.addEventListener("fetch", (event) => {
   const { request } = event;
 
+  // Only handle GET requests from this site. Never cache API calls or other websites.
+  if (request.method !== "GET") return;
+  const url = new URL(request.url);
+  if (url.origin !== self.location.origin || url.pathname.startsWith("/api")) return;
+
+  // Pages: network first, cached copy only if offline
   if (request.mode === "navigate") {
     event.respondWith(
       fetch(request)
@@ -38,6 +43,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
+  // Static files from this site: cache first
   event.respondWith(
     caches.match(request).then((cached) => {
       if (cached) return cached;
@@ -52,7 +58,6 @@ self.addEventListener("fetch", (event) => {
   );
 });
 
-// Push notification handler (ready for when Firebase Cloud Messaging is wired in)
 self.addEventListener("push", (event) => {
   const data = event.data ? event.data.json() : {};
   const title = data.title || "EduMotion";
