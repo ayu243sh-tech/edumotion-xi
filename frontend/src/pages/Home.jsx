@@ -150,11 +150,12 @@ onClick={() => {
     navigate("/live");
   } else if (id === "batches") {
     navigate("/batches");
-  } else {
-    navigate(id === "ai" ? "/" : `/search?type=${id}`);
-    } else if (id === "shorts") {
+  } else if (id === "shorts") {
   navigate("/shorts");
   }
+  else {
+    navigate(id === "ai" ? "/" : `/search?type=${id}`);
+    } 
 }}
     data-testid={`quick-access-${id}`}
     className="group bg-white rounded-[20px] border border-[#E7E5E4] p-6 text-left hover:-translate-y-1 transition-transform bento-shadow bento-shadow-hover"
