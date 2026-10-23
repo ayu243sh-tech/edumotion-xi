@@ -9,6 +9,7 @@ from resources_auth_routes import router as resources_auth_router
 from live_routes import router as live_router
 from live_doubts_routes import router as live_doubts_router
 from video_routes import router as video_router
+from short_routes import router as short_router
 
 from starlette.middleware.cors import CORSMiddleware
 import os
@@ -230,6 +231,7 @@ api_router.include_router(resources_auth_router)
 api_router.include_router(live_router) 
 api_router.include_router(live_doubts_router)
 api_router.include_router(video_router) 
+api_router.include_router(short_router)
 
 app.include_router(api_router)
 
