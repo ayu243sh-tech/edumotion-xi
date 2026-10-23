@@ -19,7 +19,7 @@ SHORTS = [
         "class_level": "12",
         "subject": "History",
         "title": "Harappan town planning — quick revision",
-        "youtube_id": "REPLACE_WITH_VIDEO_ID",
+        "youtube_id": "0nloOqGkfFQ",
     },
     # Example with your own MP4 instead of YouTube:
     # {
