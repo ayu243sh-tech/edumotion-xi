@@ -18,6 +18,7 @@ const QUICK_ACCESS = [
   { id: "games", label: "Game Break", icon: Gamepad2, accent: "#0F766E", bg: "#CCFBF1" },
   { id: "live", label: "Live Classes", icon: Radio, accent: "#B91C1C", bg: "#FEE2E2" },
   { id: "batches", label: "Batches", icon: Users, accent: "#1E40AF", bg: "#DBEAFE" },
+  { id: "shorts", label: "Shorts", icon: Clapperboard, accent: "#B91C1C", bg: "#FEE2E2" },
 ];
 
 const SUBJECT_ICONS = { science: FlaskConical, mathematics: Sigma, "social-science": Globe2, english: BookOpen, hindi: Languages, computer: Cpu };
@@ -151,6 +152,8 @@ onClick={() => {
     navigate("/batches");
   } else {
     navigate(id === "ai" ? "/" : `/search?type=${id}`);
+    } else if (id === "shorts") {
+  navigate("/shorts");
   }
 }}
     data-testid={`quick-access-${id}`}
