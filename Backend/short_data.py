@@ -12,7 +12,7 @@ SHORTS = [
         "class_level": "12",
         "subject": "Economics",
         "title": "GDP vs GNP in 60 seconds",
-        "youtube_id": "REPLACE_WITH_VIDEO_ID",
+        "youtube_id": "gw068yN6vk0",
     },
     {
         "id": "his-harappan-town-planning",
