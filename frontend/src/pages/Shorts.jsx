@@ -1,21 +1,18 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { ChevronUp, ChevronDown } from "lucide-react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { ChevronDown, ChevronUp, Play, Volume2, VolumeX, X } from "lucide-react";
 import { api } from "@/lib/api";
 
 const CLASS_FILTERS = ["all", "9", "10", "11", "12"];
-const CAPTION_SPACE = 64; // room under each video for the title
 
-function thumbUrl(id) {
-  return `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
-}
+const thumbUrl = (id) => `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
 
 function Chip({ label, selected, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`shrink-0 text-xs font-semibold rounded-full px-3.5 py-1.5 transition-colors ${
-        selected ? "bg-[#7B1E1E] text-white" : "bg-white border border-[#E7E5E4] hover:border-[#7B1E1E]"
+      className={`shrink-0 text-xs font-semibold rounded-full px-3.5 py-1.5 backdrop-blur transition-colors ${
+        selected ? "bg-white text-black" : "bg-black/40 text-white border border-white/25"
       }`}
     >
       {label}
@@ -23,42 +20,69 @@ function Chip({ label, selected, onClick }) {
   );
 }
 
-function ShortPlayer({ s, active, w, h }) {
-  const box = { width: w, height: h };
-  const frame = "rounded-[20px] overflow-hidden bg-black";
+// Fills the whole slide: the video box is sized so it always covers the screen (no black bars)
+function ShortPlayer({ s, active, muted, box, playerRef }) {
+  const w = Math.max(box.cw, (box.ch * 9) / 16);
+  const h = (w * 16) / 9;
+  const centered = {
+    position: "absolute",
+    left: "50%",
+    top: "50%",
+    width: w,
+    height: h,
+    transform: "translate(-50%, -50%)",
+  };
 
   if (!active) {
-    return (
-      <div style={box} className={frame}>
-        {s.youtube_id && <img src={thumbUrl(s.youtube_id)} alt="" className="w-full h-full object-cover opacity-80" />}
-      </div>
+    return s.youtube_id ? (
+      <img src={thumbUrl(s.youtube_id)} alt="" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+    ) : (
+      <div className="absolute inset-0 bg-black" />
     );
   }
 
   if (s.video_url) {
     return (
-      <div style={box} className={frame}>
-        <video src={s.video_url} className="w-full h-full object-cover" autoPlay muted loop playsInline controls />
-      </div>
+      <video
+        ref={playerRef}
+        src={s.video_url}
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted={muted}
+        loop
+        playsInline
+      />
     );
   }
 
-  const src = `https://www.youtube.com/embed/${s.youtube_id}?autoplay=1&mute=1&loop=1&playlist=${s.youtube_id}&playsinline=1&rel=0`;
+  const params = [
+    "autoplay=1",
+    `mute=${muted ? 1 : 0}`,
+    "loop=1",
+    `playlist=${s.youtube_id}`,
+    "playsinline=1",
+    "controls=0",
+    "rel=0",
+    "modestbranding=1",
+    "iv_load_policy=3",
+    "enablejsapi=1",
+    `origin=${encodeURIComponent(window.location.origin)}`,
+  ].join("&");
+
   return (
-    <div style={box} className={frame}>
-      <iframe
-        key={s.id}
-        className="w-full h-full"
-        src={src}
-        title={s.title}
-        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-        allowFullScreen
-      />
-    </div>
+    <iframe
+      ref={playerRef}
+      key={s.id}
+      style={centered}
+      src={`https://www.youtube.com/embed/${s.youtube_id}?${params}`}
+      title={s.title}
+      allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    />
   );
 }
 
 export default function Shorts() {
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const classFilter = searchParams.get("class") || "all";
   const subjectFilter = searchParams.get("subject") || "all";
@@ -66,9 +90,19 @@ export default function Shorts() {
   const [shorts, setShorts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [active, setActive] = useState(0);
-  const [size, setSize] = useState({ w: 270, h: 480 });
+  const [muted, setMuted] = useState(true);
+  const [paused, setPaused] = useState(false);
+  const [box, setBox] = useState({ cw: 360, ch: 640 });
   const feedRef = useRef(null);
   const slideRefs = useRef([]);
+  const playerRef = useRef(null);
+
+  // Lock the page behind the full-screen player
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = prev; };
+  }, []);
 
   useEffect(() => {
     api
@@ -101,26 +135,23 @@ export default function Shorts() {
     setSearchParams(next);
   };
 
-  // Size the video box to exactly 9:16 for whatever screen this is
+  // Measure the screen so the video can be sized to cover it
   useEffect(() => {
     const el = feedRef.current;
     if (!el) return;
-    const measure = () => {
-      const availH = Math.max(200, el.clientHeight - CAPTION_SPACE);
-      const w = Math.max(120, Math.min(el.clientWidth - 16, Math.floor((availH * 9) / 16)));
-      setSize({ w, h: Math.round((w * 16) / 9) });
-    };
+    const measure = () => setBox({ cw: el.clientWidth, ch: el.clientHeight });
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
 
-  // Back to the first short whenever a filter changes
   useEffect(() => {
     setActive(0);
     if (feedRef.current) feedRef.current.scrollTo({ top: 0 });
   }, [classFilter, subjectFilter]);
+
+  useEffect(() => { setPaused(false); }, [active]);
 
   // Work out which short is on screen
   useEffect(() => {
@@ -139,15 +170,16 @@ export default function Shorts() {
     return () => io.disconnect();
   }, [visible]);
 
-  const goTo = useCallback((i) => {
-    const el = feedRef.current;
-    if (!el) return;
-    const max = Math.round(el.scrollHeight / el.clientHeight) - 1;
-    const target = Math.max(0, Math.min(i, max));
-    el.scrollTo({ top: target * el.clientHeight, behavior: "smooth" });
-  }, []);
+  const goTo = useCallback(
+    (i) => {
+      const el = feedRef.current;
+      if (!el || visible.length === 0) return;
+      const target = Math.max(0, Math.min(i, visible.length - 1));
+      el.scrollTo({ top: target * el.clientHeight, behavior: "smooth" });
+    },
+    [visible.length]
+  );
 
-  // Arrow keys on desktop
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "ArrowDown") { e.preventDefault(); goTo(active + 1); }
@@ -157,47 +189,83 @@ export default function Shorts() {
     return () => window.removeEventListener("keydown", onKey);
   }, [active, goTo]);
 
+  // Control the playing video (YouTube iframe or own MP4)
+  const control = (action) => {
+    const el = playerRef.current;
+    if (!el) return;
+    if (el.tagName === "IFRAME") {
+      const func = { play: "playVideo", pause: "pauseVideo", mute: "mute", unmute: "unMute" }[action];
+      if (el.contentWindow) {
+        el.contentWindow.postMessage(JSON.stringify({ event: "command", func, args: [] }), "*");
+      }
+    } else {
+      if (action === "play") el.play();
+      if (action === "pause") el.pause();
+      if (action === "mute") el.muted = true;
+      if (action === "unmute") el.muted = false;
+    }
+  };
+
+  const toggleMute = () => {
+    const next = !muted;
+    setMuted(next);
+    control(next ? "mute" : "unmute");
+  };
+
+  const togglePlay = () => {
+    const next = !paused;
+    setPaused(next);
+    control(next ? "pause" : "play");
+  };
+
   return (
-    <div className="max-w-md mx-auto px-4 py-6" data-testid="shorts-page">
-      <div className="text-xs uppercase tracking-[0.2em] font-mono-em text-[#78716C]">Shorts</div>
-      <h1 className="font-display text-3xl font-bold mt-1 mb-4">Learn in a minute.</h1>
-
-      <div className="flex gap-2 overflow-x-auto pb-2">
-        {CLASS_FILTERS.map((f) => (
-          <Chip
-            key={f}
-            label={f === "all" ? "All classes" : `Class ${f}`}
-            selected={classFilter === f}
-            onClick={() => setFilter("class", f)}
-          />
-        ))}
-      </div>
-
-      {subjects.length > 0 && (
-        <div className="flex gap-2 overflow-x-auto pb-3">
-          <Chip label="All subjects" selected={subjectFilter === "all"} onClick={() => setFilter("subject", "all")} />
-          {subjects.map((s) => (
-            <Chip key={s} label={s} selected={subjectFilter === s} onClick={() => setFilter("subject", s)} />
-          ))}
+    <div className="fixed inset-0 z-[200] bg-black flex justify-center" data-testid="shorts-page">
+      <div className="relative h-full w-full md:w-[calc(100vh*9/16)] md:max-w-full">
+        {/* Filters floating over the video */}
+        <div
+          className="absolute top-0 inset-x-0 z-30 px-3 pb-6 bg-gradient-to-b from-black/70 to-transparent"
+          style={{ paddingTop: "calc(env(safe-area-inset-top) + 12px)" }}
+        >
+          <div className="flex items-center gap-3 mb-2">
+            <button
+              onClick={() => navigate("/")}
+              aria-label="Close shorts"
+              className="w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center text-white shrink-0"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <div className="font-display font-bold text-white text-lg">Shorts</div>
+          </div>
+          <div className="flex gap-2 overflow-x-auto pb-1 [&::-webkit-scrollbar]:hidden" style={{ scrollbarWidth: "none" }}>
+            {CLASS_FILTERS.map((f) => (
+              <Chip
+                key={f}
+                label={f === "all" ? "All classes" : `Class ${f}`}
+                selected={classFilter === f}
+                onClick={() => setFilter("class", f)}
+              />
+            ))}
+          </div>
+          {subjects.length > 0 && (
+            <div className="flex gap-2 overflow-x-auto mt-2 [&::-webkit-scrollbar]:hidden" style={{ scrollbarWidth: "none" }}>
+              <Chip label="All subjects" selected={subjectFilter === "all"} onClick={() => setFilter("subject", "all")} />
+              {subjects.map((s) => (
+                <Chip key={s} label={s} selected={subjectFilter === s} onClick={() => setFilter("subject", s)} />
+              ))}
+            </div>
+          )}
         </div>
-      )}
 
-      <div className="relative mt-2">
+        {/* The feed: one short per screen */}
         <div
           ref={feedRef}
-          className="overflow-y-scroll rounded-[24px] bg-[#1C1917] [&::-webkit-scrollbar]:hidden"
-          style={{
-            height: "calc(100dvh - 260px)",
-            minHeight: 420,
-            scrollSnapType: "y mandatory",
-            overscrollBehavior: "contain",
-            scrollbarWidth: "none",
-          }}
+          className="h-full w-full overflow-y-scroll [&::-webkit-scrollbar]:hidden"
+          style={{ scrollSnapType: "y mandatory", overscrollBehavior: "contain", scrollbarWidth: "none" }}
         >
           {loading ? (
             <div className="h-full flex items-center justify-center text-sm text-white/70">Loading...</div>
           ) : visible.length === 0 ? (
-            <div className="h-full flex items-center justify-center text-sm text-white/70 text-center px-8">
+            <div className="h-full flex items-center justify-center text-sm text-white/70 text-center px-10">
               No shorts here yet. New ones are added regularly.
             </div>
           ) : (
@@ -206,28 +274,47 @@ export default function Shorts() {
                 key={s.id}
                 data-index={i}
                 ref={(el) => (slideRefs.current[i] = el)}
-                className="flex flex-col items-center justify-center gap-3 px-2"
+                className="relative w-full overflow-hidden bg-black"
                 style={{ height: "100%", scrollSnapAlign: "start", scrollSnapStop: "always" }}
               >
-                <ShortPlayer s={s} active={i === active} w={size.w} h={size.h} />
-                <div className="text-center" style={{ width: size.w }}>
-                  <div className="text-[10px] uppercase tracking-[0.15em] font-mono-em text-white/60">
+                <ShortPlayer s={s} active={i === active} muted={muted} box={box} playerRef={playerRef} />
+
+                {/* Catches taps and swipes so scrolling always works */}
+                {i === active && <div className="absolute inset-0 z-10" onClick={togglePlay} />}
+                {i === active && paused && (
+                  <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+                    <div className="w-16 h-16 rounded-full bg-black/50 flex items-center justify-center">
+                      <Play className="w-8 h-8 text-white fill-white" />
+                    </div>
+                  </div>
+                )}
+
+                {/* Title over the video */}
+                <div
+                  className="absolute inset-x-0 bottom-0 z-20 pointer-events-none px-4 pt-16 pr-20 bg-gradient-to-t from-black/80 to-transparent"
+                  style={{ paddingBottom: "calc(env(safe-area-inset-bottom) + 20px)" }}
+                >
+                  <div className="text-[10px] uppercase tracking-[0.15em] font-mono-em text-white/70">
                     Class {s.class_level} · {s.subject}
                   </div>
-                  <div className="text-sm font-semibold text-white leading-snug line-clamp-2">{s.title}</div>
+                  <div className="text-base font-semibold text-white leading-snug line-clamp-2 mt-1">{s.title}</div>
                 </div>
               </div>
             ))
           )}
         </div>
 
-        {visible.length > 1 && (
-          <div className="absolute right-3 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-10">
+        {/* Buttons on the right */}
+        {visible.length > 0 && (
+          <div
+            className="absolute right-3 z-30 flex flex-col gap-3"
+            style={{ bottom: "calc(env(safe-area-inset-bottom) + 28px)" }}
+          >
             <button
               onClick={() => goTo(active - 1)}
               disabled={active === 0}
               aria-label="Previous short"
-              className="w-10 h-10 rounded-full bg-white/80 backdrop-blur flex items-center justify-center disabled:opacity-30"
+              className="hidden md:flex w-11 h-11 rounded-full bg-black/45 backdrop-blur items-center justify-center text-white disabled:opacity-30"
             >
               <ChevronUp className="w-5 h-5" />
             </button>
@@ -235,19 +322,20 @@ export default function Shorts() {
               onClick={() => goTo(active + 1)}
               disabled={active === visible.length - 1}
               aria-label="Next short"
-              className="w-10 h-10 rounded-full bg-white/80 backdrop-blur flex items-center justify-center disabled:opacity-30"
+              className="hidden md:flex w-11 h-11 rounded-full bg-black/45 backdrop-blur items-center justify-center text-white disabled:opacity-30"
             >
               <ChevronDown className="w-5 h-5" />
+            </button>
+            <button
+              onClick={toggleMute}
+              aria-label={muted ? "Turn sound on" : "Turn sound off"}
+              className="w-11 h-11 rounded-full bg-black/45 backdrop-blur flex items-center justify-center text-white"
+            >
+              {muted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
             </button>
           </div>
         )}
       </div>
-
-      {visible.length > 0 && (
-        <div className="text-center text-xs font-mono-em text-[#78716C] mt-3">
-          {active + 1} / {visible.length}
-        </div>
-      )}
     </div>
   );
 }
