@@ -40,82 +40,86 @@ export default function VideoLecture() {
 
   const active = lang && lectures[lang] ? lectures[lang] : [];
   const current = active[part];
+  const multi = active.length > 1;
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-8" data-testid="video-lecture-page">
-      <Link
-        to={`/videos/${chapter.class_id}/${chapter.subject_id}`}
-        className="text-sm text-[#78716C] hover:text-[#7B1E1E]"
-      >
-        ← Back to chapters
-      </Link>
+    <div className="max-w-[1800px] mx-auto sm:px-4 lg:px-6 py-4 sm:py-6" data-testid="video-lecture-page">
+      <div className="px-4 sm:px-0">
+        <Link
+          to={`/videos/${chapter.class_id}/${chapter.subject_id}`}
+          className="text-sm text-[#78716C] hover:text-[#7B1E1E]"
+        >
+          ← Back to chapters
+        </Link>
 
-      <div className="mt-4 mb-6">
-        <div className="text-xs uppercase tracking-[0.15em] font-mono-em text-[#78716C]">Video lecture</div>
-        <h1 className="font-display text-2xl md:text-3xl font-bold mt-1">{chapter.name}</h1>
-      </div>
+        <div className="mt-3 mb-4">
+          <div className="text-xs uppercase tracking-[0.15em] font-mono-em text-[#78716C]">Video lecture</div>
+          <h1 className="font-display text-xl md:text-3xl font-bold mt-1">{chapter.name}</h1>
+        </div>
 
-      <div className="grid sm:grid-cols-2 gap-4 mb-6">
-        {LANGS.map((l) => {
-          const count = lectures[l.id].length;
-          const disabled = count === 0;
-          const selected = lang === l.id;
-          return (
-            <button
-              key={l.id}
-              disabled={disabled}
-              onClick={() => setSearchParams({ lang: l.id })}
-              className={`text-left rounded-[20px] border p-6 transition-all ${
-                disabled
-                  ? "bg-[#FAF9F6] border-[#E7E5E4] opacity-60 cursor-not-allowed"
-                  : selected
-                  ? "bg-[#7B1E1E] border-[#7B1E1E] text-white bento-shadow"
-                  : "bg-white border-[#E7E5E4] hover:border-[#7B1E1E] hover:-translate-y-0.5 transition-transform bento-shadow"
-              }`}
-            >
-              <div className="flex items-center gap-3">
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${selected ? "bg-white/15" : "bg-[#FDE68A]"}`}>
-                  <Languages className={`w-5 h-5 ${selected ? "text-white" : "text-[#7B1E1E]"}`} />
-                </div>
-                <div>
-                  <div className="font-display font-bold text-lg leading-tight">{l.label}</div>
-                  <div className={`text-xs mt-0.5 ${selected ? "text-white/80" : "text-[#78716C]"}`}>
-                    {disabled ? "Coming soon" : `${l.sub} · ${count} ${count > 1 ? "parts" : "video"}`}
+        <div className="grid grid-cols-2 gap-3 mb-4">
+          {LANGS.map((l) => {
+            const count = lectures[l.id].length;
+            const disabled = count === 0;
+            const selected = lang === l.id;
+            return (
+              <button
+                key={l.id}
+                disabled={disabled}
+                onClick={() => setSearchParams({ lang: l.id })}
+                className={`text-left rounded-[16px] border px-4 py-3 transition-all ${
+                  disabled
+                    ? "bg-[#FAF9F6] border-[#E7E5E4] opacity-60 cursor-not-allowed"
+                    : selected
+                    ? "bg-[#7B1E1E] border-[#7B1E1E] text-white"
+                    : "bg-white border-[#E7E5E4] hover:border-[#7B1E1E]"
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${selected ? "bg-white/15" : "bg-[#FDE68A]"}`}>
+                    <Languages className={`w-4 h-4 ${selected ? "text-white" : "text-[#7B1E1E]"}`} />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="font-display font-bold text-sm md:text-base leading-tight truncate">{l.label}</div>
+                    <div className={`text-[11px] mt-0.5 truncate ${selected ? "text-white/80" : "text-[#78716C]"}`}>
+                      {disabled ? "Coming soon" : `${l.sub} · ${count} ${count > 1 ? "parts" : "video"}`}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </button>
-          );
-        })}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {!lang ? (
-        <div className="bg-white rounded-[20px] border border-[#E7E5E4] p-10 text-center text-[#78716C]">
+        <div className="mx-4 sm:mx-0 bg-white rounded-[20px] border border-[#E7E5E4] p-10 text-center text-[#78716C]">
           Choose a language above to start watching.
         </div>
       ) : !current ? (
-        <div className="bg-white rounded-[20px] border border-[#E7E5E4] p-10 text-center text-[#78716C]">
+        <div className="mx-4 sm:mx-0 bg-white rounded-[20px] border border-[#E7E5E4] p-10 text-center text-[#78716C]">
           This lecture isn't available yet.
         </div>
       ) : (
-        <div className="grid md:grid-cols-12 gap-5">
-          <div className={active.length > 1 ? "md:col-span-8" : "md:col-span-12"}>
-            <div className="aspect-video bg-black rounded-[20px] overflow-hidden border border-[#E7E5E4]">
+        <div className={multi ? "xl:grid xl:grid-cols-[minmax(0,1fr)_340px] xl:gap-5" : ""}>
+          <div>
+            {/* Edge to edge on phones, rounded on bigger screens */}
+            <div className="aspect-video bg-black sm:rounded-[20px] overflow-hidden">
               <iframe
                 key={current.youtube_id}
                 className="w-full h-full"
-                src={`https://www.youtube.com/embed/${current.youtube_id}?rel=0`}
+                src={`https://www.youtube.com/embed/${current.youtube_id}?rel=0&modestbranding=1&playsinline=1`}
                 title={current.title}
                 allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen"
                 allowFullScreen
               />
             </div>
-            <div className="font-display font-semibold mt-3">{current.title}</div>
+            <div className="px-4 sm:px-0 font-display font-semibold text-lg mt-3">{current.title}</div>
           </div>
 
-          {active.length > 1 && (
-            <div className="md:col-span-4">
-              <div className="bg-white rounded-[20px] border border-[#E7E5E4] divide-y divide-[#E7E5E4] overflow-hidden">
+          {multi && (
+            <div className="px-4 sm:px-0 mt-4 xl:mt-0">
+              <div className="bg-white rounded-[20px] border border-[#E7E5E4] divide-y divide-[#E7E5E4] overflow-hidden xl:max-h-[75vh] xl:overflow-y-auto">
                 {active.map((p, i) => (
                   <button
                     key={p.youtube_id}
