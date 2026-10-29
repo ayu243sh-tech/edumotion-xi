@@ -78,7 +78,9 @@ NOTES = {
                 {"q": "NNP at market price minus net indirect taxes equals:", "options": ["GDP at market price", "NNP at factor cost", "GNP at factor cost", "NDP at market price"], "answer": 1, "explain": "NNP at factor cost = NNP at MP − net indirect taxes, and that is National Income."},
                 {"q": "A stock variable is measured:", "options": ["Over a period of time", "At a point in time", "Only once a year", "Only in money terms"], "answer": 1, "explain": "A stock is a quantity at one moment, such as the capital of a country on 31 March."},
             ]},
-                "his-harappan": {
+        ],           
+    },
+     "his-harappan": {
         "title": "Bricks, Beads and Bones: The Harappan Civilisation",
         "summary": "How a forgotten civilisation was discovered, what its cities, crafts, trade and beliefs tell us, and why it declined.",
         "read_minutes": 20,
@@ -259,6 +261,5 @@ NOTES = {
                 {"q": "Which of these is NOT a suggested reason for the decline of the cities?", "options": ["Shifting or drying rivers", "Deforestation and overuse of land", "Floods and climatic change", "A proven massacre by invaders"], "answer": 3, "explain": "The invasion theory has no convincing evidence, and most historians reject it."},
             ]},
         ],
-    },
-    
+     },   
 }
