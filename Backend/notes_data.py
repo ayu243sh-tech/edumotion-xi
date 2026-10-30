@@ -262,7 +262,7 @@ NOTES = {
             ]},
         ],
      }, 
-        "his-kings-farmers-towns": {
+        "his-mauryan": {
         "title": "Kings, Farmers and Towns: Early States and Economies",
         "summary": "How inscriptions and coins were deciphered, how early states and the Mauryan empire worked, how ideas of kingship changed, and how farming, land grants, towns and trade shaped the economy (c. 600 BCE – 600 CE).",
         "read_minutes": 30,
