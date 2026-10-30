@@ -32,8 +32,8 @@ RESOURCE_CHAPTERS = {
         "subject": "Economics",
         "class_level": "12",
     },
-    "his-Mahabharat": {
-        "id": "his-Mahabharat",
+    "his-kinship-caste-class": {
+        "id": "his-kinship-caste-class",
         "title": "Kinship, Caste and Class",
         "subject": "History",
         "class_level": "12",
