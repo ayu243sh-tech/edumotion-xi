@@ -20,7 +20,7 @@ RESOURCE_CHAPTERS = {
         "subject": "Economics",
         "class_level": "12",
     },
-    "his-Mauryan": {
+    "his-mauryan": {
         "id": "his-mauryan",
         "title": "Kings,Farmers and Towns",
         "subject": "History",
