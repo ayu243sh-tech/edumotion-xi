@@ -63,7 +63,7 @@ RESOURCE_CHAPTERS = {
         "class_level": "12",
      },
      "his-eyes-of-travellers": {
-        "id": "his-eyes-of-travellers":",
+        "id": "his-eyes-of-travellers",
         "title": "Through the Eyes of Travellers ",
         "subject": "History",
         "class_level": "12",
