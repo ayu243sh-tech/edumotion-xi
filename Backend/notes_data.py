@@ -1977,7 +1977,7 @@ NOTES = {
             ]},
         ],
     },
-    "pol-crisis-democratic-order": {
+    "pol-criis-democratic-order": {
         "title": "The Crisis of Democratic Order",
         "summary": "Economic and political discontent in the early 1970s, the Gujarat and Bihar movements, the Allahabad High Court verdict, the Emergency of 1975-77, its excesses, the 1977 election, the Janata government, and the lessons of the Emergency.",
         "read_minutes": 30,
@@ -2118,7 +2118,7 @@ NOTES = {
             ]},
         ],
     },
-    "pol-regional-aspirations": {
+    "pol-reginal-aspirations": {
         "title": "Regional Aspirations",
         "summary": "How India has handled regional demands within a democratic framework: Jammu and Kashmir, Punjab, the Northeast (Nagaland, Mizoram, Assam), Sikkim and Goa, with the lessons of accommodation and national unity.",
         "read_minutes": 30,
