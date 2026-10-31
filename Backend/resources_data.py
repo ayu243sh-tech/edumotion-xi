@@ -104,6 +104,30 @@ RESOURCE_CHAPTERS = {
         "subject": "Political Science",
         "class_level": "12",
     },
+     "his-peasants-zamindars-state": {
+        "id": "his-peasants-zamindars-state",
+        "title": " Bhakti-Sufi Traditions ",
+        "subject": "History",
+        "class_level": "12",
+     },
+     "his-kings-chronicles": {
+        "id": "his-kings-chronicles",
+        "title": " An Imperial Capital: Vijayanagara ",
+        "subject": "History",
+        "class_level": "12",
+     },
+     "his-colonialism-countryside": {
+        "id": "his-colonialism-countryside",
+        "title": " Bhakti-Sufi Traditions ",
+        "subject": "History",
+        "class_level": "12",
+     },
+     "his-vijayanagara": {
+        "id": "his-vijayanagara",
+        "title": " An Imperial Capital: Vijayanagara ",
+        "subject": "History",
+        "class_level": "12",
+     },
     # Add one entry per chapter you want covered in the Resource Hub.
 }
 
