@@ -38,12 +38,48 @@ RESOURCE_CHAPTERS = {
         "subject": "History",
         "class_level": "12",
     },
-      "eco-government Budget": {
-        "id": "eco-governement",
-        "title": "Governement Budget",
-        "subject": "Poitical Science",
+    "pol-challenges-nation-building": {
+        "id": "pol-challenges-nation-building",
+        "title": "Challenges of Nation Building",
+        "subject": "Political Science",
         "class_level": "12",
     },
+      "pol-era-one-party-dominance": {
+        "id": "pol-era-one-party-dominance",
+        "title": "The Era of One Party Dominance",
+        "subject": "Political Science",
+        "class_level": "12",
+    },
+    "pol-politics-planned-development": {
+        "id": "pol-politics-planned-development",
+        "title": "Politics of Planned Development",
+        "subject": "Political Science",
+        "class_level": "12",
+    },
+     "his-thinkers-beliefs-buildings": {
+        "id": "his-thinkers-beliefs-buildings",
+        "title": "Thinkers, Beliefs and Buildings ",
+        "subject": "History",
+        "class_level": "12",
+     },
+     "his-eyes-of-travellers": {
+        "id": "his-eyes-of-travellers":",
+        "title": "Through the Eyes of Travellers ",
+        "subject": "History",
+        "class_level": "12",
+     },
+    "his-bhakti-sufi": {
+        "id": "his-bhakti-sufi",
+        "title": " Bhakti-Sufi Traditions ",
+        "subject": "History",
+        "class_level": "12",
+     },
+     "his-vijayanagara": {
+        "id": "his-vijayanagara",
+        "title": " An Imperial Capital: Vijayanagara ",
+        "subject": "History",
+        "class_level": "12",
+     },
     "pol-challenges-nation-building": {
         "id": "pol-challenges-nation-building",
         "title": "Challenges of Nation Building",
