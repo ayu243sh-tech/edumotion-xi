@@ -93,13 +93,13 @@ RESOURCE_CHAPTERS = {
         "class_level": "12",
     },
       "pol-criis-democratic-order ": {
-        "id": "pol-crisis-democratic-order",
+        "id": "pol-criis-democratic-order",
         "title": "Crisis of Democratic Order",
         "subject": "Political Science",
         "class_level": "12",
     },
     "pol-reginal-aspirations ": {
-        "id": "pol-regional-aspirations",
+        "id": "pol-reginal-aspirations",
         "title": "Regional Aspirations",
         "subject": "Political Science",
         "class_level": "12",
