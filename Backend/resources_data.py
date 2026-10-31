@@ -80,21 +80,27 @@ RESOURCE_CHAPTERS = {
         "subject": "History",
         "class_level": "12",
      },
-    "pol-challenges-nation-building": {
-        "id": "pol-challenges-nation-building",
-        "title": "Challenges of Nation Building",
+    "pol-indias-external-relations": {
+        "id": "pol-indias-external-relations",
+        "title": "India's External Relations",
         "subject": "Political Science",
         "class_level": "12",
     },
-      "pol-era-one-party-dominance": {
-        "id": "pol-era-one-party-dominance",
-        "title": "The Era of One Party Dominance",
+    "pol-congress-system-challenges": {
+        "id": "pol-congress-system-challenges",
+        "title": "Challenges to and Restoration of the Congress System",
         "subject": "Political Science",
         "class_level": "12",
     },
-    "pol-politics-planned-development": {
-        "id": "pol-politics-planned-development",
-        "title": "Politics of Planned Development",
+      "pol-crisis-democratic-order ": {
+        "id": "pol-crisis-democratic-order ",
+        "title": "Crisis of Democratic Order",
+        "subject": "Political Science",
+        "class_level": "12",
+    },
+    "pol-regional-aspirations ": {
+        "id": "pol-regional-aspirations ",
+        "title": "Regional Aspirations",
         "subject": "Political Science",
         "class_level": "12",
     },
