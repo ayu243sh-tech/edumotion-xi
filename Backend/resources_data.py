@@ -128,6 +128,12 @@ RESOURCE_CHAPTERS = {
         "subject": "History",
         "class_level": "12",
      },
+    "eco-income-employment": {
+        "id": "eco-income-employment",
+        "title": "Aggregate Demand & Aggregate Supply & Related Concepts",
+        "subject": "Economics",
+        "class_level": "12",
+    },
     # Add one entry per chapter you want covered in the Resource Hub.
 }
 
