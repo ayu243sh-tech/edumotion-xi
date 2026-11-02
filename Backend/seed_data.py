@@ -2,6 +2,9 @@
 from datetime import datetime, timezone
 
 CLASSES = [
+    {"id": "class-6", "name": "Class 6", "tag": "Curious Explorer", "color": "#B45309"},
+    {"id": "class-7", "name": "Class 7", "tag": "Growing Mind", "color": "#0F766E"},
+    {"id": "class-8", "name": "Class 8", "tag": "Strong Basics", "color": "#1E40AF"},
     {"id": "class-9", "name": "Class 9", "tag": "Foundation Builder", "color": "#7B1E1E"},
     {"id": "class-10", "name": "Class 10", "tag": "Board Year", "color": "#962A2A"},
     {"id": "class-11", "name": "Class 11", "tag": "Stream Choice", "color": "#F5B400"},
@@ -9,17 +12,17 @@ CLASSES = [
 ]
 
 SUBJECTS = [
-    {"id": "mathematics", "name": "Mathematics", "icon": "Sigma", "color": "#962A2A", "classes": ["class-9", "class-10", "class-11", "class-12"]},
-    {"id": "geography", "name": "Geography", "icon": "Globe2", "color": "#B45309", "classes": ["class-9", "class-10", "class-11", "class-12"]},
-    {"id": "english", "name": "English", "icon": "BookOpen", "color": "#0F766E", "classes": ["class-9", "class-10", "class-11", "class-12"]},
-    {"id": "hindi", "name": "Hindi", "icon": "Languages", "color": "#F5B400", "classes": ["class-9", "class-10"]},
+    {"id": "mathematics", "name": "Mathematics", "icon": "Sigma", "color": "#962A2A", "classes": ["class-6", "class-7", "class-8", "class-9", "class-10", "class-11", "class-12"]},
+    {"id": "geography", "name": "Geography", "icon": "Globe2", "color": "#B45309", "classes": ["class-6", "class-7", "class-8", "class-9", "class-10", "class-11", "class-12"]},
+    {"id": "english", "name": "English", "icon": "BookOpen", "color": "#0F766E", "classes": ["class-6", "class-7", "class-8", "class-9", "class-10", "class-11", "class-12"]},
+    {"id": "hindi", "name": "Hindi", "icon": "Languages", "color": "#F5B400", "classes": ["class-6", "class-7", "class-8", "class-9", "class-10"]},
     {"id": "computer", "name": "Computer", "icon": "Cpu", "color": "#1E40AF", "classes": ["class-9", "class-10"]},
     {"id": "physics", "name": "Physics", "icon": "FlaskConical", "color": "#7B1E1E", "classes": ["class-11", "class-12"]},
     {"id": "chemistry", "name": "Chemistry", "icon": "FlaskConical", "color": "#962A2A", "classes": ["class-11", "class-12"]},
     {"id": "biology", "name": "Biology", "icon": "FlaskConical", "color": "#0F766E", "classes": ["class-11", "class-12"]},
-    {"id": "history", "name": "History", "icon": "Globe2", "color": "#B45309", "classes": ["class-9","class-10","class-11", "class-12"]},
-    {"id": "political-science", "name": "Political Science", "icon": "Landmark", "color": "#B45309", "classes": ["class-9","class-10","class-11", "class-12"]},
-    {"id": "economics", "name": "Economics", "icon": "IndianRupee", "color": "#B45309", "classes": ["class-9", "class-10","class-11", "class-12"]},
+    {"id": "history", "name": "History", "icon": "Globe2", "color": "#B45309", "classes": ["class-6", "class-7", "class-8", "class-9","class-10","class-11", "class-12"]},
+    {"id": "political-science", "name": "Political Science", "icon": "Landmark", "color": "#B45309", "classes": ["class-6", "class-7", "class-8", "class-9","class-10","class-11", "class-12"]},
+    {"id": "economics", "name": "Economics", "icon": "IndianRupee", "color": "#B45309", "classes": ["class-6", "class-7", "class-8", "class-9", "class-10","class-11", "class-12"]},
     {"id": "physical-education", "name": "Physical Education", "icon": "Dumbbell", "color": "#0F766E", "classes": ["class-12","class-11"]},
     {"id": "yoga-ga", "name": "Yoga", "icon": "Dumbbell", "color": "#0F766E", "classes": ["class-12","class-11"]},
     {"id": "Soci-ology", "name": "Sociology", "icon": "BookOpen", "color": "#7B1E1E", "classes": ["class-12","class-11"]},
