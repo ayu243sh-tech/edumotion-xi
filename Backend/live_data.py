@@ -6,7 +6,8 @@
 DEFAULT_TEACHER = "EduMotion Team"  # change to your name or a teacher's name
 
 
-def _batch(id, name, level, subjects, schedule, start_date, description, teacher=DEFAULT_TEACHER):
+def _batch(id, name, level, subjects, schedule, start_date, description,
+           teacher=DEFAULT_TEACHER, options=None):
     return {
         "id": id,
         "name": name,
@@ -16,8 +17,8 @@ def _batch(id, name, level, subjects, schedule, start_date, description, teacher
         "start_date": start_date,
         "description": description,
         "teacher": teacher,
+        "options": options or [],
     }
-
 
 _BATCH_LIST = [
     # ---------- Class 9 ----------
@@ -59,14 +60,32 @@ _BATCH_LIST = [
            "Commerce core subjects from the basics."),
 
     # ---------- Class 12 ----------
-    _batch("c12-commerce", "Commerce Board Batch 2027", "12",
-           ["Economics", "Business Studies", "Accountancy", "Political Science"],
+       _batch("c12-commerce", "Commerce Board Batch 2027", "12",
+           ["Economics", "Business Studies", "Accountancy"],
            "Mon–Sat, 5:00 PM – 7:00 PM", "2026-11-01",
-           "Full syllabus coverage with weekly tests and doubt sessions."),
-    _batch("c12-arts", "Arts Board Batch 2027", "12",
-           ["History", "Political Science", "Economics"],
-           "Mon–Fri, 4:00 PM – 6:00 PM", "2026-11-01",
-           "History, Political Science and Economics in one batch."),
+           "Full syllabus coverage with weekly tests and doubt sessions. Choose the teachers you learn best with.",
+           options=[
+               {
+                   "id": "A",
+                   "label": "Option A",
+                   "tagline": "A specialist teacher for every subject",
+                   "teachers": [
+                       {"subject": "Economics", "name": "Mr. Ashish Kumar"},
+                       {"subject": "Business Studies", "name": "Mr. Sumit Kanchan"},
+                       {"subject": "Accountancy", "name": "Miss Ishita Kaushik"},
+                   ],
+               },
+               {
+                   "id": "B",
+                   "label": "Option B",
+                   "tagline": "Economics and Business Studies with one teacher",
+                   "teachers": [
+                       {"subject": "Economics", "name": "Mr. Nitin Bajpai"},
+                       {"subject": "Business Studies", "name": "Mr. Nitin Bajpai"},
+                       {"subject": "Accountancy", "name": "Suhasi Kaushik"},
+                   ],
+               },
+           ]),
 ]
 
 BATCHES = {b["id"]: b for b in _BATCH_LIST}
