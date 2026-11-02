@@ -62,6 +62,10 @@ _BATCH_LIST = [
            ["History", "Poltical Science", "Economics"],
            "Mon–Fri, 4:00 PM – 6:00 PM", "2026-11-01",
            "Commerce core subjects from the basics."),
+    _batch("c12-arts", "Humanities Batch", "12",
+           ["History", "Poltical Science", "Economics"],
+           "Mon–Fri, 4:00 PM – 6:00 PM", "2026-11-01",
+           "Commerce core subjects from the basics."),
 
     # ---------- Class 12 ----------
        _batch("c12-commerce", "Commerce Board Batch 2027", "12",
