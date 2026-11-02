@@ -86,7 +86,10 @@ function BatchList({ classLevel }) {
               <div className="mt-5 space-y-1.5 text-xs text-[#78716C]">
                 <div className="flex items-center gap-2"><Clock className="w-3.5 h-3.5" /> {b.schedule}</div>
                 <div className="flex items-center gap-2"><Calendar className="w-3.5 h-3.5" /> Starts {fmtDate(b.start_date)}</div>
-                <div className="flex items-center gap-2"><User className="w-3.5 h-3.5" /> {b.teacher}</div>
+                <div className="flex items-center gap-2">
+  <User className="w-3.5 h-3.5" />
+  {b.options && b.options.length > 0 ? `${b.options.length} teacher options to choose from` : b.teacher}
+</div>
               </div>
 
               <div className="mt-5 text-sm font-semibold text-[#7B1E1E]">View batch →</div>
