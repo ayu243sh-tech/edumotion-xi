@@ -134,6 +134,24 @@ RESOURCE_CHAPTERS = {
         "subject": "Economics",
         "class_level": "12",
     },
+    "his11-writing-and-city-life":": {
+        "id": "his11-writing-and-city-life":",
+        "title": "Thinkers, Beliefs and Buildings ",
+        "subject": "History",
+        "class_level": "11",
+     },
+     "his-eyes-of-travellers": {
+        "id": "his-eyes-of-travellers",
+        "title": "Through the Eyes of Travellers ",
+        "subject": "History",
+        "class_level": "11",
+     },
+    "his-bhakti-sufi": {
+        "id": "his-bhakti-sufi",
+        "title": " Bhakti-Sufi Traditions ",
+        "subject": "History",
+        "class_level": "11",
+     },
     # Add one entry per chapter you want covered in the Resource Hub.
 }
 
