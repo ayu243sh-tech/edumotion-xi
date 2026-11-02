@@ -114,5 +114,27 @@ LIVE_CLASSES = {
         "duration_min": 60,
         "youtube_id": "REPLACE_WITH_VIDEO_ID",
     },
+               "c12-eco-live-A1": {
+        "id": "c12-eco-live-A1",
+        "batch_id": "c12-commerce",
+        "option_id": "A",
+        "class_level": "12",
+        "subject": "Economics",
+        "title": "National Income: Introduction (Mr. Ashish Kumar)",
+        "start": "2026-11-03T17:00:00+05:30",
+        "duration_min": 60,
+        "youtube_id": "REPLACE_WITH_VIDEO_ID",
+    },
+    "c12-eco-live-B1": {
+        "id": "c12-eco-live-B1",
+        "batch_id": "c12-commerce",
+        "option_id": "B",
+        "class_level": "12",
+        "subject": "Economics",
+        "title": "National Income: Introduction (Mr. Nitin Bajpai)",
+        "start": "2026-11-03T18:00:00+05:30",
+        "duration_min": 60,
+        "youtube_id": "REPLACE_WITH_VIDEO_ID",
+    },
     # Add more classes here, same shape.
 }
