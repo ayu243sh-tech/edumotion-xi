@@ -110,7 +110,7 @@ LIVE_CLASSES = {
         "duration_min": 60,
         # Paste the YouTube video ID from the live stream URL
         # (the part after v= in youtube.com/watch?v=XXXXXXXXXXX)
-        "youtube_id": "REPLACE_WITH_VIDEO_ID",
+        "youtube_id": "QWAo4ffY3E0",
     },
     "c10-maths-live-1": {
         "id": "c10-maths-live-1",
