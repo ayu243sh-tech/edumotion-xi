@@ -23,7 +23,7 @@ function friendlyAuthError(code) {
   }
 }
 
-function InlineLogin() {
+export function InlineLogin({ message }) {
   const [mode, setMode] = useState("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -46,7 +46,7 @@ function InlineLogin() {
 
   return (
     <div className="max-w-sm">
-      <p className="text-sm text-[#78716C] mb-4">Log in to ask your doubts. You can use the same account as EduMotion Resources.</p>
+      <p className="text-sm text-[#78716C] mb-4">{message || "Log in to ask your doubts. You can use the same account as EduMotion Resources."}</p>
       <div className="flex gap-2 mb-4">
         {["login", "signup"].map((m) => (
           <button
