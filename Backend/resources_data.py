@@ -134,9 +134,9 @@ RESOURCE_CHAPTERS = {
         "subject": "Economics",
         "class_level": "12",
     },
-    "his11-writing-and-city-life":": {
-        "id": "his11-writing-and-city-life":",
-        "title": "Thinkers, Beliefs and Buildings ",
+    "his11-writing-and-city-life": {
+        "id": "his11-writing-and-city-life",
+        "title": "Writing and City Life ",
         "subject": "History",
         "class_level": "11",
      },
