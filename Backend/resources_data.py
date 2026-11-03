@@ -182,6 +182,24 @@ RESOURCE_CHAPTERS = {
         "subject": "Political Science",
         "class_level": "11",
     },
+    "pol11-executive": {
+        "id": "pol11-executive",
+        "title": "Executive",
+        "subject": "Political Science",
+        "class_level": "11",
+    },
+    "pol11-legislature": {
+        "id": "pol11-legislature",
+        "title": "Legislature",
+        "subject": "Political Science",
+        "class_level": "11",
+    },
+    "pol11-executive": {
+        "id": "pol11-executive",
+        "title": "Executive",
+        "subject": "Political Science",
+        "class_level": "11",
+    },
     
     # Add one entry per chapter you want covered in the Resource Hub.
 }
