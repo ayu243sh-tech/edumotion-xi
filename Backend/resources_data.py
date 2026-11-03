@@ -140,18 +140,49 @@ RESOURCE_CHAPTERS = {
         "subject": "History",
         "class_level": "11",
      },
-     "his-eyes-of-travellers": {
-        "id": "his-eyes-of-travellers",
-        "title": "Through the Eyes of Travellers ",
+     "his11-empire-across-three-continents": {
+        "id": "his11-empire-across-three-continents",
+        "title": "An Empire Across Three Continents ",
         "subject": "History",
         "class_level": "11",
      },
-    "his-bhakti-sufi": {
-        "id": "his-bhakti-sufi",
-        "title": " Bhakti-Sufi Traditions ",
+    "his11-nomadic-empires": {
+        "id": "his11-nomadic-empires",
+        "title": " Nomadic Empires ",
         "subject": "History",
         "class_level": "11",
      },
+    "his11-three-orders": {
+        "id": "his11-three-orders",
+        "title": " The Three Orders ",
+        "subject": "History",
+        "class_level": "11",
+     },
+    "pol11-constitution-why-and-how ": {
+        "id": "pol11-constitution-why-and-how",
+        "title": "Constitution Why and How",
+        "subject": "Political Science",
+        "class_level": "11",
+    },
+    "pol11-rights-in-indian-constitution ": {
+        "id": "pol11-rights-in-indian-constitution",
+        "title": "Rights in the Indian Constitution",
+        "subject": "Political Science",
+        "class_level": "11",
+    },
+    "pol11-election-and-representation ": {
+        "id": "pol11-election-and-representation",
+        "title": "Election and Representation",
+        "subject": "Political Science",
+        "class_level": "11",
+    },
+    "pol11-executive ": {
+        "id": "pol11-executive",
+        "title": "Executive",
+        "subject": "Political Science",
+        "class_level": "11",
+    },
+    
     # Add one entry per chapter you want covered in the Resource Hub.
 }
 
