@@ -92,13 +92,13 @@ RESOURCE_CHAPTERS = {
         "subject": "Political Science",
         "class_level": "12",
     },
-      "pol-criis-democratic-order ": {
+      "pol-criis-democratic-order": {
         "id": "pol-criis-democratic-order",
         "title": "Crisis of Democratic Order",
         "subject": "Political Science",
         "class_level": "12",
     },
-    "pol-reginal-aspirations ": {
+    "pol-reginal-aspirations": {
         "id": "pol-reginal-aspirations",
         "title": "Regional Aspirations",
         "subject": "Political Science",
@@ -158,25 +158,25 @@ RESOURCE_CHAPTERS = {
         "subject": "History",
         "class_level": "11",
      },
-    "pol11-constitution-why-and-how ": {
+    "pol11-constitution-why-and-how": {
         "id": "pol11-constitution-why-and-how",
         "title": "Constitution Why and How",
         "subject": "Political Science",
         "class_level": "11",
     },
-    "pol11-rights-in-indian-constitution ": {
+    "pol11-rights-in-indian-constitution": {
         "id": "pol11-rights-in-indian-constitution",
         "title": "Rights in the Indian Constitution",
         "subject": "Political Science",
         "class_level": "11",
     },
-    "pol11-election-and-representation ": {
+    "pol11-election-and-representation": {
         "id": "pol11-election-and-representation",
         "title": "Election and Representation",
         "subject": "Political Science",
         "class_level": "11",
     },
-    "pol11-executive ": {
+    "pol11-executive": {
         "id": "pol11-executive",
         "title": "Executive",
         "subject": "Political Science",
