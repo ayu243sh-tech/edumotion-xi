@@ -20,6 +20,57 @@ def _batch(id, name, level, subjects, schedule, start_date, description,
         "options": options or [],
     }
 
+
+# Teacher options shared by Class 11 and Class 12
+_PCB_OPTIONS = [
+    {
+        "id": "A",
+        "label": "Option A",
+        "tagline": "Chemistry and Biology with Mr. Atul, Physics with Ms. Akansha",
+        "teachers": [
+            {"subject": "Physics", "name": "Ms. Akansha"},
+            {"subject": "Chemistry", "name": "Mr. Atul"},
+            {"subject": "Biology", "name": "Mr. Atul"},
+        ],
+    },
+    {
+        "id": "B",
+        "label": "Option B",
+        "tagline": "Chemistry and Biology with Mr. Shailendra, Physics with Ms. Umam",
+        "teachers": [
+            {"subject": "Physics", "name": "Ms. Umam"},
+            {"subject": "Chemistry", "name": "Mr. Shailendra"},
+            {"subject": "Biology", "name": "Mr. Shailendra"},
+        ],
+    },
+]
+
+_PCM_OPTIONS = [
+    {
+        "id": "A",
+        "label": "Option A",
+        "tagline": "Maths with Mr. Ankur, Physics with Ms. Akansha, Chemistry with Mr. Atul",
+        "teachers": [
+            {"subject": "Physics", "name": "Ms. Akansha"},
+            {"subject": "Chemistry", "name": "Mr. Atul"},
+            {"subject": "Mathematics", "name": "Mr. Ankur"},
+        ],
+    },
+    {
+        "id": "B",
+        "label": "Option B",
+        "tagline": "Maths with Mr. Manish, Physics with Ms. Umam, Chemistry with Mr. Shailendra",
+        "teachers": [
+            {"subject": "Physics", "name": "Ms. Umam"},
+            {"subject": "Chemistry", "name": "Mr. Shailendra"},
+            {"subject": "Mathematics", "name": "Mr. Manish"},
+        ],
+    },
+]
+
+_HUMANITIES_TEACHERS = "Mrs. Faiza Khan (History, Political Science) · Ayush Maurya (Economics)"
+
+
 _BATCH_LIST = [
     # ---------- Class 9 ----------
     _batch("c9-maths-eng-hindi", "Maths + English + Hindi Combo", "9",
@@ -50,25 +101,24 @@ _BATCH_LIST = [
            "All five subjects with doubt sessions."),
 
     # ---------- Class 11 ----------
-    _batch("c11-science", "Science Batch (PCM)", "11",
+    _batch("c11-humanities", "Humanities Batch", "11",
+           ["History", "Political Science", "Economics"],
+           "Mon–Fri, 4:00 PM – 6:00 PM", "2026-11-10",
+           "History, Political Science and Economics in one batch, with weekly tests and doubt sessions.",
+           teacher=_HUMANITIES_TEACHERS),
+    _batch("c11-pcm", "PCM Batch", "11",
            ["Physics", "Chemistry", "Mathematics"],
-           "Mon–Sat, 4:00 PM – 7:00 PM", "2026-11-01",
-           "Physics, Chemistry and Maths with problem-solving sessions."),
-    _batch("c11-commerce", "Commerce Batch", "11",
-           ["Economics", "Business Studies", "Accountancy"],
-           "Mon–Fri, 4:00 PM – 6:00 PM", "2026-11-01",
-           "Commerce core subjects from the basics."),
-    _batch("c11-arts", "Humanities Batch", "11",
-           ["History", "Poltical Science", "Economics"],
-           "Mon–Fri, 4:00 PM – 6:00 PM", "2026-11-01",
-           "Commerce core subjects from the basics."),
-    _batch("c12-arts", "Humanities Batch", "12",
-           ["History", "Poltical Science", "Economics"],
-           "Mon–Fri, 4:00 PM – 6:00 PM", "2026-11-01",
-           "Commerce core subjects from the basics."),
+           "Mon–Sat, 4:00 PM – 7:00 PM", "2026-11-10",
+           "Physics, Chemistry and Maths with problem-solving sessions. Choose the teachers you learn best with.",
+           options=_PCM_OPTIONS),
+    _batch("c11-pcb", "PCB Batch", "11",
+           ["Physics", "Chemistry", "Biology"],
+           "Mon–Sat, 4:00 PM – 7:00 PM", "2026-11-10",
+           "Physics, Chemistry and Biology with diagrams, revision and doubt sessions. Choose the teachers you learn best with.",
+           options=_PCB_OPTIONS),
 
     # ---------- Class 12 ----------
-       _batch("c12-commerce", "Commerce Board Batch 2027", "12",
+    _batch("c12-commerce", "Commerce Board Batch 2027", "12",
            ["Economics", "Business Studies", "Accountancy"],
            "Mon–Sat, 5:00 PM – 7:00 PM", "2026-11-01",
            "Full syllabus coverage with weekly tests and doubt sessions. Choose the teachers you learn best with.",
@@ -94,6 +144,21 @@ _BATCH_LIST = [
                    ],
                },
            ]),
+    _batch("c12-humanities", "Humanities Board Batch 2027", "12",
+           ["History", "Political Science", "Economics"],
+           "Mon–Fri, 4:00 PM – 6:00 PM", "2026-11-10",
+           "Complete board syllabus for History, Political Science and Economics, with PYQs and sample papers.",
+           teacher=_HUMANITIES_TEACHERS),
+    _batch("c12-pcm", "PCM Board Batch 2027", "12",
+           ["Physics", "Chemistry", "Mathematics"],
+           "Mon–Sat, 4:00 PM – 7:00 PM", "2026-11-10",
+           "Full syllabus with numericals, weekly tests and doubt sessions. Choose the teachers you learn best with.",
+           options=_PCM_OPTIONS),
+    _batch("c12-pcb", "PCB Board Batch 2027", "12",
+           ["Physics", "Chemistry", "Biology"],
+           "Mon–Sat, 4:00 PM – 7:00 PM", "2026-11-10",
+           "Full syllabus with diagrams, revision and weekly tests. Choose the teachers you learn best with.",
+           options=_PCB_OPTIONS),
 ]
 
 BATCHES = {b["id"]: b for b in _BATCH_LIST}
