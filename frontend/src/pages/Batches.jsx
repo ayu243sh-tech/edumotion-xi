@@ -5,10 +5,13 @@ import { api } from "@/lib/api";
 import { fmtDate } from "@/lib/liveTime";
 
 const CLASSES = [
-  { level: "9", name: "Class 9", tag: "Foundation Builder", color: "#7B1E1E" },
+ { level: "6", name: "Class 6", tag: "Building Basics", color: "#7B1E1E" },
+  { level: "7", name: "Class 7", tag: "Growing Stronger", color: "#F5B400" },
+  { level: "8", name: "Class 8", tag: "Getting Ready", color: "#7B1E1E" },
+  { level: "9", name: "Class 9", tag: "Foundation Builder", color: "#F5B400" },
   { level: "10", name: "Class 10", tag: "Board Year", color: "#7B1E1E" },
   { level: "11", name: "Class 11", tag: "Stream Choice", color: "#F5B400" },
-  { level: "12", name: "Class 12", tag: "Final Push", color: "#F5B400" },
+  { level: "12", name: "Class 12", tag: "Final Push", color: "#7B1E1E" },
 ];
 
 function ClassPicker() {
