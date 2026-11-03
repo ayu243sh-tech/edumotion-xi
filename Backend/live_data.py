@@ -21,7 +21,50 @@ def _batch(id, name, level, subjects, schedule, start_date, description,
     }
 
 
-# Teacher options shared by Class 11 and Class 12
+# ---------------------------------------------------------------------------
+# Teacher lists and options
+# ---------------------------------------------------------------------------
+
+# Classes 7 and 8 (same teachers)
+_CLASS_7_8_TEACHERS = (
+    "Mr. Divynsh Rajput (English, Maths) · Mr. Saksham Satwani (Science) · "
+    "Mr. Ayush Maurya (Social Science) · Mrs. Rakhi (Hindi)"
+)
+
+# Class 6
+_CLASS_6_TEACHERS = (
+    "Mr. Ashish Kumar (English) · Mr. Ayush Maurya (Maths) · Mrs. Shraddha (Science) · "
+    "Mrs. Kavita (Social Science) · Mrs. Kamini (Hindi)"
+)
+
+# Class 11 and Class 12 Humanities
+_HUMANITIES_TEACHERS = "Mrs. Faiza Khan (History, Political Science) · Ayush Maurya (Economics)"
+
+# Commerce: Class 11 and Class 12 share these two options
+_COMMERCE_OPTIONS = [
+    {
+        "id": "A",
+        "label": "Option A",
+        "tagline": "A specialist teacher for every subject",
+        "teachers": [
+            {"subject": "Economics", "name": "Mr. Ashish Kumar"},
+            {"subject": "Business Studies", "name": "Mr. Sumit Kanchan"},
+            {"subject": "Accountancy", "name": "Miss Ishita Kaushik"},
+        ],
+    },
+    {
+        "id": "B",
+        "label": "Option B",
+        "tagline": "Economics and Business Studies with one teacher",
+        "teachers": [
+            {"subject": "Economics", "name": "Mr. Nitin Bajpai"},
+            {"subject": "Business Studies", "name": "Mr. Nitin Bajpai"},
+            {"subject": "Accountancy", "name": "Suhasi Kaushik"},
+        ],
+    },
+]
+
+# PCB: Class 11 and Class 12 share these two options
 _PCB_OPTIONS = [
     {
         "id": "A",
@@ -45,6 +88,7 @@ _PCB_OPTIONS = [
     },
 ]
 
+# PCM: Class 11 and Class 12 share these two options
 _PCM_OPTIONS = [
     {
         "id": "A",
@@ -68,10 +112,32 @@ _PCM_OPTIONS = [
     },
 ]
 
-_HUMANITIES_TEACHERS = "Mrs. Faiza Khan (History, Political Science) · Ayush Maurya (Economics)"
 
-
+# ---------------------------------------------------------------------------
+# Batches, in order from Class 6 to Class 12
+# ---------------------------------------------------------------------------
 _BATCH_LIST = [
+    # ---------- Class 6 ----------
+    _batch("c6-all", "Class 6 Complete Batch", "6",
+           ["Mathematics", "English", "Science", "Hindi", "Social Science"],
+           "Mon–Sat, 3:00 PM – 5:00 PM", "2026-11-10",
+           "All five subjects in one batch, taught concept by concept.",
+           teacher=_CLASS_6_TEACHERS),
+
+    # ---------- Class 7 ----------
+    _batch("c7-all", "Class 7 Complete Batch", "7",
+           ["Mathematics", "English", "Science", "Hindi", "Social Science"],
+           "Mon–Sat, 3:00 PM – 5:00 PM", "2026-11-10",
+           "All five subjects in one batch, with regular practice and revision.",
+           teacher=_CLASS_7_8_TEACHERS),
+
+    # ---------- Class 8 ----------
+    _batch("c8-all", "Class 8 Complete Batch", "8",
+           ["Mathematics", "English", "Science", "Hindi", "Social Science"],
+           "Mon–Sat, 3:00 PM – 5:00 PM", "2026-11-10",
+           "All five subjects in one batch, building a strong base for Class 9.",
+           teacher=_CLASS_7_8_TEACHERS),
+
     # ---------- Class 9 ----------
     _batch("c9-maths-eng-hindi", "Maths + English + Hindi Combo", "9",
            ["Mathematics", "English", "Hindi"],
@@ -101,6 +167,11 @@ _BATCH_LIST = [
            "All five subjects with doubt sessions."),
 
     # ---------- Class 11 ----------
+    _batch("c11-commerce", "Commerce Batch", "11",
+           ["Economics", "Business Studies", "Accountancy"],
+           "Mon–Sat, 5:00 PM – 7:00 PM", "2026-11-10",
+           "Commerce core subjects from the basics, with weekly tests and doubt sessions. Choose the teachers you learn best with.",
+           options=_COMMERCE_OPTIONS),
     _batch("c11-humanities", "Humanities Batch", "11",
            ["History", "Political Science", "Economics"],
            "Mon–Fri, 4:00 PM – 6:00 PM", "2026-11-10",
@@ -122,28 +193,7 @@ _BATCH_LIST = [
            ["Economics", "Business Studies", "Accountancy"],
            "Mon–Sat, 5:00 PM – 7:00 PM", "2026-11-01",
            "Full syllabus coverage with weekly tests and doubt sessions. Choose the teachers you learn best with.",
-           options=[
-               {
-                   "id": "A",
-                   "label": "Option A",
-                   "tagline": "A specialist teacher for every subject",
-                   "teachers": [
-                       {"subject": "Economics", "name": "Mr. Ashish Kumar"},
-                       {"subject": "Business Studies", "name": "Mr. Sumit Kanchan"},
-                       {"subject": "Accountancy", "name": "Miss Ishita Kaushik"},
-                   ],
-               },
-               {
-                   "id": "B",
-                   "label": "Option B",
-                   "tagline": "Economics and Business Studies with one teacher",
-                   "teachers": [
-                       {"subject": "Economics", "name": "Mr. Nitin Bajpai"},
-                       {"subject": "Business Studies", "name": "Mr. Nitin Bajpai"},
-                       {"subject": "Accountancy", "name": "Suhasi Kaushik"},
-                   ],
-               },
-           ]),
+           options=_COMMERCE_OPTIONS),
     _batch("c12-humanities", "Humanities Board Batch 2027", "12",
            ["History", "Political Science", "Economics"],
            "Mon–Fri, 4:00 PM – 6:00 PM", "2026-11-10",
