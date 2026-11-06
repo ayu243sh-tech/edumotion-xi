@@ -27,14 +27,12 @@ def _batch(id, name, level, subjects, schedule, start_date, description,
 
 # Classes 7 and 8 (same teachers)
 _CLASS_7_8_TEACHERS = (
-    "Mr. Divynsh Rajput (English, Maths) · Mr. Saksham Satwani (Science) · "
-    "Mr. Ayush Maurya (Social Science) · Mrs. Rakhi (Hindi)"
+    "Mr. Daljeet Kumar"
 )
 
 # Class 6
 _CLASS_6_TEACHERS = (
-    "Mr. Ashish Kumar (English) · Mr. Ayush Maurya (Maths) · Mrs. Shraddha (Science) · "
-    "Mrs. Kavita (Social Science) · Mrs. Kamini (Hindi)"
+    "Mr. Daljeet Kumar "
 )
 
 # Class 11 and Class 12 Humanities
