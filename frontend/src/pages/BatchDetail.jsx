@@ -6,6 +6,7 @@ import { fmtDate, fmtDateTime } from "@/lib/liveTime";
 import { useAuth } from "@/lib/useAuth";
 import StatusPill from "@/components/StatusPill";
 import { InlineLogin } from "@/components/DoubtBox";
+import { ENROLL } from "@/lib/enrollConfig";
 
 export default function BatchDetail() {
   const { batchId } = useParams();
@@ -144,6 +145,16 @@ export default function BatchDetail() {
             {hasOptions ? "Choose your teachers below" : batch.teacher}
           </div>
         </div>
+      </div>
+
+            <div className="mt-6 bg-[#7B1E1E] text-white rounded-[20px] p-6 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <div className="font-display text-xl font-bold">Ready to join this batch?</div>
+          <div className="text-sm text-white/80 mt-1">Enrol for ₹{ENROLL.fee.toLocaleString("en-IN")}. Fill a short form and pay by UPI.</div>
+        </div>
+        <Link to={`/enroll/${batch.id}`} className="bg-[#F5B400] hover:bg-[#D99E00] text-[#292524] font-semibold rounded-full px-7 py-3">
+          Enrol in this batch
+        </Link>
       </div>
 
       {hasOptions && (
