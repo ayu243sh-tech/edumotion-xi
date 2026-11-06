@@ -12,6 +12,7 @@ from video_routes import router as video_router
 from short_routes import router as short_router
 from notes_routes import router as notes_router
 from batch_routes import router as batch_router
+from enroll_routes import router as enroll_router
 
 from starlette.middleware.cors import CORSMiddleware
 import os
@@ -236,6 +237,7 @@ api_router.include_router(video_router)
 api_router.include_router(short_router)
 api_router.include_router(notes_router)
 api_router.include_router(batch_router)
+api_router.include_router(enroll_router)
 
 app.include_router(api_router)
 
