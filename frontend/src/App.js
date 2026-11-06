@@ -21,6 +21,8 @@ import VideoChapters from "@/pages/VideoChapters";
 import VideoLecture from "@/pages/VideoLecture";
 import Shorts from "@/pages/Shorts";
 import SalesTrackerDemo from "@/pages/SalesTrackerDemo";
+import Enroll from "@/pages/Enroll";
+import Teachers from "@/pages/Teachers";
 
 function Layout() {
   return (
@@ -56,6 +58,8 @@ function App() {
             <Route path="/video-lecture/:chapterId" element={<VideoLecture />} />
             <Route path="/shorts" element={<Shorts />} />
             <Route path="/demo/sales-tracker" element={<SalesTrackerDemo />} />
+            <Route path="/enroll/:batchId" element={<Enroll />} />
+            <Route path="/teachers" element={<Teachers />} />
   
           </Route>
         </Routes>
