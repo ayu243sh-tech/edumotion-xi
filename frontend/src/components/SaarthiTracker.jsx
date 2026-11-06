@@ -63,7 +63,7 @@ export default function SaarthiTracker({ data, demo = false }) {
           <>
             <div className="flex items-end justify-between gap-3">
               <div>
-                <div className="text-xs text-[#78716C] font-mono-em uppercase tracking-[0.15em]">Copies reserved</div>
+                <div className="text-xs text-[#78716C] font-mono-em uppercase tracking-[0.15em]">{data.label || "Copies reserved"}</div>
                 <div className="font-display text-4xl font-bold text-[#7B1E1E] leading-none mt-1">
                   {shown}
                   {goal > 0 && <span className="text-base font-semibold text-[#78716C]"> / {goal}</span>}
