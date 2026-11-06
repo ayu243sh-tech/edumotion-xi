@@ -43,7 +43,7 @@ export default function SaarthiTracker({ data, demo = false }) {
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0F766E] opacity-75" />
           <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0F766E]" />
         </span>
-        Saarthi Notes
+        {data.badge || "NOW AVAILABLE"}
       </div>
 
       {demo && (
