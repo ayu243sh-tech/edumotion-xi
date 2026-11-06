@@ -4,7 +4,7 @@ export const SAARTHI = {
   goal: 100,       // your target for pre-orders
   whatsapp: "",    // country code + number, no + or spaces, e.g. "919876543210". Adds a "Reserve" button
   books: [
-    { id: "english", title: "English", reserved: 0 },
-    { id: "pe", title: "Physical Education", reserved: 0 },
+    { id: "english", title: "English", reserved: 337 },
+    { id: "pe", title: "Physical Education", reserved: 362 },
   ],
 };
