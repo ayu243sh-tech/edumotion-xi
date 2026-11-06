@@ -20,6 +20,7 @@ import VideoSubjects from "@/pages/VideoSubjects";
 import VideoChapters from "@/pages/VideoChapters";
 import VideoLecture from "@/pages/VideoLecture";
 import Shorts from "@/pages/Shorts";
+import SalesTrackerDemo from "@/pages/SalesTrackerDemo";
 
 function Layout() {
   return (
@@ -54,6 +55,7 @@ function App() {
             <Route path="/videos/:classId/:subjectId" element={<VideoChapters />} />
             <Route path="/video-lecture/:chapterId" element={<VideoLecture />} />
             <Route path="/shorts" element={<Shorts />} />
+            <Route path="/demo/sales-tracker" element={<SalesTrackerDemo />} />
   
           </Route>
         </Routes>
