@@ -4,9 +4,12 @@ import { api } from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import SaarthiTracker from "@/components/SaarthiTracker";
+import { SAARTHI } from "@/lib/saarthiStats";
 import {
   BookOpen, Video, ClipboardList, FileText, CalendarDays, Bot, Search as SearchIcon,
-  Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu, Library,GraduationCap, Box,Gamepad2, Radio, Users, Clapperboard,
+  Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu,
+  Library, GraduationCap, Box, Gamepad2, Radio, Users, Clapperboard,
 } from "lucide-react";
 
 const QUICK_ACCESS = [
@@ -52,6 +55,28 @@ export default function Home() {
   const onSearch = (e) => {
     e.preventDefault();
     navigate(`/search?q=${encodeURIComponent(q)}`);
+  };
+
+  const openQuickAccess = (id) => {
+    if (id === "videos") {
+      navigate("/videos");
+    } else if (id === "library") {
+      window.open("https://edumotioin-l-ib.vercel.app", "_blank", "noopener");
+    } else if (id === "resources") {
+      window.open("https://edumotion-resources-one.vercel.app", "_blank", "noopener");
+    } else if (id === "models3d") {
+      window.open("https://edumotion-3d-zlzh-chi.vercel.app", "_blank", "noopener");
+    } else if (id === "games") {
+      window.open("https://edumotion-games-git-main-edumotion-xi.vercel.app/", "_blank", "noopener");
+    } else if (id === "live") {
+      navigate("/live");
+    } else if (id === "batches") {
+      navigate("/batches");
+    } else if (id === "shorts") {
+      navigate("/shorts");
+    } else {
+      navigate(id === "ai" ? "/" : `/search?type=${id}`);
+    }
   };
 
   return (
@@ -111,12 +136,7 @@ export default function Home() {
               <div className="absolute -inset-4 bg-[#FDE68A]/40 rounded-[40px] -rotate-2" />
               <div className="relative bg-white rounded-[28px] overflow-hidden border border-[#E7E5E4] bento-shadow">
                 <img src="https://images.pexels.com/photos/6549913/pexels-photo-6549913.jpeg?w=900" alt="Students studying" className="w-full h-[420px] object-cover" />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur rounded-full px-3 py-1.5 text-xs font-mono-em uppercase tracking-[0.15em]">📚 Today&apos;s pick</div>
-                <div className="absolute bottom-4 left-4 right-4 bg-white rounded-2xl p-4 shadow-lg">
-                  <div className="text-xs text-[#78716C] font-mono-em uppercase tracking-[0.15em]">Continue with</div>
-                  <div className="font-display font-semibold text-lg mt-1">Light – Reflection & Refraction</div>
-                  <Progress value={62} className="mt-2 h-1.5" />
-                </div>
+                <SaarthiTracker data={SAARTHI} />
               </div>
             </div>
           </div>
@@ -133,33 +153,12 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
           {QUICK_ACCESS.map(({ id, label, icon: Icon, accent, bg }) => (
-  <button
-    key={id}
-onClick={() => {
-  if (id === "videos") {
-    navigate("/videos");
-  } else if (id === "library") {
-    window.open("https://edumotioin-l-ib.vercel.app", "_blank", "noopener");
-  } else if (id === "resources") {
-    window.open("https://edumotion-resources-one.vercel.app", "_blank", "noopener");
-  } else if (id === "models3d") {
-    window.open("https://edumotion-3d-zlzh-chi.vercel.app", "_blank", "noopener");
-  } else if (id === "games") {
-    window.open("https://edumotion-games-git-main-edumotion-xi.vercel.app/", "_blank", "noopener");
-  } else if (id === "live") {
-    navigate("/live");
-  } else if (id === "batches") {
-    navigate("/batches");
-  } else if (id === "shorts") {
-  navigate("/shorts");
-  }
-  else {
-    navigate(id === "ai" ? "/" : `/search?type=${id}`);
-    } 
-}}
-    data-testid={`quick-access-${id}`}
-    className="group bg-white rounded-[20px] border border-[#E7E5E4] p-6 text-left hover:-translate-y-1 transition-transform bento-shadow bento-shadow-hover"
-  >
+            <button
+              key={id}
+              onClick={() => openQuickAccess(id)}
+              data-testid={`quick-access-${id}`}
+              className="group bg-white rounded-[20px] border border-[#E7E5E4] p-6 text-left hover:-translate-y-1 transition-transform bento-shadow bento-shadow-hover"
+            >
               <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4" style={{ background: bg }}>
                 <Icon className="w-6 h-6" style={{ color: accent }} strokeWidth={1.5} />
               </div>
