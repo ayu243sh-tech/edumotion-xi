@@ -58,28 +58,31 @@ export default function Home() {
     navigate(`/search?q=${encodeURIComponent(q)}`);
   };
 
-  const openQuickAccess = (id) => {
-    if (id === "videos") {
-      navigate("/videos");
-    } else if (id === "library") {
-      window.open("https://edumotioin-l-ib.vercel.app", "_blank", "noopener");
-    } else if (id === "resources") {
-      window.open("https://edumotion-resources-one.vercel.app", "_blank", "noopener");
-    } else if (id === "models3d") {
-      window.open("https://edumotion-3d-zlzh-chi.vercel.app", "_blank", "noopener");
-    } else if (id === "games") {
-      window.open("https://edumotion-games-git-main-edumotion-xi.vercel.app/", "_blank", "noopener");
-    } else if (id === "live") {
-      navigate("/live");
-    } else if (id === "batches") {
-      navigate("/batches");
-    } else if (id === "shorts") {
-      navigate("/shorts");
-    } else {
-      navigate(id === "ai" ? "/" : `/search?type=${id}`);
-    } else if (id === "teachers") {
-      navigate("/teachers");
-  };
+  
+const openQuickAccess = (id) => {
+  if (id === "videos") {
+    navigate("/videos");
+  } else if (id === "library") {
+    window.open("https://edumotioin-l-ib.vercel.app", "_blank", "noopener");
+  } else if (id === "resources") {
+    window.open("https://edumotion-resources-one.vercel.app", "_blank", "noopener");
+  } else if (id === "models3d") {
+    window.open("https://edumotion-3d-zlzh-chi.vercel.app", "_blank", "noopener");
+  } else if (id === "games") {
+    window.open("https://edumotion-games-git-main-edumotion-xi.vercel.app/", "_blank", "noopener");
+  } else if (id === "live") {
+    navigate("/live");
+  } else if (id === "batches") {
+    navigate("/batches");
+  } else if (id === "shorts") {
+    navigate("/shorts");
+  } else if (id === "teachers") {
+    navigate("/teachers");
+  } else {
+    navigate(id === "ai" ? "/" : `/search?type=${id}`);
+  }
+};
+
 
   return (
     <div data-testid="home-page">
