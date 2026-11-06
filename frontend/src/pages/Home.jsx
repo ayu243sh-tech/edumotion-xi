@@ -210,58 +210,6 @@ const openQuickAccess = (id) => {
         </div>
       </section>
 
-      {/* TRENDING */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <div className="flex items-end justify-between mb-8">
-          <div>
-            <div className="text-xs uppercase tracking-[0.2em] font-mono-em text-[#78716C]">04 — Trending Chapters</div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mt-2">What learners are mastering this week.</h2>
-          </div>
-          <Link to="/search" className="hidden md:flex items-center gap-1 text-sm font-medium text-[#7B1E1E] hover:underline">View all <ArrowRight className="w-4 h-4" /></Link>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          {trending.map((ch) => (
-            <Link key={ch.id} to={`/chapter/${ch.id}`} data-testid={`trending-${ch.id}`} className="bg-white rounded-[20px] border border-[#E7E5E4] overflow-hidden hover:-translate-y-1 transition-transform bento-shadow bento-shadow-hover">
-              <div className="relative h-44">
-                <img src={ch.thumbnail} alt={ch.name} className="w-full h-full object-cover" />
-                <Badge className="absolute top-3 left-3 bg-white text-[#292524] hover:bg-white font-mono-em text-[10px] uppercase tracking-[0.15em]">{ch.difficulty}</Badge>
-              </div>
-              <div className="p-5">
-                <div className="text-xs text-[#78716C] font-mono-em uppercase tracking-[0.15em]">{ch.class_id.replace("-", " ")} · {ch.duration}</div>
-                <div className="font-display font-semibold text-lg mt-1.5 line-clamp-2">{ch.name}</div>
-                <Progress value={Math.floor(Math.random() * 60) + 20} className="mt-4 h-1.5" />
-                <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm text-[#7B1E1E] font-semibold">Start →</span>
-                  <Play className="w-4 h-4 text-[#7B1E1E]" />
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* LATEST UPLOADS */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <div className="text-xs uppercase tracking-[0.2em] font-mono-em text-[#78716C]">05 — Latest Uploads</div>
-        <h2 className="font-display text-3xl md:text-4xl font-bold mt-2 mb-8">Fresh off the press.</h2>
-        <div className="bg-white rounded-[20px] border border-[#E7E5E4] divide-y divide-[#E7E5E4]" data-testid="latest-uploads">
-          {uploads.map((u) => (
-            <div key={u.id} className="flex items-center gap-4 p-5 hover:bg-[#FAF9F6] transition-colors">
-              <div className="w-10 h-10 rounded-xl bg-[#FDE68A] flex items-center justify-center font-mono-em text-xs uppercase">
-                {u.type === "notes" && <BookOpen className="w-4 h-4 text-[#7B1E1E]" />}
-                {u.type === "video" && <Video className="w-4 h-4 text-[#7B1E1E]" />}
-                {u.type === "test" && <ClipboardList className="w-4 h-4 text-[#7B1E1E]" />}
-              </div>
-              <div className="flex-1">
-                <div className="font-medium">{u.title}</div>
-                <div className="text-xs text-[#78716C] font-mono-em uppercase tracking-[0.15em] mt-0.5">{u.type} · {u.date}</div>
-              </div>
-              <Link to={`/chapter/${u.chapter_id}`} className="text-sm text-[#7B1E1E] font-medium hover:underline">Open →</Link>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* REVIEWS */}
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="text-xs uppercase tracking-[0.2em] font-mono-em text-[#78716C]">06 — Student Reviews</div>
