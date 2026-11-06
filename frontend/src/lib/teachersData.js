@@ -9,12 +9,4 @@ export const TEACHERS = [
   { id: "ayush-maurya", name: "Mr. Ayush Maurya", role: "Founder, EduMotion", subjects: ["Economics"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
   { id: "sumit-kanchan", name: "Mr. Sumit Kanchan", role: "", subjects: ["Business Studies"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
   { id: "ishita-kaushik", name: "Miss Ishita Kaushik", role: "", subjects: ["Accountancy"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
-  { id: "nitin-bajpai", name: "Mr. Nitin Bajpai", role: "", subjects: ["Economics", "Business Studies"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
-  { id: "suhasi-kaushik", name: "Suhasi Kaushik", role: "", subjects: ["Accountancy"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
-  { id: "atul", name: "Mr. Atul", role: "", subjects: ["Chemistry", "Biology"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
-  { id: "akansha", name: "Ms. Akansha", role: "", subjects: ["Physics"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
-  { id: "shailendra", name: "Mr. Shailendra", role: "", subjects: ["Chemistry", "Biology"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
-  { id: "umam", name: "Ms. Umam", role: "", subjects: ["Physics"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
-  { id: "ankur", name: "Mr. Ankur", role: "", subjects: ["Mathematics"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
-  { id: "manish", name: "Mr. Manish", role: "", subjects: ["Mathematics"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
 ];
