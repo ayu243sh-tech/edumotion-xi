@@ -9,7 +9,7 @@ import { SAARTHI } from "@/lib/saarthiStats";
 import {
   BookOpen, Video, ClipboardList, FileText, CalendarDays, Bot, Search as SearchIcon,
   Play, ArrowRight, Quote, Star, Sparkles, FlaskConical, Sigma, Globe2, Languages, Cpu,
-  Library, GraduationCap, Box, Gamepad2, Radio, Users, Clapperboard,
+  Library, GraduationCap, Box, Gamepad2, Radio, Users, Clapperboard, UserRound,
 } from "lucide-react";
 
 const QUICK_ACCESS = [
@@ -22,6 +22,7 @@ const QUICK_ACCESS = [
   { id: "live", label: "Live Classes", icon: Radio, accent: "#B91C1C", bg: "#FEE2E2" },
   { id: "batches", label: "Batches", icon: Users, accent: "#1E40AF", bg: "#DBEAFE" },
   { id: "shorts", label: "Shorts", icon: Clapperboard, accent: "#B91C1C", bg: "#FEE2E2" },
+  { id: "teachers", label: "About Teachers", icon: UserRound, accent: "#7B1E1E", bg: "#FDE68A" },
 ];
 
 const SUBJECT_ICONS = { science: FlaskConical, mathematics: Sigma, "social-science": Globe2, english: BookOpen, hindi: Languages, computer: Cpu };
@@ -76,7 +77,8 @@ export default function Home() {
       navigate("/shorts");
     } else {
       navigate(id === "ai" ? "/" : `/search?type=${id}`);
-    }
+    } else if (id === "teachers") {
+      navigate("/teachers");
   };
 
   return (
