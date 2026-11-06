@@ -135,7 +135,7 @@ export default function Home() {
             <div className="relative">
               <div className="absolute -inset-4 bg-[#FDE68A]/40 rounded-[40px] -rotate-2" />
               <div className="relative bg-white rounded-[28px] overflow-hidden border border-[#E7E5E4] bento-shadow">
-                <img src="https://images.pexels.com/photos/6549913/pexels-photo-6549913.jpeg?w=900" alt="Students studying" className="w-full h-[420px] object-cover" />
+                <img src="2dec2096-364a-47ab-8395-e440dd298f92.jpg" alt="Saarthi Handwritten Notes" className="w-full h-[420px] object-cover" />
                 <SaarthiTracker data={SAARTHI} />
               </div>
             </div>
