@@ -118,21 +118,21 @@ _BATCH_LIST = [
     # ---------- Class 6 ----------
     _batch("c6-all", "Class 6 Complete Batch", "6",
            ["Mathematics", "English", "Science", "Hindi", "Social Science"],
-           "Mon–Sat, 3:00 PM – 5:00 PM", "2026-11-10",
+           "Mon–Sat, 3:00 PM – 5:00 PM", "2027-01-01",
            "All five subjects in one batch, taught concept by concept.",
            teacher=_CLASS_6_TEACHERS),
 
     # ---------- Class 7 ----------
     _batch("c7-all", "Class 7 Complete Batch", "7",
            ["Mathematics", "English", "Science", "Hindi", "Social Science"],
-           "Mon–Sat, 3:00 PM – 5:00 PM", "2026-11-10",
+           "Mon–Sat, 3:00 PM – 5:00 PM", "2027-01-01",
            "All five subjects in one batch, with regular practice and revision.",
            teacher=_CLASS_7_8_TEACHERS),
 
     # ---------- Class 8 ----------
     _batch("c8-all", "Class 8 Complete Batch", "8",
            ["Mathematics", "English", "Science", "Hindi", "Social Science"],
-           "Mon–Sat, 3:00 PM – 5:00 PM", "2026-11-10",
+           "Mon–Sat, 3:00 PM – 5:00 PM", "2027-01-01",
            "All five subjects in one batch, building a strong base for Class 9.",
            teacher=_CLASS_7_8_TEACHERS),
 
