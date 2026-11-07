@@ -27,6 +27,7 @@ import Portal from "@/pages/Portal";
 import PortalBatch from "@/pages/PortalBatch";
 import PortalTest from "@/pages/PortalTest";
 import Admin from "@/pages/Admin";
+import TeacherProfile from "@/pages/TeacherProfile";
 
 function Layout() {
   return (
@@ -68,6 +69,7 @@ function App() {
             <Route path="/portal/test/:testId" element={<PortalTest />} />
             <Route path="/portal/:batchId" element={<PortalBatch />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/teachers/:id" element={<TeacherProfile />} />
   
           </Route>
         </Routes>
