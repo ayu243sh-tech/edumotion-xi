@@ -1,12 +1,36 @@
 # live_routes.py
 from datetime import datetime, timedelta, timezone
 from typing import Optional
+from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, HTTPException
 
 from live_data import BATCHES, LIVE_CLASSES
+from live_db import get_pool
 
 router = APIRouter(prefix="/live", tags=["live"])
+IST = ZoneInfo("Asia/Kolkata")
+
+
+async def all_classes():
+    """Classes from live_data.py plus the ones scheduled from the admin page."""
+    out = dict(LIVE_CLASSES)
+    try:
+        pool = await get_pool()
+        async with pool.acquire() as conn:
+            rows = await conn.fetch("select * from portal_classes")
+        for r in rows:
+            out[r["id"]] = {
+                "id": r["id"], "batch_id": r["batch_id"], "option_id": r["option_id"],
+                "class_level": BATCHES.get(r["batch_id"], {}).get("class_level", ""),
+                "subject": r["subject"], "title": r["title"],
+                "start": r["start_at"].astimezone(IST).isoformat(),
+                "duration_min": r["duration_min"],
+                "youtube_id": r["youtube_id"] or "", "free": r["free"],
+            }
+    except Exception:
+        pass  # the static classes still work if the database is unavailable
+    return out
 
 
 def _with_status(c):
@@ -19,27 +43,20 @@ def _with_status(c):
         status = "live"
     else:
         status = "ended"
-    return {**c, "status": status, "end": end.isoformat()}
+    yt = c.get("youtube_id") or ""
+    public = {k: v for k, v in c.items() if k != "youtube_id"}
+    return {**public, "status": status, "end": end.isoformat(),
+            "free": bool(c.get("free")), "has_video": bool(yt) and not yt.startswith("REPLACE")}
 
 
 def _sorted(classes):
     order = {"live": 0, "upcoming": 1, "ended": 2}
-    return sorted(
-        classes,
-        key=lambda c: (
-            order[c["status"]],
-            c["start"] if c["status"] != "ended" else "",
-        ),
-    )
+    return sorted(classes, key=lambda c: (order[c["status"]], c["start"] if c["status"] != "ended" else ""))
 
 
 @router.get("/classes")
-async def list_classes(
-    batch_id: Optional[str] = None,
-    class_level: Optional[str] = None,
-    status: Optional[str] = None,
-):
-    items = [_with_status(c) for c in LIVE_CLASSES.values()]
+async def list_classes(batch_id: Optional[str] = None, class_level: Optional[str] = None, status: Optional[str] = None):
+    items = [_with_status(c) for c in (await all_classes()).values()]
     if batch_id:
         items = [c for c in items if c["batch_id"] == batch_id]
     if class_level:
@@ -47,7 +64,6 @@ async def list_classes(
     if status:
         items = [c for c in items if c["status"] == status]
     items = _sorted(items)
-    # recordings: most recent first
     if status == "ended":
         items.sort(key=lambda c: c["start"], reverse=True)
     return items
@@ -55,7 +71,7 @@ async def list_classes(
 
 @router.get("/classes/{class_id}")
 async def get_class(class_id: str):
-    c = LIVE_CLASSES.get(class_id)
+    c = (await all_classes()).get(class_id)
     if not c:
         raise HTTPException(status_code=404, detail="Class not found")
     return _with_status(c)
@@ -74,7 +90,5 @@ async def get_batch(batch_id: str):
     b = BATCHES.get(batch_id)
     if not b:
         raise HTTPException(status_code=404, detail="Batch not found")
-    classes = _sorted(
-        [_with_status(c) for c in LIVE_CLASSES.values() if c["batch_id"] == batch_id]
-    )
+    classes = _sorted([_with_status(c) for c in (await all_classes()).values() if c["batch_id"] == batch_id])
     return {**b, "classes": classes}
