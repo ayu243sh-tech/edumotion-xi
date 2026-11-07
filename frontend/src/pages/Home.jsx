@@ -78,6 +78,8 @@ const openQuickAccess = (id) => {
     navigate("/shorts");
   } else if (id === "teachers") {
     navigate("/teachers");
+  } else if (id === "portal") {
+      navigate("/portal");
   } else {
     navigate(id === "ai" ? "/" : `/search?type=${id}`);
   }
