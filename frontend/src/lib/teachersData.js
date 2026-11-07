@@ -6,7 +6,7 @@
 export const TEACHERS = [
   {
     id: "daljeet-kumar",
-    photo: "/daljeetkumar.jpg", 
+    photo: "/daljeet-kumar.jpg",
     name: "Mr. Daljeet Kumar",
     fullName: "Daljeet Kumar",
     headline: "Senior Educator | Science & Mathematics Specialist",
@@ -35,7 +35,7 @@ export const TEACHERS = [
   },
   {
     id: "ashish-kumar",
-    photo: "/ashishkumar.jpg",
+    photo: "/ashish-kumar.jpg",
     name: "Mr. Ashish Kumar",
     fullName: "Ashish Kumar",
     headline: "Senior Educator | Social Science & Humanities Specialist",
