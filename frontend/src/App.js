@@ -23,6 +23,10 @@ import Shorts from "@/pages/Shorts";
 import SalesTrackerDemo from "@/pages/SalesTrackerDemo";
 import Enroll from "@/pages/Enroll";
 import Teachers from "@/pages/Teachers";
+import Portal from "@/pages/Portal";
+import PortalBatch from "@/pages/PortalBatch";
+import PortalTest from "@/pages/PortalTest";
+import Admin from "@/pages/Admin";
 
 function Layout() {
   return (
@@ -60,6 +64,10 @@ function App() {
             <Route path="/demo/sales-tracker" element={<SalesTrackerDemo />} />
             <Route path="/enroll/:batchId" element={<Enroll />} />
             <Route path="/teachers" element={<Teachers />} />
+            <Route path="/portal" element={<Portal />} />
+            <Route path="/portal/test/:testId" element={<PortalTest />} />
+            <Route path="/portal/:batchId" element={<PortalBatch />} />
+            <Route path="/admin" element={<Admin />} />
   
           </Route>
         </Routes>
