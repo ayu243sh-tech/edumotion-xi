@@ -1,12 +1,13 @@
 # enroll_routes.py
-# Enrolment requests: the student fills the form and pays by QR; you verify the payment by hand.
+# Enrolment requests: the student logs in, fills the form and pays by QR; you verify the payment by hand.
 import re
 from datetime import date
 from typing import Optional
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 
+from firebase_verify import get_current_user
 from live_data import BATCHES
 from live_db import get_pool
 
@@ -32,8 +33,32 @@ def _clean(text, label):
     return t
 
 
+@router.get("/enroll-request/mine")
+async def my_request(batch_id: str, user=Depends(get_current_user)):
+    pool = await get_pool()
+    async with pool.acquire() as conn:
+        row = await conn.fetchrow(
+            """select student_name, option_id, status, created_at, (user_id is not null) as activated
+               from enrollment_requests where submitted_by=$1 and batch_id=$2
+               order by created_at desc limit 1""",
+            user["uid"], batch_id,
+        )
+    if not row:
+        return {"exists": False}
+    b = BATCHES.get(batch_id, {})
+    opt = next((o for o in b.get("options", []) if o["id"] == row["option_id"]), None)
+    return {
+        "exists": True,
+        "student_name": row["student_name"],
+        "status": row["status"],
+        "activated": row["activated"],
+        "option_label": opt["label"] if opt else None,
+        "created_at": row["created_at"],
+    }
+
+
 @router.post("/enroll-request")
-async def enroll_request(body: EnrollRequest):
+async def enroll_request(body: EnrollRequest, user=Depends(get_current_user)):
     batch = BATCHES.get(body.batch_id)
     if not batch:
         raise HTTPException(status_code=404, detail="Batch not found")
@@ -68,12 +93,16 @@ async def enroll_request(body: EnrollRequest):
 
     pool = await get_pool()
     async with pool.acquire() as conn:
+        mine = await conn.fetchval(
+            "select 1 from enrollment_requests where submitted_by=$1 and batch_id=$2", user["uid"], body.batch_id)
+        if mine:
+            return {"ok": True, "already": True}
         row = await conn.fetchrow(
             """insert into enrollment_requests
-                   (batch_id, option_id, student_name, dob, father_name, mother_name, phone, utr)
-               values ($1, $2, $3, $4, $5, $6, $7, $8)
+                   (batch_id, option_id, student_name, dob, father_name, mother_name, phone, utr, submitted_by, submitted_email)
+               values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
                on conflict (batch_id, phone) do nothing
                returning id""",
-            body.batch_id, option_id, name, dob, father, mother, phone, utr,
+            body.batch_id, option_id, name, dob, father, mother, phone, utr, user["uid"], user["email"],
         )
     return {"ok": True, "already": row is None}
