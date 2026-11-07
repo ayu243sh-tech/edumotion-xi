@@ -1,36 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { TEACHERS } from "@/lib/teachersData";
+import TeacherAvatar from "@/components/TeacherAvatar";
 
 const FILTERS = ["all", "6", "7", "8", "9", "10", "11", "12"];
-
-function Avatar({ t }) {
-  const [broken, setBroken] = useState(false);
-  const initials = t.name
-    .replace(/^(Mr|Mrs|Ms|Miss)\.?\s+/i, "")
-    .split(" ")
-    .map((w) => w[0])
-    .slice(0, 2)
-    .join("")
-    .toUpperCase();
-  const box = "w-24 h-24 sm:w-32 sm:h-32 rounded-2xl shrink-0 overflow-hidden";
-
-  if (broken) {
-    return (
-      <div className={`${box} bg-gradient-to-br from-[#7B1E1E] to-[#3B0D0D] text-[#F5B400] font-display text-3xl font-bold flex items-center justify-center`}>
-        {initials}
-      </div>
-    );
-  }
-  return (
-    <img
-      src={t.photo || `/teachers/${t.id}.jpg`}
-      alt={t.name}
-      loading="lazy"
-      onError={() => setBroken(true)}
-      className={`${box} object-cover border border-[#E7E5E4]`}
-    />
-  );
-}
+const hasProfile = (t) => Boolean((t.background && t.background.length) || (t.aboutParas && t.aboutParas.length));
 
 export default function Teachers() {
   const [filter, setFilter] = useState("all");
@@ -56,18 +31,16 @@ export default function Teachers() {
       </div>
 
       {list.length === 0 ? (
-        <div className="bg-white rounded-[20px] border border-[#E7E5E4] p-10 text-center text-[#78716C]">
-          No teachers listed for this class yet.
-        </div>
+        <div className="bg-white rounded-[20px] border border-[#E7E5E4] p-10 text-center text-[#78716C]">No teachers listed for this class yet.</div>
       ) : (
         <div className="grid md:grid-cols-2 gap-5">
           {list.map((t) => (
-            <div key={t.id} className="bg-white rounded-[20px] border border-[#E7E5E4] p-5 sm:p-6 bento-shadow">
+            <div key={t.id} className="bg-white rounded-[20px] border border-[#E7E5E4] p-5 sm:p-6 bento-shadow flex flex-col">
               <div className="flex gap-4 sm:gap-5 items-start">
-                <Avatar t={t} />
+                <TeacherAvatar t={t} />
                 <div className="min-w-0">
                   <h2 className="font-display text-xl font-bold leading-snug">{t.name}</h2>
-                  {t.role && <div className="text-sm text-[#7B1E1E] font-semibold mt-0.5">{t.role}</div>}
+                  {(t.headline || t.role) && <div className="text-sm text-[#7B1E1E] font-semibold mt-0.5">{t.headline || t.role}</div>}
                   <div className="flex flex-wrap gap-1.5 mt-2.5">
                     {t.subjects.map((s) => (
                       <span key={s} className="text-xs font-semibold bg-[#FDE68A]/60 text-[#92400E] rounded-full px-2.5 py-1">{s}</span>
@@ -96,7 +69,13 @@ export default function Teachers() {
                 </div>
               )}
 
-              <p className="text-sm text-[#57534E] leading-relaxed mt-4">{t.about || "Profile coming soon."}</p>
+              <p className="text-sm text-[#57534E] leading-relaxed mt-4 flex-1">{t.about || "Profile coming soon."}</p>
+
+              {hasProfile(t) && (
+                <Link to={`/teachers/${t.id}`} className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#7B1E1E] hover:underline">
+                  View full profile <ArrowRight className="w-4 h-4" />
+                </Link>
+              )}
             </div>
           ))}
         </div>
