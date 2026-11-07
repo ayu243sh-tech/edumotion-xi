@@ -263,7 +263,7 @@ export default function Enroll() {
 
             <div className="mt-5 mx-auto w-56 h-56 rounded-2xl border border-[#E7E5E4] bg-[#FAF9F6] flex items-center justify-center overflow-hidden">
               {qrOk ? (
-                <img src={/WhatsApp Image 2026-11-07 at 1.28.07 PM.jpeg} alt="UPI payment QR code" onError={() => setQrOk(false)} className="w-full h-full object-contain" />
+                <img src={WhatsApp Image 2026-11-07 at 1.28.07 PM.jpeg} alt="UPI payment QR code" onError={() => setQrOk(false)} className="w-full h-full object-contain" />
               ) : (
                 <span className="text-xs text-[#78716C] px-4">The payment QR will appear here</span>
               )}
