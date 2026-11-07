@@ -1,16 +1,9 @@
-// Edit this file to update the About Teachers page.
-// PHOTO: save each picture in the public folder as  public/teachers/<id>.jpg  (for example
-// public/teachers/daljeet-kumar.jpg) and it shows up automatically. Until then, initials show.
-// Fill in role / qualification / experience / about only with real details. Empty ones are hidden.
-export const TEACHERS = [
-  { id: "daljeet-kumar", name: "Mr. Daljeet Kumar", role: "", subjects: ["All subjects"], classes: ["6", "7", "8"], qualification: "", experience: "", about: "" },
-  { id: "ashish-kumar", name: "Mr. Ashish Kumar", role: "", subjects: ["All subjects (Classes 6–8)", "Economics (Class 12)"], classes: ["6", "7", "8", "12"], qualification: "", experience: "", about: "" },
-  { id: "faiza-khan", name: "Mrs. Faiza Khan", role: "", subjects: ["History", "Political Science"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
-  { id: "ayush-maurya", name: "Mr. Ayush Maurya", role: "Founder, EduMotion", subjects: ["Economics"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
-  { id: "sumit-kanchan", name: "Mr. Sumit Kanchan", role: "", subjects: ["Business Studies"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
-  { id: "ishita-kaushik", name: "Miss Ishita Kaushik", role: "", subjects: ["Accountancy"], classes: ["11", "12"], qualification: "", experience: "", about: "" },
-];
 
+// Edit this file to update the About Teachers page.
+// PHOTO: Save pictures in public/teachers/<id>.jpg
+// Empty fields can be hidden by the UI.
+
+export const TEACHERS = [
   {
     id: "daljeet-kumar",
     name: "Mr. Daljeet Kumar",
@@ -30,14 +23,14 @@ export const TEACHERS = [
       "Bachelor of Science (B.Sc.)",
       "Bachelor of Education (B.Ed.)",
       "Strong understanding of NCERT curriculum.",
-      "Special interest in conceptual learning and student development.",
+      "Special interest in conceptual learning and student development."
     ],
     about: "Daljeet Kumar is a dedicated educator with a background in Science and professional teacher training.",
     aboutParas: [
       "Daljeet Kumar is a dedicated educator with a background in Science and professional teacher training. He believes in making complex concepts easier through practical examples, interactive explanations and structured learning.",
-      "His teaching approach focuses on building strong fundamentals, improving problem-solving abilities and helping students develop confidence in their studies.",
+      "His teaching approach focuses on building strong fundamentals, improving problem-solving abilities and helping students develop confidence in their studies."
     ],
-    philosophy: "Every student can learn effectively when concepts are explained with clarity, patience and the right approach.",
+    philosophy: "Every student can learn effectively when concepts are explained with clarity, patience and the right approach."
   },
   {
     id: "ashish-kumar",
@@ -58,12 +51,34 @@ export const TEACHERS = [
       "Bachelor of Arts in Sociology.",
       "Bachelor of Education (B.Ed.).",
       "Knowledge of NCERT curriculum.",
-      "Special interest in social sciences and humanities.",
+      "Special interest in social sciences and humanities."
     ],
     about: "Ashish Kumar is a passionate educator with an academic background in Sociology and professional training in education.",
     aboutParas: [
       "Ashish Kumar is a passionate educator with an academic background in Sociology and professional training in education. He focuses on developing students' understanding of society, history, geography and the world around them.",
-      "His teaching methodology combines real-life examples, interactive discussions and simplified explanations to make learning interesting and effective.",
+      "His teaching methodology combines real-life examples, interactive discussions and simplified explanations to make learning interesting and effective."
     ],
-    philosophy: "Education is not just about memorising facts; it is about understanding the world and developing the ability to think independently.",
+    philosophy: "Education is not just about memorising facts; it is about understanding the world and developing the ability to think independently."
   },
+  {
+    id: "faiza-khan",
+    name: "Mrs. Faiza Khan",
+    role: "",
+    subjects: ["History", "Political Science"],
+    classes: ["11", "12"],
+    qualification: "",
+    experience: "",
+    about: ""
+  },
+  {
+    id: "ayush-maurya",
+    name: "Mr. Ayush Maurya",
+    role: "Founder, EduMotion",
+    subjects: ["Economics"],
+    classes: ["11", "12"],
+    qualification: "",
+    experience: "",
+    about: ""
+  },
+];
+
