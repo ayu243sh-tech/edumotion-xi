@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from firebase_verify import get_current_user
 from live_data import LIVE_CLASSES
 from live_db import get_pool
-from live_routes import _with_status
+from live_routes import _with_status, all_classes
 
 router = APIRouter(prefix="/live", tags=["live-doubts"])
 
@@ -44,7 +44,7 @@ async def my_doubts(class_id: str, user=Depends(get_current_user)):
 
 @router.post("/classes/{class_id}/doubts")
 async def ask_doubt(class_id: str, body: DoubtBody, user=Depends(get_current_user)):
-    c = LIVE_CLASSES.get(class_id)
+    c = (await all_classes()).get(class_id)
     if not c:
         raise HTTPException(status_code=404, detail="Class not found")
     if _with_status(c)["status"] != "ended":
