@@ -7,6 +7,6 @@ export const SAARTHI = {
   whatsapp: "",    // country code + number, no + or spaces, e.g. "919876543210". Adds a "Reserve" button
   books: [
     { id: "english", title: "English", reserved: 647 },
-    { id: "pe", title: "Physical Education", reserved: 723 },
+    { id: "pe", title: "Physical Education", reserved: 727 },
   ],
 };
