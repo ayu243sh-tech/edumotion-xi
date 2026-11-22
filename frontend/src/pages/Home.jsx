@@ -118,15 +118,6 @@ const openQuickAccess = (id) => {
               </div>
             </form>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button onClick={() => navigate("/dashboard")} data-testid="cta-start-learning" className="bg-[#7B1E1E] hover:bg-[#631818] text-white rounded-full px-7 py-6 text-base">
-                <BookOpen className="w-4 h-4 mr-2" /> Start Learning
-              </Button>
-              <Button onClick={() => navigate("/search?type=video")} data-testid="cta-watch-videos" variant="outline" className="rounded-full px-7 py-6 text-base border-[#E7E5E4] hover:border-[#7B1E1E] hover:text-[#7B1E1E]">
-                <Play className="w-4 h-4 mr-2" /> Watch Videos
-              </Button>
-            </div>
-
             <div className="mt-10 flex items-center gap-6 text-sm text-[#78716C]">
               <div className="flex -space-x-2">
                 {[5940722, 7983621, 3771807].map((id) => (
